@@ -1,6 +1,25 @@
 import csv
 import pandas as pd
 
+# Todos
+# 1. Operate on all indicators.
+# 2. Operate on subnational data according to file structure:
+#    /data/subnational/state/alabama/indicator_1-1-1.csv
+#    /data/subnational/state/alabama/city/montgomery/indicator_1-1-1.csv
+#    etc
+# 3. End up with several tidy CSV files:
+#    - /data/tidy/indicator_1-1-1.csv (all data, national and subnational)
+#    - /data/subnational/state/alabama/tidy/indicator_1-1-1.csv (all state and city data)
+#    - /data/subnational/state/alabama/city/montgomery/tidy/indicator_1-1-1.csv (only city data)
+# 4. Incorporate units into naming convention
+#    - field:value:unit, eg:
+#        - gender:total|per capita
+#        - gender:total|average
+#        - gender:male|per capita
+#        - gender:male|average
+#        - gender:female|per capita
+#        - gender:female|average
+
 with open('../data/indicator_1-2-1.csv', newline='') as csvfile:
     df = pd.read_csv(csvfile)
     disaggregations = dict()
