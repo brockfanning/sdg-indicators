@@ -4,7 +4,7 @@ en:
   site-title: "U.S. Indicators For The Sustainable Development Goals"
   disclaimer-wip: "This site is a work in progress"
   nav-reporting-status : "Reporting Status"
-  nav-statistics : "U.S. Statistics"
+  nav-statistics : "JM Statistics"
   nav-training : "Training Materials"
   nav-faq : "FAQs"
 es:

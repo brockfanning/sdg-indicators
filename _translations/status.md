@@ -4,7 +4,7 @@ en:
   page-title: "Reporting Status"
   disclaimer-wip: "This site is a work in progress"
   nav-reporting-status : "Reporting Status"
-  nav-statistics : "U.S. Statistics"
+  nav-statistics : "JM Statistics"
   page-subtitle : "Overall Reporting Status"
   default-text : "Improving measures"
   danger-text : "Exploring data"
