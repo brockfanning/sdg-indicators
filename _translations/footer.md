@@ -2,7 +2,7 @@
 translation_id: footer
 en:
   about-heading: "About"
-  about-text: "This is the official website of the United States of America used for providing information on the U.S. National Statistics for the U.N. Sustainable Development Goals.  It is developed in collaboration with the US Office of Management and Budget, Office of Information and Regulatory Affairs: the US Department of State, Office of International Organizations; the US General Services Administration; and the US Office of Science and Technology Policy."
+  about-text: "This is the official website of Jamaica used for providing information on the Jamaican National Statistics for the U.N. Sustainable Development Goals. It is developed in collaboration with the Statistical Institute of Jamaica; and the, Mona School of Business &amp; Management, UWI."
   contact-heading: "Contact"
   contact-text: "For content questions, <br>Email: SDGs@omb.eop.gov <br>For site functionality, <br>Email: datagov@gsa.gov"
 es:
