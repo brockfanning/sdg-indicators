@@ -1,7 +1,7 @@
 ---
 translation_id: frontpage
 en:
-  main-heading: "Jamaica National Statistics for the UN Sustainable Development Goals"
+  main-heading: "JM National Statistics for the UN Sustainable Development Goals"
   intro-text: "Click on each goal for Jamaica national statistics for Sustainable Development Goal global indicators."
 es:
   main-heading: "Estadisticas Nacionales de Jamaica para los Objetivos de Desarrollo Sostenible de la ONU"
