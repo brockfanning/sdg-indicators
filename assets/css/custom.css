@@ -50,7 +50,7 @@ body {
     text-indent: -99999em;
     overflow : hidden;
     background: url('../../assets/img/logo.png');
-    background-size : cover;
+    background-size : contain;
     background-repeat: no-repeat;
 }
 
