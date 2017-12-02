@@ -1,58 +1,132 @@
-import csv
+# -*- coding: utf-8 -*-
+"""
+This script looks through all of the CSV files in the /data folder
+and convert any that are suitable into tidy (long) form.
+
+Suitability is determined by the presence of column names that follow
+a strict naming convention. The rules of this convention are:
+
+1. The first column is called "year".
+2. The second column is called "total".
+3. At least one column following the format [category]:[value].
+4. Multiple category/value pairs can be separated by a pipe (|).
+
+"""
+
+import glob
+import os.path
 import pandas as pd
 
-# Todos
-# 1. Operate on all indicators.
-# 2. Operate on subnational data according to file structure:
-#    /data/subnational/state/alabama/indicator_1-1-1.csv
-#    /data/subnational/state/alabama/city/montgomery/indicator_1-1-1.csv
-#    etc
-# 3. End up with several tidy CSV files:
-#    - /data/tidy/indicator_1-1-1.csv (all data, national and subnational)
-#    - /data/subnational/state/alabama/tidy/indicator_1-1-1.csv (all state and city data)
-#    - /data/subnational/state/alabama/city/montgomery/tidy/indicator_1-1-1.csv (only city data)
-# 4. Incorporate units into naming convention
-#    - field:value:unit, eg:
-#        - gender:total|per capita
-#        - gender:total|average
-#        - gender:male|per capita
-#        - gender:male|average
-#        - gender:female|per capita
-#        - gender:female|average
+def check_headers(df, csv):
+    """This checks to see if the column headers are suitable for tidying."""
+    status = True
+    cols = df.columns
 
-with open('../data/indicator_1-2-1.csv', newline='') as csvfile:
-    df = pd.read_csv(csvfile)
-    disaggregations = dict()
-    other_columns = []
+    if cols[0] != 'year':
+        status = False
+        print(csv, ': First column not called "year"')
+    if cols[1] != 'total':
+        status = False
+        print(csv, ': Second column not called "total"')
+
+    return status
+
+def wide_to_tidy(df, csv):
+
+    categories = dict()
     columns = list(df.columns.values)
     # Look for all the columns following the naming convention for
     # disaggregation: "[Category]:[Value]" (eg, "Gender:Female")
     for column in columns:
-        if ':' in column:
-            parts = column.split(':')
-            disaggregation_name = parts[0]
-            disaggregation_value = parts[1]
-            if disaggregation_name not in disaggregations:
-                disaggregations[disaggregation_name] = []
-            disaggregations[disaggregation_name].append(disaggregation_value)
-            # Rename the column now because we no longer need the naming
-            # convention.
-            df.rename(columns = {column: disaggregation_value}, inplace = True)
-        elif column != 'year':
-            other_columns.append(column)
+        categories_in_column = column.split('|')
+        for category_in_column in categories_in_column:
+            category_parts = category_in_column.split(':')
+            if len(category_parts) > 1:
+                category_name = category_parts[0]
+                category_value = category_parts[1]
+                if category_name not in categories:
+                    categories[category_name] = []
+                categories[category_name].append(category_value)
+                # Rename the column now because we no longer need the naming
+                # convention.
+                df.rename(columns = {column: category_value}, inplace = True)
     # If we didn't find anything, no tidying is possible.
-    if not disaggregations:
-        print('foo')
-        quit()
+    if not categories:
+        print('No categories found.')
+        return False
 
-    # "Melt" each disaggregation and concat them for a tidy format.
+    # "Melt" each category and concat them for a tidy format.
     melts = []
-    for disaggregation in disaggregations:
-        melts.append(pd.melt(df, id_vars=['year'], value_vars=disaggregations[disaggregation], var_name=disaggregation))
+    for category in categories:
+        melts.append(pd.melt(df, id_vars=['year'], value_vars=categories[category], var_name=category))
     # Also add the totals.
     total = pd.melt(df, id_vars=['year'], value_vars=['total'], var_name='total')
     del total['total']
     melts.append(total)
     tidy = pd.concat(melts)
-    print(tidy.to_csv(index=False))
 
+    # For human readability, move the 'year' column to the front.
+    cols = tidy.columns.tolist()
+    cols.insert(0, cols.pop(-1))
+    tidy = tidy[cols]
+
+    return tidy
+
+def tidy_csv(csv):
+    """Convert wide CSV file to tidy format
+
+    If there are any problems return False to stop the build.
+
+    Args:
+        csv (str): The file name that we want to tidy
+
+    Returns:
+        bool: Status
+    """
+    status = True
+
+    try:
+        df = pd.read_csv(csv)
+    except Exception as e:
+        print(csv, e)
+        return False
+
+    if not check_headers(df, csv):
+        return False
+
+    try:
+        tidy = wide_to_tidy(df, csv)
+    except Exception as e:
+        print(csv, e)
+        return False
+
+    try:
+        csv_file = os.path.split(csv)[-1]
+        tidy_file = csv_file.replace('indicator', 'tidy.indicator')
+        tidy_path = os.path.join('data', 'tidy', tidy_file)
+        tidy.to_csv(tidy_path, index=False, encoding='utf-8')
+    except Exception as e:
+        print(csv, e)
+        return False
+
+    return status
+
+def main():
+    """Tidy up all of the indicator CSVs in the data folder"""
+    status = True
+    # Create the place to put the files
+    os.makedirs("data/tidy", exist_ok=True)
+
+    csvs = glob.glob("data/convert-to-tidy/indicator*.csv")
+    print("Tidying " + str(len(csvs)) + " wide CSV files...")
+
+    for csv in csvs:
+        status = status & tidy_csv(csv)
+    return(status)
+
+if __name__ == '__main__':
+    status = main()
+    if (not status):
+        raise RuntimeError("Failed tidy conversion")
+    else:
+        print ("Success")
