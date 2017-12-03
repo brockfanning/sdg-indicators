@@ -129,7 +129,7 @@ def tidy_csv(csv):
     try:
         csv_file = os.path.split(csv)[-1]
         tidy_path = os.path.join('data', 'tidy', csv_file)
-        tidy.to_csv(tidy_path, index=False, encoding='utf-8')
+        tidy.to_csv(tidy_path, index=False, encoding='utf-8', float_format='%g')
         print('Converted ' + csv_file + ' to tidy format.')
     except Exception as e:
         print(csv, e)
