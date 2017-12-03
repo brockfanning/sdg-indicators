@@ -101,9 +101,6 @@ def tidy_dataframe(df):
     cols = [HEADER_YEAR] + cols + [HEADER_VALUE]
     tidy = tidy[cols]
 
-    # Clean up rows with empty values.
-    tidy.dropna(subset=[HEADER_VALUE], inplace=True)
-
     return tidy
 
 def tidy_csv(csv):
