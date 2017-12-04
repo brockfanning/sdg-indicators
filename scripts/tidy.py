@@ -7,26 +7,26 @@ Suitability is determined by the presence of column names that follow
 a strict naming convention. The rules of this convention are:
 
 1. There is a column is called "Year".
-2. There is a column is called "Total".
+2. There is a column is called "All".
 3. Optionally, there are columns following the format: category:value
 4. Optionally, there are columns following the format: category1:value1|category2|value2
 
 Here are some examples of valid headers:
-* Year, Total
-* Year, Total, Gender:Female, Gender:Male
-* Year, Total, Age:Under 18, Age:18 to 64
-* Year, Total, Gender:Female|Age:Under 18, Gender:Male|Age:Under 18
+* Year, All
+* Year, All, Gender:Female, Gender:Male
+* Year, All, Age:Under 18, Age:18 to 64
+* Year, All|Unit:Inches, All|Unit:Centimeters
+* Year, All, Gender:Female|Age:Under 18, Gender:Female|Age:18 to 64
 etc...
 """
 
 import glob
 import os.path
 import pandas as pd
-import numpy as np
 
 # Some variables to be treated as constants in functions below.
 HEADER_YEAR = 'Year'
-HEADER_TOTAL = 'Total'
+HEADER_TOTAL = 'All'
 HEADER_VALUE = 'Value'
 
 def tidy_headers_check(df):
@@ -38,7 +38,7 @@ def tidy_headers_check(df):
         return False
 
     if HEADER_TOTAL not in columns:
-        return False
+        return any(column.startswith(HEADER_TOTAL + '|') for column in columns)
 
     return True
 
@@ -66,7 +66,7 @@ def tidy_dataframe(df):
     tidy = tidy_blank_dataframe()
     for column in df.columns.tolist():
         if column == HEADER_TOTAL:
-            # The 'Total' column gets converted into rows without any categories.
+            # The 'All' column gets converted into rows without any categories.
             melted = tidy_melt(df, HEADER_TOTAL, HEADER_TOTAL)
             del melted[HEADER_TOTAL]
             tidy = tidy.append(melted)
@@ -86,12 +86,18 @@ def tidy_dataframe(df):
             merged = tidy_blank_dataframe()
             categories_in_column = column.split('|')
             for category_in_column in categories_in_column:
-                category_parts = category_in_column.split(':')
-                category_name = category_parts[0]
-                category_value = category_parts[1]
-                melted = tidy_melt(df, column, category_name)
-                melted[category_name] = category_value
-                merged = merged.merge(melted, on=[HEADER_YEAR,HEADER_VALUE], how='outer')
+                if category_in_column == HEADER_TOTAL:
+                    # Handle the case where the 'All' column has units.
+                    melted = tidy_melt(df, column, HEADER_TOTAL)
+                    del melted[HEADER_TOTAL]
+                    merged = merged.merge(melted, on=[HEADER_YEAR, HEADER_VALUE], how='outer')
+                else:
+                    category_parts = category_in_column.split(':')
+                    category_name = category_parts[0]
+                    category_value = category_parts[1]
+                    melted = tidy_melt(df, column, category_name)
+                    melted[category_name] = category_value
+                    merged = merged.merge(melted, on=[HEADER_YEAR, HEADER_VALUE], how='outer')
             tidy = tidy.append(merged)
 
     # For human readability, move 'Year' to the front, and 'Value' to the back.
