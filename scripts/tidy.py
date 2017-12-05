@@ -113,7 +113,7 @@ def tidy_csv(csv):
     """This runs all checks and processing on a CSV file and reports exceptions."""
 
     try:
-        df = pd.read_csv(csv)
+        df = pd.read_csv(csv, dtype=str)
     except Exception as e:
         print(csv, e)
         return False
@@ -132,7 +132,7 @@ def tidy_csv(csv):
     try:
         csv_file = os.path.split(csv)[-1]
         tidy_path = os.path.join('data', 'tidy', csv_file)
-        tidy.to_csv(tidy_path, index=False, encoding='utf-8', float_format='%g')
+        tidy.to_csv(tidy_path, index=False, encoding='utf-8')
         print('Converted ' + csv_file + ' to tidy format.')
     except Exception as e:
         print(csv, e)
