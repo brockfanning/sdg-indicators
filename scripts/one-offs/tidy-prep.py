@@ -18,37 +18,31 @@ providers will need updated guidelines on CSV column names.
 """
 
 import glob
-import csv
-import shutil
-import os
-import stat
-
-def copy_complete(source, target):
-    # copy content, stat-info (mode too), timestamps...
-    shutil.copy2(source, target)
-    # copy owner and group
-    st = os.stat(source)
-    os.chown(target, st[stat.ST_UID], st[stat.ST_GID])
+import os.path
+import pandas as pd
 
 def tidy_prep_fix_csv(filename):
     """This changes 'year' to 'Year', and fixes 'All' on single-value datasets."""
 
-    temp_file = filename + '.tmp'
-    copy_complete(filename, temp_file)
-    with open(filename, newline='') as in_file, open(temp_file, 'w', newline='') as out_file:
-        reader = csv.reader(in_file)
-        writer = csv.writer(out_file)
+    # To prevent Git from thinking that all lines have changed, we
+    # go to a little extra trouble here to preserve newlines.
+    dos_line_endings = False
+    if "\r\n" in open(filename, 'r', newline='').read():
+        dos_line_endings = True
 
-        header = True
-        for row in reader:
-            if header:
-                header = False
-                row[0] = 'Year'
-                if len(row) == 2:
-                    row[1] = 'All'
-            writer.writerow(row)
+    # Load the CSV into a dataframe and rename some columns.
+    df = pd.read_csv(filename, dtype=str)
+    cols = df.columns.tolist()
+    cols[0] = 'Year'
+    if len(cols) == 2:
+        cols[1] = 'All'
+    df.columns = cols
 
-    shutil.move(temp_file, filename)
+    # Export the dataframe to the same CSV file.
+    if dos_line_endings:
+        df.to_csv(filename, index=False, encoding='utf-8', line_terminator='\r\n')
+    else:
+        df.to_csv(filename, index=False, encoding='utf-8')
 
 def main():
     """Fix CSV headers for all of the indicators in the data folder."""
@@ -58,6 +52,8 @@ def main():
 
     for filename in filenames:
         tidy_prep_fix_csv(filename)
+
+    print("Success.")
 
 if __name__ == '__main__':
     main()
