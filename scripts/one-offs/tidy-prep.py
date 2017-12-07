@@ -21,37 +21,49 @@ import glob
 import os.path
 import pandas as pd
 
-def tidy_prep_fix_csv(filename):
-    """This changes 'year' to 'Year', and fixes 'All' on single-value datasets."""
+HEADER_YEAR = 'year'
+HEADER_TOTAL = 'all'
+FOLDER_IN = 'data'
+FOLDER_OUT = 'data-wide'
+
+def tidy_prep_fix_csv(file_in, file_out):
+    """This changes 'year' to 'Year' and fixes 'All' on single-value datasets."""
 
     # To prevent Git from thinking that all lines have changed, we
     # go to a little extra trouble here to preserve newlines.
     dos_line_endings = False
-    if "\r\n" in open(filename, 'r', newline='').read():
+    if "\r\n" in open(file_in, 'r', newline='').read():
         dos_line_endings = True
 
+    file_can_be_fixed = True
+
     # Load the CSV into a dataframe and rename some columns.
-    df = pd.read_csv(filename, dtype=str)
+    df = pd.read_csv(file_in, dtype=str)
     cols = df.columns.tolist()
-    cols[0] = 'Year'
+    cols[0] = HEADER_YEAR
     if len(cols) == 2:
-        cols[1] = 'All'
+        cols[1] = HEADER_TOTAL
+    else:
+        file_can_be_fixed = False
     df.columns = cols
 
     # Export the dataframe to the same CSV file.
-    if dos_line_endings:
-        df.to_csv(filename, index=False, encoding='utf-8', line_terminator='\r\n')
-    else:
-        df.to_csv(filename, index=False, encoding='utf-8')
+    if file_can_be_fixed:
+        if dos_line_endings:
+            df.to_csv(file_out, index=False, encoding='utf-8', line_terminator='\r\n')
+        else:
+            df.to_csv(file_out, index=False, encoding='utf-8')
 
 def main():
     """Fix CSV headers for all of the indicators in the data folder."""
 
-    filenames = glob.glob("data/indicator*.csv")
+    os.makedirs(FOLDER_OUT, exist_ok=True)
+    filenames = glob.glob(FOLDER_IN + "/indicator*.csv")
     print("Attempting to fix headers in " + str(len(filenames)) + " CSV files...")
 
-    for filename in filenames:
-        tidy_prep_fix_csv(filename)
+    for file_in in filenames:
+        file_out = file_in.replace(FOLDER_IN + os.sep, FOLDER_OUT + os.sep)
+        tidy_prep_fix_csv(file_in, file_out)
 
     print("Success.")
 
