@@ -24,7 +24,7 @@ import pandas as pd
 HEADER_YEAR = 'year'
 HEADER_TOTAL = 'all'
 FOLDER_IN = 'data'
-FOLDER_OUT = 'data-wide'
+FOLDER_OUT = 'data'
 
 def tidy_prep_fix_csv(file_in, file_out):
     """This changes 'year' to 'Year' and fixes 'All' on single-value datasets."""
