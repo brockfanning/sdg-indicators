@@ -19,15 +19,6 @@ Here are some examples of valid headers:
 * year, all|unit:gdp_global, all|unit:gdp_national
 * year, all, sex:female|age:under18, sex:female|age:18to64
 etc...
-
-@TODOS:
-* Implement folder-style of disaggregation, where 2-folder occurences
-  in the /data-wide folder are treated as disaggregation categories
-  and merged into the tidy data as if they were additional columns
-  in the wide source. For example, all of the columns in:
-  /data-wide/state/maryland/3-1-1.csv
-  are merged with /data-wide/3-1-1.csv as additional columns that all
-  have the string '|state:maryland' appended onto them.
 """
 
 import glob
