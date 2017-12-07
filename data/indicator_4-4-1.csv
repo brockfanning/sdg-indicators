@@ -1,4 +1,4 @@
-Year,All,Sex:male,Sex:female,Age:24,Age:34,Age:44,Age:54,Age:65,Income:lowinc,Income:highinc
+year,i4_4_1_tech_total,i4_4_1_tech_male,i4_4_1_tech_female,i4_4_1_tech_24,i4_4_1_tech_34,i4_4_1_tech_44,i4_4_1_tech54,i4_4_1_tech_65,I4_4_1_tech_lowinc,I4_4_1_tech_highinc
 2000,,,,,,,,,,
 2001,,,,,,,,,,
 2002,,,,,,,,,,
