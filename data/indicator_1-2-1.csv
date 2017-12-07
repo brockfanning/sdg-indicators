@@ -16,7 +16,6 @@ year,age,sex,value
 2014,,,14.8
 2015,,,13.5
 2016,,,12.7
-2017,,,
 2000,,male,9.9
 2001,,male,10.4
 2002,,male,10.9
@@ -34,7 +33,6 @@ year,age,sex,value
 2014,,male,13.4
 2015,,male,12.2
 2016,,male,11.3
-2017,,male,
 2000,,female,12.6
 2001,,female,12.9
 2002,,female,13.3
@@ -52,7 +50,6 @@ year,age,sex,value
 2014,,female,16.1
 2015,,female,14.8
 2016,,female,14.0
-2017,,female,
 2000,under_18_years,,16.2
 2001,under_18_years,,16.3
 2002,under_18_years,,16.7
@@ -70,7 +67,6 @@ year,age,sex,value
 2014,under_18_years,,21.1
 2015,under_18_years,,19.7
 2016,under_18_years,,18.0
-2017,under_18_years,,
 2000,18_64_years,,9.6
 2001,18_64_years,,10.1
 2002,18_64_years,,10.6
@@ -88,7 +84,6 @@ year,age,sex,value
 2014,18_64_years,,13.5
 2015,18_64_years,,12.4
 2016,18_64_years,,11.6
-2017,18_64_years,,
 2000,65andover_years,,9.9
 2001,65andover_years,,10.1
 2002,65andover_years,,10.4
@@ -106,4 +101,3 @@ year,age,sex,value
 2014,65andover_years,,10.0
 2015,65andover_years,,8.8
 2016,65andover_years,,9.3
-2017,65andover_years,,
