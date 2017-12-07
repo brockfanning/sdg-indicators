@@ -120,6 +120,9 @@ def tidy_dataframe(df):
     cols = [HEADER_YEAR] + cols + [HEADER_VALUE]
     tidy = tidy[cols]
 
+    # Remove any rows with no value.
+    tidy = tidy.dropna(subset=[HEADER_VALUE])
+
     return tidy
 
 def tidy_csv_from_disaggregation_folder(csv, subfolder):
