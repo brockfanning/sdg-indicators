@@ -1,4 +1,4 @@
-year,i4_3_1formal_total,i4_3_1formal_male,i4_3_1formal_female,i4_3_1formal_24,i4_3_1formal_34,i4_3_1formal_44,i4_3_1formal_54,i4_3_1formal_65,i4_3_1formal_lowquartile,i4_3_1formal_midquartiles,i4_3_1formal_highquartile,i4_3_1nonformal_total,i4_3_1nonformal_male,i4_3_1nonformal_female,i4_3_1nonformal_24,i4_3_1nonformal_34,i4_3_1nonformal_44,i4_3_1nonformal_54,i4_3_1nonformal_65,i4_3_1nonformal_lowquartile,i4_3_1nonformal_midquartiles,i4_3_1nonformal_highquartile
+Year,All|Type:formal,Sex:male|Type:formal,Sex:female|Type:formal,Age:24|Type:formal,Age:34|Type:formal,Age:44|Type:formal,Age:54|Type:formal,Age:65|Type:formal,Income:lowquartile|Type:formal,Income:midquartiles|Type:formal,Income:highquartile|Type:formal,All|Type:nonformal,Sex:male|Type:nonformal,Sex:female|Type:nonformal,Age:24|Type:nonformal,Age:34|Type:nonformal,Age:44|Type:nonformal,Age:54|Type:nonformal,Age:65|Type:nonformal,Income:lowquartile|Type:nonformal,Income:midquartiles|Type:nonformal,Income:highquartile|Type:nonformal
 2000,,,,,,,,,,,,,,,,,,,,,,
 2001,,,,,,,,,,,,,,,,,,,,,,
 2002,,,,,,,,,,,,,,,,,,,,,,
