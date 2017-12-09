@@ -12,15 +12,11 @@ The files are generated and placed in an "sdmx" folder inside the data folder.
 
 import glob
 import os.path
-import pandas as pd
 import json
 import datetime
-
-# Some variables to be treated as constants in functions below.
-HEADER_YEAR = 'year'
-HEADER_VALUE = 'value'
-FOLDER = 'data'
-SUBFOLDER = 'sdmx'
+import pandas as pd
+from site_variables.csv_column_names import *
+from site_variables.folders import *
 
 def sdmx_headers_check(df):
     """This checks to see if the column headers are suitable for SDMX."""
@@ -104,7 +100,7 @@ def sdmx_csv(csv):
         return False
 
     try:
-        json_path = os.path.join(FOLDER, SUBFOLDER, json_filename)
+        json_path = os.path.join(FOLDER_DATA_SDMX_JSON, json_filename)
         with open(json_path, 'w') as json_file:
             json_file.write(json)
         print('Created ' + json_filename + ' for SDMX use.')
@@ -120,9 +116,9 @@ def main():
     status = True
 
     # Create the place to put the files.
-    os.makedirs(os.path.join(FOLDER, SUBFOLDER), exist_ok=True)
+    os.makedirs(FOLDER_DATA_SDMX_JSON, exist_ok=True)
     # Read all the files in the source location.
-    csvs = glob.glob(FOLDER + "/indicator*.csv")
+    csvs = glob.glob(FOLDER_DATA_CSV_TIDY + "/indicator*.csv")
     print("Attempting to create SDMX data for " + str(len(csvs)) + " CSV files...")
 
     for csv in csvs:
