@@ -63,13 +63,17 @@ def sdmx_json(df):
             series_dict[series_key]['attributes'] = attributes
             series_dict[series_key]['observations'] = []
 
-        observation = row[[HEADER_VALUE, HEADER_YEAR]]
-        series_dict[series_key]['observations'].append(observation.to_dict())
+        # Enforce certain keys for year and value, because the Jekyll template
+        # expects them in a certain way.
+        observation = dict()
+        observation['year'] = row[HEADER_YEAR]
+        observation['value'] = row[HEADER_VALUE]
+        series_dict[series_key]['observations'].append(observation)
 
     # TODO: Get proper ID and Sender.
-    header_dict['ID'] = 'TODO'
-    header_dict['Prepared'] = datetime.datetime.now().isoformat()
-    header_dict['Sender'] = 'TODO'
+    header_dict['id'] = 'TODO'
+    header_dict['prepared'] = datetime.datetime.now().isoformat()
+    header_dict['sender'] = 'TODO'
 
     json_dict['header'] = header_dict
     json_dict['series'] = list(series_dict.values())
