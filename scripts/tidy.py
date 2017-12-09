@@ -24,13 +24,8 @@ etc...
 import glob
 import os.path
 import pandas as pd
-
-# Some variables to be treated as constants in functions below.
-HEADER_YEAR = 'year'
-HEADER_TOTAL = 'all'
-HEADER_VALUE = 'value'
-FOLDER_IN = 'data-wide'
-FOLDER_OUT = 'data'
+from site_variables.csv_column_names import *
+from site_variables.folders import *
 
 def tidy_headers_check(df):
     """This checks to see if the column headers are suitable for tidying."""
@@ -127,7 +122,7 @@ def tidy_csv_from_disaggregation_folder(csv, subfolder):
 
     # Convert the folder structure into a column according to our syntax rules.
     # For example: state/alabama will turn into 'state:alabama'.
-    subfolder = subfolder.replace(FOLDER_IN, '')
+    subfolder = subfolder.replace(FOLDER_DATA_CSV_WIDE, '')
     subfolder = subfolder.strip(os.sep)
     subfolder_column = subfolder.replace(os.sep, ':')
 
@@ -178,7 +173,7 @@ def tidy_csv(csv, disaggregation_folders):
         return False
 
     try:
-        tidy_path = os.path.join(FOLDER_OUT, csv_filename)
+        tidy_path = os.path.join(FOLDER_DATA_CSV_TIDY, csv_filename)
         tidy.to_csv(tidy_path, index=False, encoding='utf-8')
         print('Converted ' + csv_filename + ' to tidy format.')
     except Exception as e:
@@ -193,14 +188,14 @@ def main():
     status = True
 
     # Create the place to put the files.
-    os.makedirs(FOLDER_OUT, exist_ok=True)
+    os.makedirs(FOLDER_DATA_CSV_TIDY, exist_ok=True)
     # Read all the files in the source location.
-    csvs = glob.glob(FOLDER_IN + "/indicator*.csv")
+    csvs = glob.glob(FOLDER_DATA_CSV_WIDE + "/indicator*.csv")
     print("Attempting to tidy " + str(len(csvs)) + " wide CSV files...")
 
     # Check here to see if there are any subfolder-style disaggregations.
     disaggregation_folders = dict()
-    folders = glob.glob(FOLDER_IN + '/*/')
+    folders = glob.glob(FOLDER_DATA_CSV_WIDE + '/*/')
     for folder in folders:
         subfolders = glob.glob(folder + '/*/')
         if (subfolders):
