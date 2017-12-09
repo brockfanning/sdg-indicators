@@ -1,0 +1,29 @@
+{% capture variables %}
+{% assign slug = page.indicator | replace: '.', '-' %}
+{% assign dataset_name = 'indicator_' | append: slug %}
+{% assign json = site.data.sdmx[dataset_name] %}
+{% endcapture %}{{ variables | strip_newlines }}<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message:GenericTimeSeriesData xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlsn:common="http://www.sdmx.org/resource/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message ../../../../schemas/SDMXMessage.xsd">
+
+  <message:Header>
+    <message:ID>{{ json.header.id }}</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>{{ json.header.prepared }}</message:Prepared>
+    <message:Sender id="{{ json.header.sender }}"/>
+  </message:Header>
+
+  <message:DataSet>{% for series in json.series %}
+    <generic:Series>
+      <generic:Attributes>{% for attribute in series.attributes %}
+        <generic:Value value="{{ attribute[1] }}" id="{{ attribute[0] }}">{% endfor %}
+      </generic:Attributes>{% for observation in series.observations %}
+
+      <generic:Obs>
+        <generic:ObsDimension value="{{ observation.year }}"/>
+        <generic:ObsValue value="{{ observation.value }}"/>
+      </generic:Obs>{% endfor %}
+
+    </generic:Series>{% endfor %}
+  </message:DataSet>
+
+</message:GenericTimeSeriesData>
