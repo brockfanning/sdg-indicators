@@ -10,9 +10,18 @@ so that the json files in /data/sdmx exist.
 import glob
 import os.path
 import pandas as pd
+import yaml
 
-FOLDER_DATA_SDMX_JSON = 'data/sdmx'
-FOLDER_PAGES_SDMX = 'api/sdmx'
+scripts_path = os.path.join('scripts', 'site_variables.yml')
+with open(scripts_path, 'r') as stream:
+    try:
+        site = yaml.load(stream)
+    except yaml.YAMLError as e:
+        print(e)
+
+# For more readable code below.
+FOLDER_DATA_SDMX_JSON = site['folders']['data_sdmx_json']
+FOLDER_PAGES_SDMX = site['folders']['pages_sdmx']
 
 def main():
     """Create .md versions of al the .json files in data/sdmx."""

@@ -15,8 +15,26 @@ import os.path
 import json
 import datetime
 import pandas as pd
-from site_variables.csv_column_names import *
-from site_variables.folders import *
+import yaml
+
+scripts_path = os.path.join('scripts', 'site_variables.yml')
+with open(scripts_path, 'r') as stream:
+    try:
+        site = yaml.load(stream)
+    except yaml.YAMLError as e:
+        print(e)
+
+# For more readable code below.
+HEADER_ALL = site['csv_column_names']['all']
+HEADER_YEAR = site['csv_column_names']['year']
+HEADER_VALUE = site['csv_column_names']['value']
+FOLDER_DATA_CSV_TIDY = site['folders']['data_csv_tidy']
+FOLDER_DATA_SDMX_JSON = site['folders']['data_sdmx_json']
+FOLDER_PAGES_INDICATORS = site['folders']['pages_indicators']
+META_KEYS_METHOD = site['indicator_metadata_keys']['method_of_computation']
+META_KEYS_UNIT = site['indicator_metadata_keys']['unit_of_measure']
+META_KEYS_TITLE = site['indicator_metadata_keys']['title']
+META_KEYS_METADATA_DATE = site['indicator_metadata_keys']['data_metadata_updated']
 
 def sdmx_headers_check(df):
     """This checks to see if the column headers are suitable for SDMX."""
@@ -31,24 +49,64 @@ def sdmx_headers_check(df):
 
     return True
 
-def sdmx_json(df):
+def mapped_val(key, map):
+    # Return an empty string if there is no value.
+    if key not in map:
+        return ''
+    # Otherwise return the value.
+    return map[key]
+
+def map_str(original, map):
+    # Return the original if there is no mapping.
+    if original not in map:
+        return original
+    # Otherwise return the mapped version.
+    return map[original]
+
+def sdmx_indicator_metadata(indicator_id):
+    """This gets the "front matter" metadata about an indicator."""
+
+    path = os.path.join(FOLDER_PAGES_INDICATORS, indicator_id + '.md')
+    with open(path, 'r') as file:
+        contents = file.read()
+        front_matter = contents.split('---')[1]
+        metadata = yaml.load(front_matter)
+    return metadata
+
+def sdmx_json(df, indicator_id):
     """This converts a dataframe into a json string."""
+
+    # First try to get metadata about this dataset.
+    meta = sdmx_indicator_metadata(indicator_id)
+
+    # Get any maps of concepts and values.
+    concepts = site['sdmx_concept_columns'].copy()
+    if 'sdmx_concept_columns' in meta:
+        concepts.update(meta['sdmx_concept_columns'])
+    values = site['sdmx_value_codes'].copy()
+    if 'sdmx_value_codes' in meta:
+        values.update(meta['sdmx_value_codes'])
 
     json_dict = dict()
     header_dict = dict()
     series_dict = dict()
     attributes_base = dict()
 
-    # TODO: Get global attributes from metadata, etc.
+    # Start with some SDMX concept IDs that are assumed to be necessary.
     attributes_base['FREQ'] = 'A'
-    attributes_base['UNIT_MULT'] = 'TODO'
-    attributes_base['COLL_METHOD'] = 'TODO'
-    attributes_base['TITLE'] = 'TODO'
+    attributes_base['COLL_METHOD'] = mapped_val(META_KEYS_METHOD, meta)
+    attributes_base['TITLE'] = mapped_val(META_KEYS_TITLE, meta)
+    attributes_base['UNIT_MEASURE'] = mapped_val(META_KEYS_UNIT, meta)
 
-    for index,row in df.iterrows():
+    for index, row in df.iterrows():
 
-        # Uniquely identify (hash) each combination of non-observation columns.
+        # Call out the non-observation columns.
         non_observation_cols = row.drop([HEADER_YEAR, HEADER_VALUE])
+        # Use our mapping to change column names.
+        non_observation_cols = non_observation_cols.rename(concepts)
+        # Use our mapping to change values.
+        non_observation_cols = non_observation_cols.replace(values)
+        # Uniquely identify each combination of columns.
         series_key = hash(tuple(non_observation_cols))
 
         # Initialize the series in the series dict, if it does not exist.
@@ -56,7 +114,9 @@ def sdmx_json(df):
             series_dict[series_key] = dict()
             attributes = attributes_base.copy()
             attributes.update(non_observation_cols.dropna().to_dict())
+            # Add the attributes to the series.
             series_dict[series_key]['attributes'] = attributes
+            # Initialize an empty list of observations.
             series_dict[series_key]['observations'] = []
 
         # Enforce certain keys for year and value, because the Jekyll template
@@ -66,10 +126,9 @@ def sdmx_json(df):
         observation['value'] = observation.pop(HEADER_VALUE)
         series_dict[series_key]['observations'].append(observation)
 
-    # TODO: Get proper ID and Sender.
-    header_dict['id'] = 'TODO'
-    header_dict['prepared'] = datetime.datetime.now().isoformat()
-    header_dict['sender'] = 'TODO'
+    header_dict['id'] = indicator_id
+    header_dict['prepared'] = mapped_val(META_KEYS_METADATA_DATE, meta)
+    header_dict['sender'] = '???' #TODO
 
     json_dict['header'] = header_dict
     json_dict['series'] = list(series_dict.values())
@@ -94,7 +153,9 @@ def sdmx_csv(csv):
         return False
 
     try:
-        json = sdmx_json(df)
+        indicator_id = csv_filename.split('.')[0]
+        indicator_id = indicator_id.split('indicator_')[1]
+        json = sdmx_json(df, indicator_id)
     except Exception as e:
         print(csv, e)
         return False
