@@ -24,8 +24,21 @@ etc...
 import glob
 import os.path
 import pandas as pd
-from site_variables.csv_column_names import *
-from site_variables.folders import *
+import yaml
+
+scripts_path = os.path.join('scripts', 'site_variables.yml')
+with open(scripts_path, 'r') as stream:
+    try:
+        site = yaml.load(stream)
+    except yaml.YAMLError as e:
+        print(e)
+
+# For more readable code below.
+HEADER_ALL = site['csv_column_names']['all']
+HEADER_YEAR = site['csv_column_names']['year']
+HEADER_VALUE = site['csv_column_names']['value']
+FOLDER_DATA_CSV_TIDY = site['folders']['data_csv_tidy']
+FOLDER_DATA_CSV_WIDE = site['folders']['data_csv_wide']
 
 def tidy_headers_check(df):
     """This checks to see if the column headers are suitable for tidying."""
@@ -35,8 +48,8 @@ def tidy_headers_check(df):
     if HEADER_YEAR not in columns:
         return False
 
-    if HEADER_TOTAL not in columns:
-        return any(column.startswith(HEADER_TOTAL + '|') for column in columns)
+    if HEADER_ALL not in columns:
+        return any(column.startswith(HEADER_ALL + '|') for column in columns)
 
     return True
 
@@ -63,10 +76,10 @@ def tidy_dataframe(df):
 
     tidy = tidy_blank_dataframe()
     for column in df.columns.tolist():
-        if column == HEADER_TOTAL:
+        if column == HEADER_ALL:
             # The 'all' column gets converted into rows without any categories.
-            melted = tidy_melt(df, HEADER_TOTAL, HEADER_TOTAL)
-            del melted[HEADER_TOTAL]
+            melted = tidy_melt(df, HEADER_ALL, HEADER_ALL)
+            del melted[HEADER_ALL]
             tidy = tidy.append(melted)
         elif '|' not in column and ':' in column:
             # Columns matching the pattern 'category:value' get converted into
@@ -84,11 +97,11 @@ def tidy_dataframe(df):
             merged = tidy_blank_dataframe()
             categories_in_column = column.split('|')
             for category_in_column in categories_in_column:
-                if category_in_column == HEADER_TOTAL:
+                if category_in_column == HEADER_ALL:
                     # Handle the case where the 'all' column has units.
                     # Eg: all|unit:gdp_global, all|unit:gdp_national.
-                    melted = tidy_melt(df, column, HEADER_TOTAL)
-                    del melted[HEADER_TOTAL]
+                    melted = tidy_melt(df, column, HEADER_ALL)
+                    del melted[HEADER_ALL]
                     merged = merged.merge(melted, on=[HEADER_YEAR, HEADER_VALUE], how='outer')
                 else:
                     category_parts = category_in_column.split(':')
@@ -130,10 +143,10 @@ def tidy_csv_from_disaggregation_folder(csv, subfolder):
     columns = dict()
     for column in df.columns.tolist():
         fixed = column
-        if column == HEADER_TOTAL:
+        if column == HEADER_ALL:
             fixed = subfolder_column
-        elif column.startswith(HEADER_TOTAL + '|'):
-            fixed = column.replace(HEADER_TOTAL + '|', subfolder_column + '|')
+        elif column.startswith(HEADER_ALL + '|'):
+            fixed = column.replace(HEADER_ALL + '|', subfolder_column + '|')
         elif column == HEADER_YEAR:
             fixed = HEADER_YEAR
         else:
