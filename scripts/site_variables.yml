@@ -1,0 +1,59 @@
+# The files in this folder are meant to be customized for your needs. The syntax
+# used here is YAML, which is the same as the "front matter" used at the top of
+# Jekyll content.
+
+# Here you can inform the platform about your particular naming convention in
+# CSV files. These settings are case sensitive. For example, if the naming
+# convention in your CSV data is to use 'Year' for the year column, you would
+# want this setting:
+#   year: Year
+csv_column_names:
+  year:   year
+  all:    all
+  value:  value
+  unit:   unit
+
+# Here you can inform the scripts about where certain types of files are stored
+# in the repository. The paths below are all relative from the root of the repo.
+# These paths can be written as Unix-style (using forward-slashes) and the
+# scripts will adjust automatically when run on Windows computers.
+folders:
+  data_csv_wide:      data-wide
+  data_csv_tidy:      data
+  data_sdmx_json:     data/sdmx
+  pages_sdmx:         api/sdmx
+  pages_indicators:   _indicators
+
+# Here you can inform the scripts about the keys being used in your indicator's
+# "front matter" to control metadata. For example, if the key you are using for
+# unit of measure is 'measuring_unit' you would want the following setting:
+#   unit_of_measure: measuring_unit
+indicator_metadata_keys:
+  title:                  title
+  method_of_computation:  us_method_of_computation
+  data_metadata_updated:  date_metadata_updated
+  unit_of_measure:        unit_of_measure
+
+# Here you inform the scripts about how to properly "translate" CSV column names
+# into SDMX "concept" IDs. This is case-sensitive. For example, if your
+# indicator CSV files tend to use "Age" for CSV columns about age, you might
+# want something like this:
+#   Age: CL_AGE
+# NOTE: This "mapping" can be extended and overridden for each individual
+# indicator, by including the same structure in the "front matter" in the
+# indicator's .md file in the _indicators folder.
+sdmx_concept_columns:
+  age: CL_AGE
+  sex: CL_SEX
+
+# Here you inform the scripts about how to properly "translate" CSV cells
+# (values) into the SDMX "codes" that make up a "code list". These settings are
+# case-sensitive. For example, if your indicator CSV files tend to use
+# "Female" for the female gender, you might want something like this:
+#   Female: F
+# NOTE: This "mapping" can be extended and overridden for each individual
+# indicator, by including the same structure in the "front matter" in the
+# indicator's .md file in the _indicators folder.
+sdmx_value_codes:
+  female: F
+  male: M
