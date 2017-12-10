@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "3-a-1",
+        "prepared": "October 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of persons who are daily smokers is based on responses to two questions from the National Health Interview Survey: \u201cHave you smoked at least 100 cigarettes in your entire life?\u201d and \u201cDo you now smoke cigarettes every day, some days, or not at all?\u201d Daily smokers are adults who have smoked 100 cigarettes in their lifetime and currently smoke every day.  Percentages are generated using sampling survey weights to make nationally representative population estimates.",
+                "TITLE": "Age-standardized prevalence of current tobacco use among persons aged 15 years and older",
+                "UNIT_MEASURE": ""
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 19.1
+                },
+                {
+                    "year": 2001.0,
+                    "value": 18.7
+                },
+                {
+                    "year": 2002.0,
+                    "value": 18.4
+                },
+                {
+                    "year": 2003.0,
+                    "value": 17.5
+                },
+                {
+                    "year": 2004.0,
+                    "value": 17.0
+                },
+                {
+                    "year": 2005.0,
+                    "value": 16.9
+                },
+                {
+                    "year": 2006.0,
+                    "value": 16.7
+                },
+                {
+                    "year": 2007.0,
+                    "value": 15.4
+                },
+                {
+                    "year": 2008.0,
+                    "value": 16.5
+                },
+                {
+                    "year": 2009.0,
+                    "value": 16.1
+                },
+                {
+                    "year": 2010.0,
+                    "value": 15.1
+                },
+                {
+                    "year": 2011.0,
+                    "value": 14.8
+                },
+                {
+                    "year": 2012.0,
+                    "value": 14.2
+                },
+                {
+                    "year": 2013.0,
+                    "value": 13.7
+                },
+                {
+                    "year": 2014.0,
+                    "value": 12.9
+                },
+                {
+                    "year": 2015.0,
+                    "value": 11.4
+                },
+                {
+                    "year": 2016.0,
+                    "value": 11.8
+                }
+            ]
+        }
+    ]
+}

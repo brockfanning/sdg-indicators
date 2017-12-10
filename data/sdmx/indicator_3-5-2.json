@@ -1,0 +1,47 @@
+{
+    "header": {
+        "id": "3-5-2",
+        "prepared": "2017-10-10",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The National Survey on Drug Use and Health (NSDUH) is an annual survey of the civilian, noninstitutionalized population of the United States aged 12 years old or older. The survey covers residents of households and individuals in noninstitutional group quarters (e.g., shelters, boarding houses, college dormitories, migratory workers' camps, halfway houses). The survey excludes people with no fixed address (e.g., homeless people not in shelters), military personnel on active duty, and residents of institutional group quarters, such as jails, nursing homes, mental institutions, and long-term care hospitals. The NSDUH employs a stratified multistage area probability sample that is designed to be representative of both the nation as a whole and for each of the 50 states and the District of Columbia.",
+                "TITLE": "Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol",
+                "UNIT_MEASURE": "Current (past month or past 30 days) binge alcohol and heavy alcohol use data. The 30 days reference the date of interview completed through the annual NSDUH data collection.",
+                "unit": "current_binge_alcohol"
+            },
+            "observations": [
+                {
+                    "year": 2015,
+                    "value": 26.0
+                },
+                {
+                    "year": 2016,
+                    "value": 25.3
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The National Survey on Drug Use and Health (NSDUH) is an annual survey of the civilian, noninstitutionalized population of the United States aged 12 years old or older. The survey covers residents of households and individuals in noninstitutional group quarters (e.g., shelters, boarding houses, college dormitories, migratory workers' camps, halfway houses). The survey excludes people with no fixed address (e.g., homeless people not in shelters), military personnel on active duty, and residents of institutional group quarters, such as jails, nursing homes, mental institutions, and long-term care hospitals. The NSDUH employs a stratified multistage area probability sample that is designed to be representative of both the nation as a whole and for each of the 50 states and the District of Columbia.",
+                "TITLE": "Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol",
+                "UNIT_MEASURE": "Current (past month or past 30 days) binge alcohol and heavy alcohol use data. The 30 days reference the date of interview completed through the annual NSDUH data collection.",
+                "unit": "current_heavy_alcohol"
+            },
+            "observations": [
+                {
+                    "year": 2015,
+                    "value": 6.8
+                },
+                {
+                    "year": 2016,
+                    "value": 6.3
+                }
+            ]
+        }
+    ]
+}

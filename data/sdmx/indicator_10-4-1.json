@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "10-4-1",
+        "prepared": "10/2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "",
+                "TITLE": "Labour share of GDP, comprising wages and social protection transfers",
+                "UNIT_MEASURE": "Proportion"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 0.5694
+                },
+                {
+                    "year": 2001.0,
+                    "value": 0.5693
+                },
+                {
+                    "year": 2002.0,
+                    "value": 0.5595
+                },
+                {
+                    "year": 2003.0,
+                    "value": 0.5529
+                },
+                {
+                    "year": 2004.0,
+                    "value": 0.5491
+                },
+                {
+                    "year": 2005.0,
+                    "value": 0.5412
+                },
+                {
+                    "year": 2006.0,
+                    "value": 0.5415
+                },
+                {
+                    "year": 2007.0,
+                    "value": 0.5456
+                },
+                {
+                    "year": 2008.0,
+                    "value": 0.5488
+                },
+                {
+                    "year": 2009.0,
+                    "value": 0.5401
+                },
+                {
+                    "year": 2010.0,
+                    "value": 0.532
+                },
+                {
+                    "year": 2011.0,
+                    "value": 0.5329
+                },
+                {
+                    "year": 2012.0,
+                    "value": 0.5329
+                },
+                {
+                    "year": 2013.0,
+                    "value": 0.5298
+                },
+                {
+                    "year": 2014.0,
+                    "value": 0.5311
+                },
+                {
+                    "year": 2015.0,
+                    "value": 0.5358
+                },
+                {
+                    "year": 2016.0,
+                    "value": 0.5358
+                }
+            ]
+        }
+    ]
+}

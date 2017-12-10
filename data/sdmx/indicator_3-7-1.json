@@ -1,0 +1,31 @@
+{
+    "header": {
+        "id": "3-7-1",
+        "prepared": "October 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Measures the contraceptive method used (if any) in the month of the interview (not at a specific act of sexual intercourse) among female participants aged 15-44 in the National Survey of Family Growth. The recode variable used to identify any contraception use was CONSTAT1.  Nationally representative estimates are produced using sample survey weights.",
+                "TITLE": "Proportion of women of reproductive age (aged 15-49 years) who have their need for family planning satisfied with modern methods",
+                "UNIT_MEASURE": ""
+            },
+            "observations": [
+                {
+                    "year": 2002.0,
+                    "value": 61.9
+                },
+                {
+                    "year": 2008.0,
+                    "value": 62.2
+                },
+                {
+                    "year": 2013.0,
+                    "value": 61.6
+                }
+            ]
+        }
+    ]
+}

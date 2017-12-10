@@ -1,0 +1,111 @@
+{
+    "header": {
+        "id": "8-6-1",
+        "prepared": "November 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Source: Current Population Survey (CPS) - a monthly national sample household survey.   Technical Documentation and Methodology: https://www.bls.gov/cps/documentation.htm                                                   Indicator = 100*(16 to 24 years, Not Enrolled in School, Unemployed or Not in the Labor Force)/(Total, 16 to 24 years)",
+                "TITLE": "Proportion of youth (aged 15-24 years) not in education, employment or training",
+                "UNIT_MEASURE": "Percent"
+            },
+            "observations": [
+                {
+                    "year": 1994.0,
+                    "value": 17.2
+                },
+                {
+                    "year": 1995.0,
+                    "value": 16.9
+                },
+                {
+                    "year": 1996.0,
+                    "value": 16.2
+                },
+                {
+                    "year": 1997.0,
+                    "value": 15.3
+                },
+                {
+                    "year": 1998.0,
+                    "value": 14.6
+                },
+                {
+                    "year": 1999.0,
+                    "value": 14.3
+                },
+                {
+                    "year": 2000.0,
+                    "value": 14.3
+                },
+                {
+                    "year": 2001.0,
+                    "value": 14.9
+                },
+                {
+                    "year": 2002.0,
+                    "value": 15.4
+                },
+                {
+                    "year": 2003.0,
+                    "value": 15.8
+                },
+                {
+                    "year": 2004.0,
+                    "value": 15.2
+                },
+                {
+                    "year": 2005.0,
+                    "value": 15.5
+                },
+                {
+                    "year": 2006.0,
+                    "value": 14.8
+                },
+                {
+                    "year": 2007.0,
+                    "value": 14.5
+                },
+                {
+                    "year": 2008.0,
+                    "value": 15.4
+                },
+                {
+                    "year": 2009.0,
+                    "value": 17.5
+                },
+                {
+                    "year": 2010.0,
+                    "value": 17.6
+                },
+                {
+                    "year": 2011.0,
+                    "value": 17.1
+                },
+                {
+                    "year": 2012.0,
+                    "value": 16.5
+                },
+                {
+                    "year": 2013.0,
+                    "value": 17.6
+                },
+                {
+                    "year": 2014.0,
+                    "value": 16.6
+                },
+                {
+                    "year": 2015.0,
+                    "value": 15.7
+                },
+                {
+                    "year": 2016.0,
+                    "value": 15.3
+                }
+            ]
+        }
+    ]
+}

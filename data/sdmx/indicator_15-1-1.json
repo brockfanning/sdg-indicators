@@ -1,0 +1,27 @@
+{
+    "header": {
+        "id": "15-1-1",
+        "prepared": "",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Total U.S. Forest Area, as defined and measured by USDA Forest Service Forest Inventory and Analysis Program and reported to UN FAO, is divided by Total U.S. Area minus Inland Water Bodies, as defined and measured by U.S. Census and reported to UN FAO: [Total U.S. Forest Area] / [(Total U.S. Area) \u2013 (Inland Water Bodies)]. Resulting measures are converted from acres to hectares.",
+                "TITLE": "Forest area as a proportion of total land area",
+                "UNIT_MEASURE": "Percent"
+            },
+            "observations": [
+                {
+                    "year": 2010.0,
+                    "value": 33.7
+                },
+                {
+                    "year": 2015.0,
+                    "value": 33.8
+                }
+            ]
+        }
+    ]
+}

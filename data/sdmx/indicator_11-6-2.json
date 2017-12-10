@@ -1,0 +1,167 @@
+{
+    "header": {
+        "id": "11-6-2",
+        "prepared": "2017-10-11",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Steps for computing the indicator: 1. Retrieved monitor-level annual mean values from EPA's Air Quality System. (These annual means are the average of the four calendar quarter averages. At least 11 24-hour observations in each calendar quarter is required for the annual mean to be valid.  Otherwise it is invalid and not used.) 2. The highest annual mean among all monitors in each city (using Core Based Statistical Areas as defined by the United States Census Bureau) was computed to represent each city. 3. For each city, multiplied the maximum annual mean by the 2010 population. 4. Summed this population-weighted annual mean across all cities with data. 5. Divided this sum by the sum of all cities with data. 6. Resulting value is an average population-weighted concentration.",
+                "TITLE": "Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)",
+                "UNIT_MEASURE": "micrograms per cubic meter",
+                "unit": "annl_mn_pm_cities_pw_pm2_5"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 15.7
+                },
+                {
+                    "year": 2001,
+                    "value": 15.4
+                },
+                {
+                    "year": 2002,
+                    "value": 14.4
+                },
+                {
+                    "year": 2003,
+                    "value": 14.2
+                },
+                {
+                    "year": 2004,
+                    "value": 13.7
+                },
+                {
+                    "year": 2005,
+                    "value": 14.3
+                },
+                {
+                    "year": 2006,
+                    "value": 13.0
+                },
+                {
+                    "year": 2007,
+                    "value": 13.2
+                },
+                {
+                    "year": 2008,
+                    "value": 12.1
+                },
+                {
+                    "year": 2009,
+                    "value": 11.0
+                },
+                {
+                    "year": 2010,
+                    "value": 10.9
+                },
+                {
+                    "year": 2011,
+                    "value": 11.1
+                },
+                {
+                    "year": 2012,
+                    "value": 10.5
+                },
+                {
+                    "year": 2013,
+                    "value": 10.3
+                },
+                {
+                    "year": 2014,
+                    "value": 9.8
+                },
+                {
+                    "year": 2015,
+                    "value": 9.9
+                },
+                {
+                    "year": 2016,
+                    "value": 9.0
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Steps for computing the indicator: 1. Retrieved monitor-level annual mean values from EPA's Air Quality System. (These annual means are the average of the four calendar quarter averages. At least 11 24-hour observations in each calendar quarter is required for the annual mean to be valid.  Otherwise it is invalid and not used.) 2. The highest annual mean among all monitors in each city (using Core Based Statistical Areas as defined by the United States Census Bureau) was computed to represent each city. 3. For each city, multiplied the maximum annual mean by the 2010 population. 4. Summed this population-weighted annual mean across all cities with data. 5. Divided this sum by the sum of all cities with data. 6. Resulting value is an average population-weighted concentration.",
+                "TITLE": "Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)",
+                "UNIT_MEASURE": "micrograms per cubic meter",
+                "unit": "annl_mn_pm_cities_pw_pm10"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 33.3
+                },
+                {
+                    "year": 2001,
+                    "value": 31.9
+                },
+                {
+                    "year": 2002,
+                    "value": 30.3
+                },
+                {
+                    "year": 2003,
+                    "value": 31.8
+                },
+                {
+                    "year": 2004,
+                    "value": 29.6
+                },
+                {
+                    "year": 2005,
+                    "value": 32.0
+                },
+                {
+                    "year": 2006,
+                    "value": 34.6
+                },
+                {
+                    "year": 2007,
+                    "value": 33.1
+                },
+                {
+                    "year": 2008,
+                    "value": 30.5
+                },
+                {
+                    "year": 2009,
+                    "value": 27.5
+                },
+                {
+                    "year": 2010,
+                    "value": 26.4
+                },
+                {
+                    "year": 2011,
+                    "value": 27.9
+                },
+                {
+                    "year": 2012,
+                    "value": 26.7
+                },
+                {
+                    "year": 2013,
+                    "value": 25.0
+                },
+                {
+                    "year": 2014,
+                    "value": 25.1
+                },
+                {
+                    "year": 2015,
+                    "value": 24.9
+                },
+                {
+                    "year": 2016,
+                    "value": 24.7
+                }
+            ]
+        }
+    ]
+}

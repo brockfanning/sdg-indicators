@@ -1,0 +1,59 @@
+{
+    "header": {
+        "id": "17-8-1",
+        "prepared": "2017-10-03",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data are derived from the 1) Computer and Internet Use and 2) School Enrollment and Internet Use Supplements of the Current Population Survey (CPS). The Census Bureau and Bureau of Labor Statistics jointly sponsor the CPS. The Census Bureau and National Center for Education Statistics jointly sponsored the 2003, 2007, and 2009-2010 supplements. The National Telecommunications and Information Administration sponsored the 2011-2013 and 2015 supplements. Data are collected by the Census Bureau. Individuals using the Internet: Persons age 3 and over who use the Internet from any location. Metadata sources: http://www.census.gov/programs-surveys/cps/technical-documentation/complete.html",
+                "TITLE": "Proportion of individuals using the Internet",
+                "UNIT_MEASURE": "Proportion"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 0.44
+                },
+                {
+                    "year": 2001.0,
+                    "value": 0.54
+                },
+                {
+                    "year": 2003.0,
+                    "value": 0.59
+                },
+                {
+                    "year": 2007.0,
+                    "value": 0.62
+                },
+                {
+                    "year": 2009.0,
+                    "value": 0.68
+                },
+                {
+                    "year": 2010.0,
+                    "value": 0.72
+                },
+                {
+                    "year": 2011.0,
+                    "value": 0.7
+                },
+                {
+                    "year": 2012.0,
+                    "value": 0.75
+                },
+                {
+                    "year": 2013.0,
+                    "value": 0.71
+                },
+                {
+                    "year": 2015.0,
+                    "value": 0.75
+                }
+            ]
+        }
+    ]
+}

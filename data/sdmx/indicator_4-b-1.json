@@ -1,0 +1,69 @@
+{
+    "header": {
+        "id": "4-b-1",
+        "prepared": "November 2016",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data available from budget documents.",
+                "TITLE": "Volume of official development assistance flows for scholarships by sector and type of study",
+                "UNIT_MEASURE": "Dollar"
+            },
+            "observations": [
+                {
+                    "year": 2013,
+                    "value": 1151645000
+                },
+                {
+                    "year": 2014,
+                    "value": 974553000
+                },
+                {
+                    "year": 2015,
+                    "value": 905674000
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data available from budget documents.",
+                "TITLE": "Volume of official development assistance flows for scholarships by sector and type of study",
+                "UNIT_MEASURE": "Dollar",
+                "type": "basic"
+            },
+            "observations": [
+                {
+                    "year": 2014,
+                    "value": 727746000
+                },
+                {
+                    "year": 2015,
+                    "value": 675671000
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data available from budget documents.",
+                "TITLE": "Volume of official development assistance flows for scholarships by sector and type of study",
+                "UNIT_MEASURE": "Dollar",
+                "type": "higher"
+            },
+            "observations": [
+                {
+                    "year": 2014,
+                    "value": 246807000
+                },
+                {
+                    "year": 2015,
+                    "value": 230003000
+                }
+            ]
+        }
+    ]
+}

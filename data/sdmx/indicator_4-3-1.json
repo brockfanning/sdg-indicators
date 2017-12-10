@@ -1,0 +1,359 @@
+{
+    "header": {
+        "id": "4-3-1",
+        "prepared": "11/2016",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 26
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_SEX": "M",
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 24
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_SEX": "F",
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 26
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 24.0,
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 73
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 34.0,
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 27
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 44.0,
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 15
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 54.0,
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 8
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 65.0,
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "income": "lowquartile",
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 48
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "income": "midquartiles",
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 21
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "income": "highquartile",
+                "type": "formal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 12
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 58
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_SEX": "M",
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 57
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_SEX": "F",
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 55
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 24.0,
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 64
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 34.0,
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 60
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 44.0,
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 57
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 54.0,
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 54
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 65.0,
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 49
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "income": "lowquartile",
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 54
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "income": "midquartiles",
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 62
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage of 16- to 65-year-olds enrolling in formal or nonformal programs during the past year based on data collected through PIAAC. Data are based on weighted percentage of respondents in the survey. Standard errors available upon request.",
+                "TITLE": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
+                "UNIT_MEASURE": "Percentage",
+                "income": "highquartile",
+                "type": "nonformal"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 80
+                }
+            ]
+        }
+    ]
+}

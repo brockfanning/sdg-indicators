@@ -1,0 +1,83 @@
+{
+    "header": {
+        "id": "3-2-1",
+        "prepared": "",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Number of deaths to infants and children younger than 5 years divided by the number of births for a given year, expressed per 1,000 live births",
+                "TITLE": "Under-five mortality rate",
+                "UNIT_MEASURE": "Individual"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 8.13
+                },
+                {
+                    "year": 2001.0,
+                    "value": 8.12
+                },
+                {
+                    "year": 2002.0,
+                    "value": 8.18
+                },
+                {
+                    "year": 2003.0,
+                    "value": 8.07
+                },
+                {
+                    "year": 2004.0,
+                    "value": 7.96
+                },
+                {
+                    "year": 2005.0,
+                    "value": 8.02
+                },
+                {
+                    "year": 2006.0,
+                    "value": 7.77
+                },
+                {
+                    "year": 2007.0,
+                    "value": 7.84
+                },
+                {
+                    "year": 2008.0,
+                    "value": 7.72
+                },
+                {
+                    "year": 2009.0,
+                    "value": 7.47
+                },
+                {
+                    "year": 2010.0,
+                    "value": 7.23
+                },
+                {
+                    "year": 2011.0,
+                    "value": 7.14
+                },
+                {
+                    "year": 2012.0,
+                    "value": 7.04
+                },
+                {
+                    "year": 2013.0,
+                    "value": 7.0
+                },
+                {
+                    "year": 2014.0,
+                    "value": 6.78
+                },
+                {
+                    "year": 2015.0,
+                    "value": 6.89
+                }
+            ]
+        }
+    ]
+}

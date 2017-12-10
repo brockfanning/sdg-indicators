@@ -1,0 +1,51 @@
+{
+    "header": {
+        "id": "16-3-2",
+        "prepared": "January 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Percentage unsentenced of total inmates held in prisons and jails (excludes youth held in juvenile facilities, persons held in military facilities, persons detained in Immigration and Customs operated facilities, and persons held in US territories and commonwealths).",
+                "TITLE": "Unsentenced detainees as proportion of overall prison population",
+                "UNIT_MEASURE": "Persons held in prison or jail"
+            },
+            "observations": [
+                {
+                    "year": 2007.0,
+                    "value": 22.3
+                },
+                {
+                    "year": 2008.0,
+                    "value": 22.4
+                },
+                {
+                    "year": 2009.0,
+                    "value": 21.9
+                },
+                {
+                    "year": 2010.0,
+                    "value": 21.2
+                },
+                {
+                    "year": 2011.0,
+                    "value": 20.9
+                },
+                {
+                    "year": 2012.0,
+                    "value": 21.4
+                },
+                {
+                    "year": 2013.0,
+                    "value": 21.5
+                },
+                {
+                    "year": 2014.0,
+                    "value": 22.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "header": {
+        "id": "3-c-1",
+        "prepared": "December 2016",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data are derived from several data sources. Physician information is from the American Medical Association Physician Master file. Physician assistant, advanced practice registered nurse, nurse practitioner,clinical nurse specialist,certified registered nurse anesthetists, and advance practice nurse midwife data are from the Centers from Medicare and Medicaid Services (CMS) National Provider Identification (NPI) File. The Administrative Simplification provisions of the Health Insurance Portability and Accountability Act of 1996 (HIPAA) mandated the adoption of standard unique identifiers for health care providers and health plans. The NPI is a unique identifier developed by CMS. Covered health care providers and all health plans and health care clearinghouses must use the NPIs in the administrative and financial transactions adopted under HIPAA. 2010 Population information is from 2010 Census Redistricting Data (Public Law 94-171) Summary File, U.S. Census Bureau and 2011-2014 Population Estimates are from the Bureau of the Census and include the calculated number of people living in an area as of July 1. The estimated population is calculated from a components of change model that incorporates information on natural change (births, deaths) and net migration (net internal migration, net international migration) that has occurred in an area since a Census 2000 reference date for 2001-2009 estimates and Census 2010 for 2011-2014 estimates. 2013 metro/non-metro information is from the U.S. Department of Agriculture\u2019s Economic Research Service (ERS) website:  http://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx.",
+                "TITLE": "Health worker density and distribution",
+                "UNIT_MEASURE": "Number of health care workers (per 1000 population)"
+            },
+            "observations": [
+                {
+                    "year": 2010,
+                    "value": 4.108198642
+                },
+                {
+                    "year": 2011,
+                    "value": 4.220517055
+                },
+                {
+                    "year": 2012,
+                    "value": 4.366281292
+                },
+                {
+                    "year": 2013,
+                    "value": 4.522697153
+                },
+                {
+                    "year": 2014,
+                    "value": 4.667198
+                },
+                {
+                    "year": 2015,
+                    "value": 4.845478557
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data are derived from several data sources. Physician information is from the American Medical Association Physician Master file. Physician assistant, advanced practice registered nurse, nurse practitioner,clinical nurse specialist,certified registered nurse anesthetists, and advance practice nurse midwife data are from the Centers from Medicare and Medicaid Services (CMS) National Provider Identification (NPI) File. The Administrative Simplification provisions of the Health Insurance Portability and Accountability Act of 1996 (HIPAA) mandated the adoption of standard unique identifiers for health care providers and health plans. The NPI is a unique identifier developed by CMS. Covered health care providers and all health plans and health care clearinghouses must use the NPIs in the administrative and financial transactions adopted under HIPAA. 2010 Population information is from 2010 Census Redistricting Data (Public Law 94-171) Summary File, U.S. Census Bureau and 2011-2014 Population Estimates are from the Bureau of the Census and include the calculated number of people living in an area as of July 1. The estimated population is calculated from a components of change model that incorporates information on natural change (births, deaths) and net migration (net internal migration, net international migration) that has occurred in an area since a Census 2000 reference date for 2001-2009 estimates and Census 2010 for 2011-2014 estimates. 2013 metro/non-metro information is from the U.S. Department of Agriculture\u2019s Economic Research Service (ERS) website:  http://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx.",
+                "TITLE": "Health worker density and distribution",
+                "UNIT_MEASURE": "Number of health care workers (per 1000 population)",
+                "density": "healthworker_dist_metro"
+            },
+            "observations": [
+                {
+                    "year": 2010,
+                    "value": 4.435708
+                },
+                {
+                    "year": 2011,
+                    "value": 4.551183
+                },
+                {
+                    "year": 2012,
+                    "value": 4.7023470000000005
+                },
+                {
+                    "year": 2013,
+                    "value": 4.865181
+                },
+                {
+                    "year": 2014,
+                    "value": 5.014774
+                },
+                {
+                    "year": 2015,
+                    "value": 5.1994095289999995
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data are derived from several data sources. Physician information is from the American Medical Association Physician Master file. Physician assistant, advanced practice registered nurse, nurse practitioner,clinical nurse specialist,certified registered nurse anesthetists, and advance practice nurse midwife data are from the Centers from Medicare and Medicaid Services (CMS) National Provider Identification (NPI) File. The Administrative Simplification provisions of the Health Insurance Portability and Accountability Act of 1996 (HIPAA) mandated the adoption of standard unique identifiers for health care providers and health plans. The NPI is a unique identifier developed by CMS. Covered health care providers and all health plans and health care clearinghouses must use the NPIs in the administrative and financial transactions adopted under HIPAA. 2010 Population information is from 2010 Census Redistricting Data (Public Law 94-171) Summary File, U.S. Census Bureau and 2011-2014 Population Estimates are from the Bureau of the Census and include the calculated number of people living in an area as of July 1. The estimated population is calculated from a components of change model that incorporates information on natural change (births, deaths) and net migration (net internal migration, net international migration) that has occurred in an area since a Census 2000 reference date for 2001-2009 estimates and Census 2010 for 2011-2014 estimates. 2013 metro/non-metro information is from the U.S. Department of Agriculture\u2019s Economic Research Service (ERS) website:  http://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx.",
+                "TITLE": "Health worker density and distribution",
+                "UNIT_MEASURE": "Number of health care workers (per 1000 population)",
+                "density": "healthworker_dist_nonmetro"
+            },
+            "observations": [
+                {
+                    "year": 2010,
+                    "value": 2.251444
+                },
+                {
+                    "year": 2011,
+                    "value": 2.326877
+                },
+                {
+                    "year": 2012,
+                    "value": 2.4213400000000003
+                },
+                {
+                    "year": 2013,
+                    "value": 2.522589
+                },
+                {
+                    "year": 2014,
+                    "value": 2.615357
+                },
+                {
+                    "year": 2015,
+                    "value": 2.735288971
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "header": {
+        "id": "1-5-3",
+        "prepared": "January 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "US Presidential Policy Directive 8: National Preparedness, including the National Preparedness Goal and the National Preparedness System",
+                "TITLE": "Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015-2030",
+                "UNIT_MEASURE": "Yes/no"
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": "no"
+                },
+                {
+                    "year": 2008,
+                    "value": "no"
+                },
+                {
+                    "year": 2009,
+                    "value": "no"
+                },
+                {
+                    "year": 2010,
+                    "value": "no"
+                },
+                {
+                    "year": 2011,
+                    "value": "yes"
+                },
+                {
+                    "year": 2012,
+                    "value": "yes"
+                },
+                {
+                    "year": 2013,
+                    "value": "yes"
+                },
+                {
+                    "year": 2014,
+                    "value": "yes"
+                },
+                {
+                    "year": 2015,
+                    "value": "yes"
+                },
+                {
+                    "year": 2016,
+                    "value": "yes"
+                },
+                {
+                    "year": 2017,
+                    "value": "yes"
+                }
+            ]
+        }
+    ]
+}

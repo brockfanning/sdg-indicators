@@ -1,0 +1,55 @@
+{
+    "header": {
+        "id": "13-b-1",
+        "prepared": "",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "",
+                "TITLE": "Number of least developed countries and small island developing States that are receiving specialized support, and amount of support, including finance, technology and capacity-building, for mechanisms for raising capacities for effective climate change-related planning and management, including focusing on women, youth and local and marginalized communities",
+                "UNIT_MEASURE": ""
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2008,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2009,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2010,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2011,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2012,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2013,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2014,
+                    "value": "not_applicable"
+                },
+                {
+                    "year": 2015,
+                    "value": "not_applicable"
+                }
+            ]
+        }
+    ]
+}

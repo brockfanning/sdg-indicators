@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "17-4-1",
+        "prepared": "10/2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Net U.S. acquisition of debt securities divided by exports (goods and services)",
+                "TITLE": "Debt service as a proportion of exports of goods and services",
+                "UNIT_MEASURE": "Percentage"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 4.8
+                },
+                {
+                    "year": 2001.0,
+                    "value": -0.2
+                },
+                {
+                    "year": 2002.0,
+                    "value": 6.2
+                },
+                {
+                    "year": 2003.0,
+                    "value": 1.4
+                },
+                {
+                    "year": 2004.0,
+                    "value": 9.1
+                },
+                {
+                    "year": 2005.0,
+                    "value": 6.2
+                },
+                {
+                    "year": 2006.0,
+                    "value": 24.1
+                },
+                {
+                    "year": 2007.0,
+                    "value": 14.0
+                },
+                {
+                    "year": 2008.0,
+                    "value": -13.3
+                },
+                {
+                    "year": 2009.0,
+                    "value": 19.7
+                },
+                {
+                    "year": 2010.0,
+                    "value": 6.5
+                },
+                {
+                    "year": 2011.0,
+                    "value": 3.7
+                },
+                {
+                    "year": 2012.0,
+                    "value": 6.6
+                },
+                {
+                    "year": 2013.0,
+                    "value": 8.5
+                },
+                {
+                    "year": 2014.0,
+                    "value": 6.4
+                },
+                {
+                    "year": 2015.0,
+                    "value": -1.6
+                },
+                {
+                    "year": 2016.0,
+                    "value": 1.2
+                }
+            ]
+        }
+    ]
+}

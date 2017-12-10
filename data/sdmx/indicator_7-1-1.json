@@ -1,0 +1,51 @@
+{
+    "header": {
+        "id": "7-1-1",
+        "prepared": "November 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted Frequency of sample units answering 'yes' to whether the household uses electricity (variable USELECT), divided  by total households.  Weight is AHS variable WGT90GEO.  Filtered on households in metropolitan areas (AHS variable METRO3 in '1','2','4','9')",
+                "TITLE": "Proportion of population with access to electricity",
+                "UNIT_MEASURE": "Percent of households"
+            },
+            "observations": [
+                {
+                    "year": 2001.0,
+                    "value": 99.936
+                },
+                {
+                    "year": 2003.0,
+                    "value": 99.9197
+                },
+                {
+                    "year": 2005.0,
+                    "value": 99.9421
+                },
+                {
+                    "year": 2007.0,
+                    "value": 99.9902
+                },
+                {
+                    "year": 2009.0,
+                    "value": 99.9843
+                },
+                {
+                    "year": 2011.0,
+                    "value": 99.9867
+                },
+                {
+                    "year": 2013.0,
+                    "value": 99.9829
+                },
+                {
+                    "year": 2015.0,
+                    "value": 99.8808
+                }
+            ]
+        }
+    ]
+}

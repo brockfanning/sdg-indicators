@@ -1,0 +1,167 @@
+{
+    "header": {
+        "id": "1-5-2",
+        "prepared": "2017-10-20",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Disaster losses divided by World/US GDP expressed as a percentage",
+                "TITLE": "Direct disaster economic loss attributed to disasters in relation to global gross domestic product (GDP)",
+                "UNIT_MEASURE": "Disaster losses: Billions of US dollars",
+                "unit": "dsast_loss_pct_global_gdp"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 0.0
+                },
+                {
+                    "year": 2001,
+                    "value": 0.06
+                },
+                {
+                    "year": 2002,
+                    "value": 0.0
+                },
+                {
+                    "year": 2003,
+                    "value": 0.0
+                },
+                {
+                    "year": 2004,
+                    "value": 0.07
+                },
+                {
+                    "year": 2005,
+                    "value": 0.23
+                },
+                {
+                    "year": 2006,
+                    "value": 0.0
+                },
+                {
+                    "year": 2007,
+                    "value": 0.0
+                },
+                {
+                    "year": 2008,
+                    "value": 0.03
+                },
+                {
+                    "year": 2009,
+                    "value": 0.0
+                },
+                {
+                    "year": 2010,
+                    "value": 0.0
+                },
+                {
+                    "year": 2011,
+                    "value": 0.0
+                },
+                {
+                    "year": 2012,
+                    "value": 0.06
+                },
+                {
+                    "year": 2013,
+                    "value": 0.0
+                },
+                {
+                    "year": 2014,
+                    "value": 0.0
+                },
+                {
+                    "year": 2015,
+                    "value": 0.0
+                },
+                {
+                    "year": 2016,
+                    "value": 0.0
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Disaster losses divided by World/US GDP expressed as a percentage",
+                "TITLE": "Direct disaster economic loss attributed to disasters in relation to global gross domestic product (GDP)",
+                "UNIT_MEASURE": "Disaster losses: Billions of US dollars",
+                "unit": "dsast_loss_pct_us_gdp"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 0.0
+                },
+                {
+                    "year": 2001,
+                    "value": 0.18
+                },
+                {
+                    "year": 2002,
+                    "value": 0.0
+                },
+                {
+                    "year": 2003,
+                    "value": 0.0
+                },
+                {
+                    "year": 2004,
+                    "value": 0.24
+                },
+                {
+                    "year": 2005,
+                    "value": 0.84
+                },
+                {
+                    "year": 2006,
+                    "value": 0.0
+                },
+                {
+                    "year": 2007,
+                    "value": 0.0
+                },
+                {
+                    "year": 2008,
+                    "value": 0.13
+                },
+                {
+                    "year": 2009,
+                    "value": 0.0
+                },
+                {
+                    "year": 2010,
+                    "value": 0.0
+                },
+                {
+                    "year": 2011,
+                    "value": 0.0
+                },
+                {
+                    "year": 2012,
+                    "value": 0.28
+                },
+                {
+                    "year": 2013,
+                    "value": 0.0
+                },
+                {
+                    "year": 2014,
+                    "value": 0.0
+                },
+                {
+                    "year": 2015,
+                    "value": 0.0
+                },
+                {
+                    "year": 2016,
+                    "value": 0.0
+                }
+            ]
+        }
+    ]
+}

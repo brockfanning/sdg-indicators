@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "2-1-2",
+        "prepared": "November 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "USDA food security statistics are obtained from data collected in the Food Security Supplement to the Current Population Survey. The household food security statistics are based on a measure of food security calculated from responses to a series of questions about conditions and behaviors that characterize households when they are having difficulty meeting basic food needs. The US Household Food Security Survey Module includes three questions about food conditions of the household as a whole and seven about food conditions of adults in the household, and, if there are children in the household, an additional eight questions about their food conditions. The food security status of each interviewed household is determined by the number of food-insecure conditions and behaviors the household reports. Households are classified as food secure if they report no food-insecure conditions or only one or two food-insecure conditions. They are classified as food insecure if they report three or more food-insecure conditions. Households classified as food insecure were \"at times unable to acquire adequate food for one or more household members because they had insufficient money and other resources for food\". For more information on U.S. food security statistics and measurement methods see the resources available at: https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us/readings/",
+                "TITLE": "Prevalence of moderate or severe food insecurity in the population, based on the Food Insecurity Experience Scale (FIES)",
+                "UNIT_MEASURE": "Prevalence estimates, percentage of US households experiencing food insecurity in the past 12 months"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 10.5
+                },
+                {
+                    "year": 2001.0,
+                    "value": 10.7
+                },
+                {
+                    "year": 2002.0,
+                    "value": 11.1
+                },
+                {
+                    "year": 2003.0,
+                    "value": 11.2
+                },
+                {
+                    "year": 2004.0,
+                    "value": 11.9
+                },
+                {
+                    "year": 2005.0,
+                    "value": 11.0
+                },
+                {
+                    "year": 2006.0,
+                    "value": 10.9
+                },
+                {
+                    "year": 2007.0,
+                    "value": 11.1
+                },
+                {
+                    "year": 2008.0,
+                    "value": 14.6
+                },
+                {
+                    "year": 2009.0,
+                    "value": 14.7
+                },
+                {
+                    "year": 2010.0,
+                    "value": 14.5
+                },
+                {
+                    "year": 2011.0,
+                    "value": 14.9
+                },
+                {
+                    "year": 2012.0,
+                    "value": 14.5
+                },
+                {
+                    "year": 2013.0,
+                    "value": 14.3
+                },
+                {
+                    "year": 2014.0,
+                    "value": 14.0
+                },
+                {
+                    "year": 2015.0,
+                    "value": 12.7
+                },
+                {
+                    "year": 2016.0,
+                    "value": 12.3
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "17-3-2",
+        "prepared": "10/2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Personal transfers divided by GDP, expressed as a percentage",
+                "TITLE": "Volume of remittances (in United States dollars) as a proportion of total GDP",
+                "UNIT_MEASURE": "Percentage"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 0.228
+                },
+                {
+                    "year": 2001.0,
+                    "value": 0.25
+                },
+                {
+                    "year": 2002.0,
+                    "value": 0.253
+                },
+                {
+                    "year": 2003.0,
+                    "value": 0.244
+                },
+                {
+                    "year": 2004.0,
+                    "value": 0.248
+                },
+                {
+                    "year": 2005.0,
+                    "value": 0.239
+                },
+                {
+                    "year": 2006.0,
+                    "value": 0.248
+                },
+                {
+                    "year": 2007.0,
+                    "value": 0.255
+                },
+                {
+                    "year": 2008.0,
+                    "value": 0.261
+                },
+                {
+                    "year": 2009.0,
+                    "value": 0.252
+                },
+                {
+                    "year": 2010.0,
+                    "value": 0.24600000000000002
+                },
+                {
+                    "year": 2011.0,
+                    "value": 0.23399999999999999
+                },
+                {
+                    "year": 2012.0,
+                    "value": 0.233
+                },
+                {
+                    "year": 2013.0,
+                    "value": 0.237
+                },
+                {
+                    "year": 2014.0,
+                    "value": 0.24
+                },
+                {
+                    "year": 2015.0,
+                    "value": 0.244
+                },
+                {
+                    "year": 2016.0,
+                    "value": 0.25
+                }
+            ]
+        }
+    ]
+}

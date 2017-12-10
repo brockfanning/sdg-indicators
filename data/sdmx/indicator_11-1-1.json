@@ -1,0 +1,137 @@
+{
+    "header": {
+        "id": "11-1-1",
+        "prepared": "October 5, 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "2007-2013:  Using microdata of the American Housing Survey national public use files.  Tabulate ZADEQ (recoded adequacy of housing, values '2' and '3') for occupied units (STATUS='1') in urban areas (METRO3 IN['1','2','4','9']), weighted by WGT90GEO.  Percent of all occupied in urban areas.  See AHS codebook for full description of variables:  http://www.census.gov/programs-surveys/ahs/tech-documentation/codebooks/ahs-codebook.html\n2015 and later:  Using internal use file of the American Housing Survey.  Tabulate ADEQUACY (recoded adequacy of housing, values '2' and '3') for occupied units (INTSTATUS='1') in urban areas (URBAN_2010 IN('1','2')).  See online codebook at https://www.census.gov/data-tools/demo/codebook/ahs/ahsdict.html.",
+                "TITLE": "Proportion of urban population living in slums, informal settlements, or inadequate housing",
+                "UNIT_MEASURE": "Percent of all occupied housing units (households)",
+                "severity": "md_inadqt_hs"
+            },
+            "observations": [
+                {
+                    "year": 2001,
+                    "value": 3.9974199999999995
+                },
+                {
+                    "year": 2003,
+                    "value": 3.8170800000000003
+                },
+                {
+                    "year": 2005,
+                    "value": 3.57281
+                },
+                {
+                    "year": 2007,
+                    "value": 3.78186
+                },
+                {
+                    "year": 2009,
+                    "value": 3.7107699999999997
+                },
+                {
+                    "year": 2011,
+                    "value": 3.83114
+                },
+                {
+                    "year": 2013,
+                    "value": 3.69158
+                },
+                {
+                    "year": 2015,
+                    "value": 4.22536
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "2007-2013:  Using microdata of the American Housing Survey national public use files.  Tabulate ZADEQ (recoded adequacy of housing, values '2' and '3') for occupied units (STATUS='1') in urban areas (METRO3 IN['1','2','4','9']), weighted by WGT90GEO.  Percent of all occupied in urban areas.  See AHS codebook for full description of variables:  http://www.census.gov/programs-surveys/ahs/tech-documentation/codebooks/ahs-codebook.html\n2015 and later:  Using internal use file of the American Housing Survey.  Tabulate ADEQUACY (recoded adequacy of housing, values '2' and '3') for occupied units (INTSTATUS='1') in urban areas (URBAN_2010 IN('1','2')).  See online codebook at https://www.census.gov/data-tools/demo/codebook/ahs/ahsdict.html.",
+                "TITLE": "Proportion of urban population living in slums, informal settlements, or inadequate housing",
+                "UNIT_MEASURE": "Percent of all occupied housing units (households)",
+                "severity": "sv_inadqt_hs"
+            },
+            "observations": [
+                {
+                    "year": 2001,
+                    "value": 2.0573200000000003
+                },
+                {
+                    "year": 2003,
+                    "value": 1.94087
+                },
+                {
+                    "year": 2005,
+                    "value": 1.88559
+                },
+                {
+                    "year": 2007,
+                    "value": 1.75856
+                },
+                {
+                    "year": 2009,
+                    "value": 1.8266799999999999
+                },
+                {
+                    "year": 2011,
+                    "value": 2.0020700000000002
+                },
+                {
+                    "year": 2013,
+                    "value": 1.85935
+                },
+                {
+                    "year": 2015,
+                    "value": 1.25475
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "2007-2013:  Using microdata of the American Housing Survey national public use files.  Tabulate ZADEQ (recoded adequacy of housing, values '2' and '3') for occupied units (STATUS='1') in urban areas (METRO3 IN['1','2','4','9']), weighted by WGT90GEO.  Percent of all occupied in urban areas.  See AHS codebook for full description of variables:  http://www.census.gov/programs-surveys/ahs/tech-documentation/codebooks/ahs-codebook.html\n2015 and later:  Using internal use file of the American Housing Survey.  Tabulate ADEQUACY (recoded adequacy of housing, values '2' and '3') for occupied units (INTSTATUS='1') in urban areas (URBAN_2010 IN('1','2')).  See online codebook at https://www.census.gov/data-tools/demo/codebook/ahs/ahsdict.html.",
+                "TITLE": "Proportion of urban population living in slums, informal settlements, or inadequate housing",
+                "UNIT_MEASURE": "Percent of all occupied housing units (households)"
+            },
+            "observations": [
+                {
+                    "year": 2001,
+                    "value": 6.05474
+                },
+                {
+                    "year": 2003,
+                    "value": 5.75795
+                },
+                {
+                    "year": 2005,
+                    "value": 5.4584
+                },
+                {
+                    "year": 2007,
+                    "value": 5.54042
+                },
+                {
+                    "year": 2009,
+                    "value": 5.53745
+                },
+                {
+                    "year": 2011,
+                    "value": 5.8332
+                },
+                {
+                    "year": 2013,
+                    "value": 5.55093
+                },
+                {
+                    "year": 2015,
+                    "value": 5.48011
+                }
+            ]
+        }
+    ]
+}

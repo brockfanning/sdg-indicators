@@ -1,0 +1,51 @@
+{
+    "header": {
+        "id": "16-1-4",
+        "prepared": "December 2016",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "",
+                "TITLE": "Proportion of people that feel safe walking alone around the area they live",
+                "UNIT_MEASURE": "Randomly selected adult"
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": 37
+                },
+                {
+                    "year": 2008,
+                    "value": 37
+                },
+                {
+                    "year": 2009,
+                    "value": 34
+                },
+                {
+                    "year": 2010,
+                    "value": 37
+                },
+                {
+                    "year": 2011,
+                    "value": 38
+                },
+                {
+                    "year": 2013,
+                    "value": 34
+                },
+                {
+                    "year": 2014,
+                    "value": 37
+                },
+                {
+                    "year": 2015,
+                    "value": 35
+                }
+            ]
+        }
+    ]
+}

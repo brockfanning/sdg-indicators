@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "9-4-1",
+        "prepared": "2017-09-21",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Published in Table 1.7 Primary Energy Consumption, Energy Expenditures, and Carbon Dioxide Emissions Indicators from the Monthly Energy Review",
+                "TITLE": "CO2 emission per unit of value added",
+                "UNIT_MEASURE": "Metric Tons Carbon Dioxide per Million Chained (2009) Dollars"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 467
+                },
+                {
+                    "year": 2001,
+                    "value": 454
+                },
+                {
+                    "year": 2002,
+                    "value": 450
+                },
+                {
+                    "year": 2003,
+                    "value": 441
+                },
+                {
+                    "year": 2004,
+                    "value": 433
+                },
+                {
+                    "year": 2005,
+                    "value": 421
+                },
+                {
+                    "year": 2006,
+                    "value": 404
+                },
+                {
+                    "year": 2007,
+                    "value": 403
+                },
+                {
+                    "year": 2008,
+                    "value": 392
+                },
+                {
+                    "year": 2009,
+                    "value": 374
+                },
+                {
+                    "year": 2010,
+                    "value": 378
+                },
+                {
+                    "year": 2011,
+                    "value": 362
+                },
+                {
+                    "year": 2012,
+                    "value": 341
+                },
+                {
+                    "year": 2013,
+                    "value": 343
+                },
+                {
+                    "year": 2014,
+                    "value": 338
+                },
+                {
+                    "year": 2015,
+                    "value": 321
+                },
+                {
+                    "year": 2016,
+                    "value": 310
+                }
+            ]
+        }
+    ]
+}

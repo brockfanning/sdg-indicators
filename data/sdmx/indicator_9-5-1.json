@@ -1,0 +1,83 @@
+{
+    "header": {
+        "id": "9-5-1",
+        "prepared": "2017-10-19",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data on national R&D expenditures (dollars) divided by data on gross domestic product (dollars)",
+                "TITLE": "Research and development expenditure as a proportion of GDP",
+                "UNIT_MEASURE": "percent"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 2.61
+                },
+                {
+                    "year": 2001.0,
+                    "value": 2.62
+                },
+                {
+                    "year": 2002.0,
+                    "value": 2.53
+                },
+                {
+                    "year": 2003.0,
+                    "value": 2.53
+                },
+                {
+                    "year": 2004.0,
+                    "value": 2.47
+                },
+                {
+                    "year": 2005.0,
+                    "value": 2.48
+                },
+                {
+                    "year": 2006.0,
+                    "value": 2.53
+                },
+                {
+                    "year": 2007.0,
+                    "value": 2.61
+                },
+                {
+                    "year": 2008.0,
+                    "value": 2.75
+                },
+                {
+                    "year": 2009.0,
+                    "value": 2.79
+                },
+                {
+                    "year": 2010.0,
+                    "value": 2.72
+                },
+                {
+                    "year": 2011.0,
+                    "value": 2.75
+                },
+                {
+                    "year": 2012.0,
+                    "value": 2.68
+                },
+                {
+                    "year": 2013.0,
+                    "value": 2.72
+                },
+                {
+                    "year": 2014.0,
+                    "value": 2.73
+                },
+                {
+                    "year": 2015.0,
+                    "value": 2.73
+                }
+            ]
+        }
+    ]
+}

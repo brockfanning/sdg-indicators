@@ -1,0 +1,167 @@
+{
+    "header": {
+        "id": "3-4-1",
+        "prepared": "December, 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The crude rate is calculated as the number of deaths due to combined causes as identified by ICD-10 codes C00-C97 (malignant neoplasms), E10-E14 (diabetes mellitus), I00-I78 (major cardiovascular disease) and J40-J47 (chronic lower respiratory diseases) divided by by the US population.  Rates are age-adjusted using the direct method of applying age-specific death rates to the U.S. standard population distribution. See http://wonder.cdc.gov/wonder/help/ucd.html#Age-Adjusted Rates for more detail.",
+                "TITLE": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease",
+                "UNIT_MEASURE": "",
+                "unit": "crude_rate"
+            },
+            "observations": [
+                {
+                    "year": 1999,
+                    "value": 606.6
+                },
+                {
+                    "year": 2000,
+                    "value": 597.4
+                },
+                {
+                    "year": 2001,
+                    "value": 586.2
+                },
+                {
+                    "year": 2002,
+                    "value": 582.0
+                },
+                {
+                    "year": 2003,
+                    "value": 572.2
+                },
+                {
+                    "year": 2004,
+                    "value": 549.9
+                },
+                {
+                    "year": 2005,
+                    "value": 548.7
+                },
+                {
+                    "year": 2006,
+                    "value": 529.7
+                },
+                {
+                    "year": 2007,
+                    "value": 520.6
+                },
+                {
+                    "year": 2008,
+                    "value": 520.1
+                },
+                {
+                    "year": 2009,
+                    "value": 506.7
+                },
+                {
+                    "year": 2010,
+                    "value": 506.0
+                },
+                {
+                    "year": 2011,
+                    "value": 504.7
+                },
+                {
+                    "year": 2012,
+                    "value": 504.3
+                },
+                {
+                    "year": 2013,
+                    "value": 508.1
+                },
+                {
+                    "year": 2014,
+                    "value": 507.6
+                },
+                {
+                    "year": 2015,
+                    "value": 517.3
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The crude rate is calculated as the number of deaths due to combined causes as identified by ICD-10 codes C00-C97 (malignant neoplasms), E10-E14 (diabetes mellitus), I00-I78 (major cardiovascular disease) and J40-J47 (chronic lower respiratory diseases) divided by by the US population.  Rates are age-adjusted using the direct method of applying age-specific death rates to the U.S. standard population distribution. See http://wonder.cdc.gov/wonder/help/ucd.html#Age-Adjusted Rates for more detail.",
+                "TITLE": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease",
+                "UNIT_MEASURE": "",
+                "unit": "age_adjusted_rate"
+            },
+            "observations": [
+                {
+                    "year": 1999,
+                    "value": 620.5
+                },
+                {
+                    "year": 2000,
+                    "value": 608.5
+                },
+                {
+                    "year": 2001,
+                    "value": 594.5
+                },
+                {
+                    "year": 2002,
+                    "value": 586.5
+                },
+                {
+                    "year": 2003,
+                    "value": 571.6
+                },
+                {
+                    "year": 2004,
+                    "value": 545.9
+                },
+                {
+                    "year": 2005,
+                    "value": 538.9
+                },
+                {
+                    "year": 2006,
+                    "value": 514.6
+                },
+                {
+                    "year": 2007,
+                    "value": 500.3
+                },
+                {
+                    "year": 2008,
+                    "value": 494.0
+                },
+                {
+                    "year": 2009,
+                    "value": 475.6
+                },
+                {
+                    "year": 2010,
+                    "value": 470.0
+                },
+                {
+                    "year": 2011,
+                    "value": 460.4
+                },
+                {
+                    "year": 2012,
+                    "value": 452.2
+                },
+                {
+                    "year": 2013,
+                    "value": 448.2
+                },
+                {
+                    "year": 2014,
+                    "value": 441.3
+                },
+                {
+                    "year": 2015,
+                    "value": 442.9
+                }
+            ]
+        }
+    ]
+}

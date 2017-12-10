@@ -1,0 +1,150 @@
+{
+    "header": {
+        "id": "4-2-2-tidy",
+        "prepared": "October 2016",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "aggregation": "total"
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": 92.39
+                },
+                {
+                    "year": 2008,
+                    "value": 90.98
+                },
+                {
+                    "year": 2009,
+                    "value": 91.53299999999999
+                },
+                {
+                    "year": 2010,
+                    "value": 92.37700000000001
+                },
+                {
+                    "year": 2011,
+                    "value": 92.57600000000001
+                },
+                {
+                    "year": 2012,
+                    "value": 89.79799999999999
+                },
+                {
+                    "year": 2013,
+                    "value": 90.26
+                },
+                {
+                    "year": 2014,
+                    "value": 90.714
+                },
+                {
+                    "year": 2015,
+                    "value": 90.955
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "gender": "M"
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": 91.09700000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 91.16799999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 90.435
+                },
+                {
+                    "year": 2010,
+                    "value": 91.833
+                },
+                {
+                    "year": 2011,
+                    "value": 92.616
+                },
+                {
+                    "year": 2012,
+                    "value": 89.39200000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 90.62200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.555
+                },
+                {
+                    "year": 2015,
+                    "value": 90.00200000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "gender": "F"
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": 91.09700000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 91.16799999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 90.435
+                },
+                {
+                    "year": 2010,
+                    "value": 91.833
+                },
+                {
+                    "year": 2011,
+                    "value": 92.616
+                },
+                {
+                    "year": 2012,
+                    "value": 89.39200000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 90.62200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.555
+                },
+                {
+                    "year": 2015,
+                    "value": 90.00200000000001
+                }
+            ]
+        }
+    ]
+}

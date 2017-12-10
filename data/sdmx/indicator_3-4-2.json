@@ -1,0 +1,167 @@
+{
+    "header": {
+        "id": "3-4-2",
+        "prepared": "",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Number of deaths attributable to suicide (ICD-10 codes U03, X60-X84, Y87.0) divided by the population and expressed per 100,000 population. Rates are age-adjusted using the direct method of applying age-specific death rates to the U.S. standard population distribution. See http://wonder.cdc.gov/wonder/help/ucd.html#Age-Adjusted Rates for more detail.",
+                "TITLE": "Suicide mortality rate",
+                "UNIT_MEASURE": "",
+                "unit": "crude_rate"
+            },
+            "observations": [
+                {
+                    "year": 1999,
+                    "value": 10.5
+                },
+                {
+                    "year": 2000,
+                    "value": 10.4
+                },
+                {
+                    "year": 2001,
+                    "value": 10.7
+                },
+                {
+                    "year": 2002,
+                    "value": 11.0
+                },
+                {
+                    "year": 2003,
+                    "value": 10.9
+                },
+                {
+                    "year": 2004,
+                    "value": 11.1
+                },
+                {
+                    "year": 2005,
+                    "value": 11.0
+                },
+                {
+                    "year": 2006,
+                    "value": 11.2
+                },
+                {
+                    "year": 2007,
+                    "value": 11.5
+                },
+                {
+                    "year": 2008,
+                    "value": 11.8
+                },
+                {
+                    "year": 2009,
+                    "value": 12.0
+                },
+                {
+                    "year": 2010,
+                    "value": 12.4
+                },
+                {
+                    "year": 2011,
+                    "value": 12.7
+                },
+                {
+                    "year": 2012,
+                    "value": 12.9
+                },
+                {
+                    "year": 2013,
+                    "value": 13.0
+                },
+                {
+                    "year": 2014,
+                    "value": 13.4
+                },
+                {
+                    "year": 2015,
+                    "value": 13.8
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Number of deaths attributable to suicide (ICD-10 codes U03, X60-X84, Y87.0) divided by the population and expressed per 100,000 population. Rates are age-adjusted using the direct method of applying age-specific death rates to the U.S. standard population distribution. See http://wonder.cdc.gov/wonder/help/ucd.html#Age-Adjusted Rates for more detail.",
+                "TITLE": "Suicide mortality rate",
+                "UNIT_MEASURE": "",
+                "unit": "age_adjusted_rate"
+            },
+            "observations": [
+                {
+                    "year": 1999,
+                    "value": 10.5
+                },
+                {
+                    "year": 2000,
+                    "value": 10.4
+                },
+                {
+                    "year": 2001,
+                    "value": 10.7
+                },
+                {
+                    "year": 2002,
+                    "value": 10.9
+                },
+                {
+                    "year": 2003,
+                    "value": 10.8
+                },
+                {
+                    "year": 2004,
+                    "value": 11.0
+                },
+                {
+                    "year": 2005,
+                    "value": 10.9
+                },
+                {
+                    "year": 2006,
+                    "value": 11.0
+                },
+                {
+                    "year": 2007,
+                    "value": 11.3
+                },
+                {
+                    "year": 2008,
+                    "value": 11.6
+                },
+                {
+                    "year": 2009,
+                    "value": 11.8
+                },
+                {
+                    "year": 2010,
+                    "value": 12.1
+                },
+                {
+                    "year": 2011,
+                    "value": 12.3
+                },
+                {
+                    "year": 2012,
+                    "value": 12.6
+                },
+                {
+                    "year": 2013,
+                    "value": 12.6
+                },
+                {
+                    "year": 2014,
+                    "value": 13.0
+                },
+                {
+                    "year": 2015,
+                    "value": 13.3
+                }
+            ]
+        }
+    ]
+}

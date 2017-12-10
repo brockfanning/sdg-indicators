@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "7-3-1",
+        "prepared": "2017-09-21",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "",
+                "TITLE": "Energy intensity measured in terms of primary energy and GDP",
+                "UNIT_MEASURE": "Energy intensity, defined as  thousand Btu per chained (2009) dollar"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 7.87
+                },
+                {
+                    "year": 2001.0,
+                    "value": 7.58
+                },
+                {
+                    "year": 2002.0,
+                    "value": 7.56
+                },
+                {
+                    "year": 2003.0,
+                    "value": 7.38
+                },
+                {
+                    "year": 2004.0,
+                    "value": 7.27
+                },
+                {
+                    "year": 2005.0,
+                    "value": 7.04
+                },
+                {
+                    "year": 2006.0,
+                    "value": 6.81
+                },
+                {
+                    "year": 2007.0,
+                    "value": 6.79
+                },
+                {
+                    "year": 2008.0,
+                    "value": 6.67
+                },
+                {
+                    "year": 2009.0,
+                    "value": 6.53
+                },
+                {
+                    "year": 2010.0,
+                    "value": 6.59
+                },
+                {
+                    "year": 2011.0,
+                    "value": 6.45
+                },
+                {
+                    "year": 2012.0,
+                    "value": 6.15
+                },
+                {
+                    "year": 2013.0,
+                    "value": 6.22
+                },
+                {
+                    "year": 2014.0,
+                    "value": 6.15
+                },
+                {
+                    "year": 2015.0,
+                    "value": 5.94
+                },
+                {
+                    "year": 2016.0,
+                    "value": 5.85
+                }
+            ]
+        }
+    ]
+}

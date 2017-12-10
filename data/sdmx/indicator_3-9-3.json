@@ -1,0 +1,167 @@
+{
+    "header": {
+        "id": "3-9-3",
+        "prepared": "December, 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Number of deaths attributable to unintentional poisoning (ICD 10 code X40-X49) divided by the population and expressed per 100,000 population. Rates are age-adjusted using the direct method of applying age-specific death rates to the U.S. standard population distribution. See http://wonder.cdc.gov/wonder/help/ucd.html#Age-Adjusted Rates for more detail.",
+                "TITLE": "Mortality rate attributed to unintentional poisoning",
+                "UNIT_MEASURE": "",
+                "unit": "crude_rate"
+            },
+            "observations": [
+                {
+                    "year": 1999,
+                    "value": 4.4
+                },
+                {
+                    "year": 2000,
+                    "value": 4.5
+                },
+                {
+                    "year": 2001,
+                    "value": 4.9
+                },
+                {
+                    "year": 2002,
+                    "value": 6.1
+                },
+                {
+                    "year": 2003,
+                    "value": 6.7
+                },
+                {
+                    "year": 2004,
+                    "value": 7.2
+                },
+                {
+                    "year": 2005,
+                    "value": 8.0
+                },
+                {
+                    "year": 2006,
+                    "value": 9.2
+                },
+                {
+                    "year": 2007,
+                    "value": 9.9
+                },
+                {
+                    "year": 2008,
+                    "value": 10.2
+                },
+                {
+                    "year": 2009,
+                    "value": 10.4
+                },
+                {
+                    "year": 2010,
+                    "value": 10.7
+                },
+                {
+                    "year": 2011,
+                    "value": 11.6
+                },
+                {
+                    "year": 2012,
+                    "value": 11.6
+                },
+                {
+                    "year": 2013,
+                    "value": 12.3
+                },
+                {
+                    "year": 2014,
+                    "value": 13.2
+                },
+                {
+                    "year": 2015,
+                    "value": 14.8
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Number of deaths attributable to unintentional poisoning (ICD 10 code X40-X49) divided by the population and expressed per 100,000 population. Rates are age-adjusted using the direct method of applying age-specific death rates to the U.S. standard population distribution. See http://wonder.cdc.gov/wonder/help/ucd.html#Age-Adjusted Rates for more detail.",
+                "TITLE": "Mortality rate attributed to unintentional poisoning",
+                "UNIT_MEASURE": "",
+                "unit": "age_adjusted_rate"
+            },
+            "observations": [
+                {
+                    "year": 1999,
+                    "value": 4.4
+                },
+                {
+                    "year": 2000,
+                    "value": 4.5
+                },
+                {
+                    "year": 2001,
+                    "value": 4.9
+                },
+                {
+                    "year": 2002,
+                    "value": 6.1
+                },
+                {
+                    "year": 2003,
+                    "value": 6.7
+                },
+                {
+                    "year": 2004,
+                    "value": 7.2
+                },
+                {
+                    "year": 2005,
+                    "value": 8.0
+                },
+                {
+                    "year": 2006,
+                    "value": 9.2
+                },
+                {
+                    "year": 2007,
+                    "value": 9.9
+                },
+                {
+                    "year": 2008,
+                    "value": 10.2
+                },
+                {
+                    "year": 2009,
+                    "value": 10.3
+                },
+                {
+                    "year": 2010,
+                    "value": 10.6
+                },
+                {
+                    "year": 2011,
+                    "value": 11.6
+                },
+                {
+                    "year": 2012,
+                    "value": 11.5
+                },
+                {
+                    "year": 2013,
+                    "value": 12.2
+                },
+                {
+                    "year": 2014,
+                    "value": 13.1
+                },
+                {
+                    "year": 2015,
+                    "value": 14.8
+                }
+            ]
+        }
+    ]
+}

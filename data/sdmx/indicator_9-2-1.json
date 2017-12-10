@@ -1,0 +1,167 @@
+{
+    "header": {
+        "id": "9-2-1",
+        "prepared": "2017-10-20",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "As Percentage of GDP: Manufacturing value added divded by GDP, expressed as a percentage Per Capita: Manufacturing value added divded by population",
+                "TITLE": "Manufacturing value added as a proportion of GDP and per capita",
+                "UNIT_MEASURE": "As percentage of GDP: Percentage,   Per Capita: Dollars",
+                "unit": "manuf_va_as_pctgdp"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 15.1
+                },
+                {
+                    "year": 2001,
+                    "value": 13.9
+                },
+                {
+                    "year": 2002,
+                    "value": 13.4
+                },
+                {
+                    "year": 2003,
+                    "value": 13.3
+                },
+                {
+                    "year": 2004,
+                    "value": 13.2
+                },
+                {
+                    "year": 2005,
+                    "value": 13.0
+                },
+                {
+                    "year": 2006,
+                    "value": 13.0
+                },
+                {
+                    "year": 2007,
+                    "value": 12.8
+                },
+                {
+                    "year": 2008,
+                    "value": 12.3
+                },
+                {
+                    "year": 2009,
+                    "value": 12.0
+                },
+                {
+                    "year": 2010,
+                    "value": 12.2
+                },
+                {
+                    "year": 2011,
+                    "value": 12.3
+                },
+                {
+                    "year": 2012,
+                    "value": 12.3
+                },
+                {
+                    "year": 2013,
+                    "value": 12.2
+                },
+                {
+                    "year": 2014,
+                    "value": 12.1
+                },
+                {
+                    "year": 2015,
+                    "value": 12.0
+                },
+                {
+                    "year": 2016,
+                    "value": 11.7
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "As Percentage of GDP: Manufacturing value added divded by GDP, expressed as a percentage Per Capita: Manufacturing value added divded by population",
+                "TITLE": "Manufacturing value added as a proportion of GDP and per capita",
+                "UNIT_MEASURE": "As percentage of GDP: Percentage,   Per Capita: Dollars",
+                "unit": "manuf_va_percapita"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 5677.4
+                },
+                {
+                    "year": 2001,
+                    "value": 5394.0
+                },
+                {
+                    "year": 2002,
+                    "value": 5395.6
+                },
+                {
+                    "year": 2003,
+                    "value": 5615.8
+                },
+                {
+                    "year": 2004,
+                    "value": 5924.8
+                },
+                {
+                    "year": 2005,
+                    "value": 6002.6
+                },
+                {
+                    "year": 2006,
+                    "value": 6240.9
+                },
+                {
+                    "year": 2007,
+                    "value": 6379.9
+                },
+                {
+                    "year": 2008,
+                    "value": 6137.4
+                },
+                {
+                    "year": 2009,
+                    "value": 5620.1
+                },
+                {
+                    "year": 2010,
+                    "value": 5868.9
+                },
+                {
+                    "year": 2011,
+                    "value": 5841.4
+                },
+                {
+                    "year": 2012,
+                    "value": 5817.5
+                },
+                {
+                    "year": 2013,
+                    "value": 5891.3
+                },
+                {
+                    "year": 2014,
+                    "value": 5905.2
+                },
+                {
+                    "year": 2015,
+                    "value": 5953.2
+                },
+                {
+                    "year": 2016,
+                    "value": 5903.6
+                }
+            ]
+        }
+    ]
+}

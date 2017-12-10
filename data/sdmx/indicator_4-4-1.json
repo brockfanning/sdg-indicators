@@ -1,0 +1,158 @@
+{
+    "header": {
+        "id": "4-4-1",
+        "prepared": "10/2016",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 39
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "CL_SEX": "M"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 42
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "CL_SEX": "F"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 36
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 24.0
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 43
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 34.0
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 45
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 44.0
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 42
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 54.0
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 33
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "CL_AGE": 65.0
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 29
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "income": "lowinc"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 38
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted percentage of respondents in the survey achieving a score level of 2 or higher",
+                "TITLE": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+                "UNIT_MEASURE": "Percentage",
+                "income": "highinc"
+            },
+            "observations": [
+                {
+                    "year": 2012,
+                    "value": 55
+                }
+            ]
+        }
+    ]
+}

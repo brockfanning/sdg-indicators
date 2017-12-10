@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "16-9-1",
+        "prepared": "",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Estimated percent of births registered by all 50 states and the District of Columbia.",
+                "TITLE": "Proportion of children under 5 years of age whose births have been registered with a civil authority, by age",
+                "UNIT_MEASURE": ""
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2001.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2002.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2003.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2003.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2004.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2005.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2006.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2007.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2008.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2009.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2010.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2011.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2012.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2013.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2014.0,
+                    "value": 99.0
+                },
+                {
+                    "year": 2015.0,
+                    "value": 99.0
+                }
+            ]
+        }
+    ]
+}

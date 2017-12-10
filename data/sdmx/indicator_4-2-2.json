@@ -1,0 +1,1918 @@
+{
+    "header": {
+        "id": "4-2-2",
+        "prepared": "2017-10-13",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 93.99700000000001
+                },
+                {
+                    "year": 2001,
+                    "value": 93.09700000000001
+                },
+                {
+                    "year": 2002,
+                    "value": 93.56299999999999
+                },
+                {
+                    "year": 2003,
+                    "value": 91.89399999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 93.088
+                },
+                {
+                    "year": 2005,
+                    "value": 93.40899999999999
+                },
+                {
+                    "year": 2006,
+                    "value": 92.603
+                },
+                {
+                    "year": 2007,
+                    "value": 92.39
+                },
+                {
+                    "year": 2008,
+                    "value": 90.98
+                },
+                {
+                    "year": 2009,
+                    "value": 91.53299999999999
+                },
+                {
+                    "year": 2010,
+                    "value": 92.37700000000001
+                },
+                {
+                    "year": 2011,
+                    "value": 92.57600000000001
+                },
+                {
+                    "year": 2012,
+                    "value": 89.79799999999999
+                },
+                {
+                    "year": 2013,
+                    "value": 90.26
+                },
+                {
+                    "year": 2014,
+                    "value": 90.714
+                },
+                {
+                    "year": 2015,
+                    "value": 90.955
+                },
+                {
+                    "year": 2016,
+                    "value": 90.12200000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "CL_SEX": "M"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 93.23100000000001
+                },
+                {
+                    "year": 2001,
+                    "value": 92.969
+                },
+                {
+                    "year": 2002,
+                    "value": 94.292
+                },
+                {
+                    "year": 2003,
+                    "value": 92.89
+                },
+                {
+                    "year": 2004,
+                    "value": 93.39200000000001
+                },
+                {
+                    "year": 2005,
+                    "value": 92.875
+                },
+                {
+                    "year": 2006,
+                    "value": 92.57
+                },
+                {
+                    "year": 2007,
+                    "value": 91.09700000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 91.16799999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 90.435
+                },
+                {
+                    "year": 2010,
+                    "value": 91.833
+                },
+                {
+                    "year": 2011,
+                    "value": 92.616
+                },
+                {
+                    "year": 2012,
+                    "value": 89.39200000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 90.62200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.555
+                },
+                {
+                    "year": 2015,
+                    "value": 90.00200000000001
+                },
+                {
+                    "year": 2016,
+                    "value": 89.689
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "CL_SEX": "F"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 94.81299999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 93.228
+                },
+                {
+                    "year": 2002,
+                    "value": 92.79700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 90.936
+                },
+                {
+                    "year": 2004,
+                    "value": 92.76
+                },
+                {
+                    "year": 2005,
+                    "value": 93.984
+                },
+                {
+                    "year": 2006,
+                    "value": 92.637
+                },
+                {
+                    "year": 2007,
+                    "value": 93.73100000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 90.78200000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 92.68700000000001
+                },
+                {
+                    "year": 2010,
+                    "value": 92.949
+                },
+                {
+                    "year": 2011,
+                    "value": 92.53299999999999
+                },
+                {
+                    "year": 2012,
+                    "value": 90.21
+                },
+                {
+                    "year": 2013,
+                    "value": 89.86200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 89.852
+                },
+                {
+                    "year": 2015,
+                    "value": 91.961
+                },
+                {
+                    "year": 2016,
+                    "value": 90.588
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "low_quintile"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 91.31299999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 91.155
+                },
+                {
+                    "year": 2002,
+                    "value": 94.59700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 89.15299999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 88.331
+                },
+                {
+                    "year": 2005,
+                    "value": 92.303
+                },
+                {
+                    "year": 2006,
+                    "value": 90.213
+                },
+                {
+                    "year": 2007,
+                    "value": 86.476
+                },
+                {
+                    "year": 2008,
+                    "value": 88.06700000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 89.575
+                },
+                {
+                    "year": 2010,
+                    "value": 89.39299999999999
+                },
+                {
+                    "year": 2011,
+                    "value": 91.571
+                },
+                {
+                    "year": 2012,
+                    "value": 84.552
+                },
+                {
+                    "year": 2013,
+                    "value": 91.234
+                },
+                {
+                    "year": 2014,
+                    "value": 91.37700000000001
+                },
+                {
+                    "year": 2015,
+                    "value": 88.73700000000001
+                },
+                {
+                    "year": 2016,
+                    "value": 88.475
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_low_quintile"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 89.94
+                },
+                {
+                    "year": 2001,
+                    "value": 90.50200000000001
+                },
+                {
+                    "year": 2002,
+                    "value": 93.54700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 87.978
+                },
+                {
+                    "year": 2004,
+                    "value": 93.869
+                },
+                {
+                    "year": 2005,
+                    "value": 87.948
+                },
+                {
+                    "year": 2006,
+                    "value": 89.28299999999999
+                },
+                {
+                    "year": 2007,
+                    "value": 91.646
+                },
+                {
+                    "year": 2008,
+                    "value": 89.098
+                },
+                {
+                    "year": 2009,
+                    "value": 89.559
+                },
+                {
+                    "year": 2010,
+                    "value": 91.404
+                },
+                {
+                    "year": 2011,
+                    "value": 90.569
+                },
+                {
+                    "year": 2012,
+                    "value": 90.22
+                },
+                {
+                    "year": 2013,
+                    "value": 89.20200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 87.88
+                },
+                {
+                    "year": 2015,
+                    "value": 92.87899999999999
+                },
+                {
+                    "year": 2016,
+                    "value": 89.198
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_quintile"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 93.941
+                },
+                {
+                    "year": 2001,
+                    "value": 93.171
+                },
+                {
+                    "year": 2002,
+                    "value": 92.508
+                },
+                {
+                    "year": 2003,
+                    "value": 93.552
+                },
+                {
+                    "year": 2004,
+                    "value": 92.771
+                },
+                {
+                    "year": 2005,
+                    "value": 92.98100000000001
+                },
+                {
+                    "year": 2006,
+                    "value": 92.911
+                },
+                {
+                    "year": 2007,
+                    "value": 94.729
+                },
+                {
+                    "year": 2008,
+                    "value": 91.561
+                },
+                {
+                    "year": 2009,
+                    "value": 91.73899999999999
+                },
+                {
+                    "year": 2010,
+                    "value": 89.684
+                },
+                {
+                    "year": 2011,
+                    "value": 92.094
+                },
+                {
+                    "year": 2012,
+                    "value": 90.211
+                },
+                {
+                    "year": 2013,
+                    "value": 89.12100000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.45700000000001
+                },
+                {
+                    "year": 2015,
+                    "value": 91.413
+                },
+                {
+                    "year": 2016,
+                    "value": 89.21700000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_high_quintile"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 95.54899999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 94.476
+                },
+                {
+                    "year": 2002,
+                    "value": 91.20299999999999
+                },
+                {
+                    "year": 2003,
+                    "value": 91.54799999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 94.072
+                },
+                {
+                    "year": 2005,
+                    "value": 95.27
+                },
+                {
+                    "year": 2006,
+                    "value": 91.891
+                },
+                {
+                    "year": 2007,
+                    "value": 92.919
+                },
+                {
+                    "year": 2008,
+                    "value": 92.43700000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 91.87100000000001
+                },
+                {
+                    "year": 2010,
+                    "value": 94.62
+                },
+                {
+                    "year": 2011,
+                    "value": 91.141
+                },
+                {
+                    "year": 2012,
+                    "value": 88.854
+                },
+                {
+                    "year": 2013,
+                    "value": 88.574
+                },
+                {
+                    "year": 2014,
+                    "value": 91.344
+                },
+                {
+                    "year": 2015,
+                    "value": 88.191
+                },
+                {
+                    "year": 2016,
+                    "value": 89.54700000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "high_quintile"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 97.852
+                },
+                {
+                    "year": 2001,
+                    "value": 95.025
+                },
+                {
+                    "year": 2002,
+                    "value": 96.236
+                },
+                {
+                    "year": 2003,
+                    "value": 95.4
+                },
+                {
+                    "year": 2004,
+                    "value": 95.29700000000001
+                },
+                {
+                    "year": 2005,
+                    "value": 96.62299999999999
+                },
+                {
+                    "year": 2006,
+                    "value": 97.242
+                },
+                {
+                    "year": 2007,
+                    "value": 95.04799999999999
+                },
+                {
+                    "year": 2008,
+                    "value": 92.78399999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 94.306
+                },
+                {
+                    "year": 2010,
+                    "value": 95.479
+                },
+                {
+                    "year": 2011,
+                    "value": 96.354
+                },
+                {
+                    "year": 2012,
+                    "value": 94.15100000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 92.86200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.117
+                },
+                {
+                    "year": 2015,
+                    "value": 92.512
+                },
+                {
+                    "year": 2016,
+                    "value": 93.493
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 88.99700000000001
+                },
+                {
+                    "year": 2001,
+                    "value": 88.09700000000001
+                },
+                {
+                    "year": 2002,
+                    "value": 88.56299999999999
+                },
+                {
+                    "year": 2003,
+                    "value": 91.89399999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 88.088
+                },
+                {
+                    "year": 2005,
+                    "value": 88.40899999999999
+                },
+                {
+                    "year": 2006,
+                    "value": 92.603
+                },
+                {
+                    "year": 2007,
+                    "value": 92.39
+                },
+                {
+                    "year": 2008,
+                    "value": 90.98
+                },
+                {
+                    "year": 2009,
+                    "value": 91.53299999999999
+                },
+                {
+                    "year": 2010,
+                    "value": 92.37700000000001
+                },
+                {
+                    "year": 2011,
+                    "value": 92.57600000000001
+                },
+                {
+                    "year": 2012,
+                    "value": 89.79799999999999
+                },
+                {
+                    "year": 2013,
+                    "value": 90.26
+                },
+                {
+                    "year": 2014,
+                    "value": 90.714
+                },
+                {
+                    "year": 2015,
+                    "value": 90.955
+                },
+                {
+                    "year": 2016,
+                    "value": 90.12200000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "CL_SEX": "M",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 88.23100000000001
+                },
+                {
+                    "year": 2001,
+                    "value": 92.969
+                },
+                {
+                    "year": 2002,
+                    "value": 94.292
+                },
+                {
+                    "year": 2003,
+                    "value": 92.89
+                },
+                {
+                    "year": 2004,
+                    "value": 88.39200000000001
+                },
+                {
+                    "year": 2005,
+                    "value": 92.875
+                },
+                {
+                    "year": 2006,
+                    "value": 92.57
+                },
+                {
+                    "year": 2007,
+                    "value": 91.09700000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 91.16799999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 90.435
+                },
+                {
+                    "year": 2010,
+                    "value": 91.833
+                },
+                {
+                    "year": 2011,
+                    "value": 92.616
+                },
+                {
+                    "year": 2012,
+                    "value": 89.39200000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 90.62200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.555
+                },
+                {
+                    "year": 2015,
+                    "value": 90.00200000000001
+                },
+                {
+                    "year": 2016,
+                    "value": 89.689
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "CL_SEX": "F",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 94.81299999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 88.228
+                },
+                {
+                    "year": 2002,
+                    "value": 92.79700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 90.936
+                },
+                {
+                    "year": 2004,
+                    "value": 92.76
+                },
+                {
+                    "year": 2005,
+                    "value": 88.984
+                },
+                {
+                    "year": 2006,
+                    "value": 92.637
+                },
+                {
+                    "year": 2007,
+                    "value": 88.73100000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 90.78200000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 92.68700000000001
+                },
+                {
+                    "year": 2010,
+                    "value": 92.949
+                },
+                {
+                    "year": 2011,
+                    "value": 92.53299999999999
+                },
+                {
+                    "year": 2012,
+                    "value": 90.21
+                },
+                {
+                    "year": 2013,
+                    "value": 89.86200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 89.852
+                },
+                {
+                    "year": 2015,
+                    "value": 91.961
+                },
+                {
+                    "year": 2016,
+                    "value": 90.588
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "low_quintile",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 91.31299999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 91.155
+                },
+                {
+                    "year": 2002,
+                    "value": 94.59700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 89.15299999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 88.331
+                },
+                {
+                    "year": 2005,
+                    "value": 92.303
+                },
+                {
+                    "year": 2006,
+                    "value": 90.213
+                },
+                {
+                    "year": 2007,
+                    "value": 86.476
+                },
+                {
+                    "year": 2008,
+                    "value": 88.06700000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 89.575
+                },
+                {
+                    "year": 2010,
+                    "value": 89.39299999999999
+                },
+                {
+                    "year": 2011,
+                    "value": 91.571
+                },
+                {
+                    "year": 2012,
+                    "value": 84.552
+                },
+                {
+                    "year": 2013,
+                    "value": 91.234
+                },
+                {
+                    "year": 2014,
+                    "value": 91.37700000000001
+                },
+                {
+                    "year": 2015,
+                    "value": 88.73700000000001
+                },
+                {
+                    "year": 2016,
+                    "value": 88.475
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_low_quintile",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 89.94
+                },
+                {
+                    "year": 2001,
+                    "value": 90.50200000000001
+                },
+                {
+                    "year": 2002,
+                    "value": 88.54700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 87.978
+                },
+                {
+                    "year": 2004,
+                    "value": 88.869
+                },
+                {
+                    "year": 2005,
+                    "value": 87.948
+                },
+                {
+                    "year": 2006,
+                    "value": 89.28299999999999
+                },
+                {
+                    "year": 2007,
+                    "value": 91.646
+                },
+                {
+                    "year": 2008,
+                    "value": 89.098
+                },
+                {
+                    "year": 2009,
+                    "value": 89.559
+                },
+                {
+                    "year": 2010,
+                    "value": 91.404
+                },
+                {
+                    "year": 2011,
+                    "value": 90.569
+                },
+                {
+                    "year": 2012,
+                    "value": 90.22
+                },
+                {
+                    "year": 2013,
+                    "value": 89.20200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 87.88
+                },
+                {
+                    "year": 2015,
+                    "value": 92.87899999999999
+                },
+                {
+                    "year": 2016,
+                    "value": 89.198
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_quintile",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 88.941
+                },
+                {
+                    "year": 2001,
+                    "value": 88.171
+                },
+                {
+                    "year": 2002,
+                    "value": 92.508
+                },
+                {
+                    "year": 2003,
+                    "value": 88.552
+                },
+                {
+                    "year": 2004,
+                    "value": 92.771
+                },
+                {
+                    "year": 2005,
+                    "value": 92.98100000000001
+                },
+                {
+                    "year": 2006,
+                    "value": 92.911
+                },
+                {
+                    "year": 2007,
+                    "value": 94.729
+                },
+                {
+                    "year": 2008,
+                    "value": 91.561
+                },
+                {
+                    "year": 2009,
+                    "value": 91.73899999999999
+                },
+                {
+                    "year": 2010,
+                    "value": 89.684
+                },
+                {
+                    "year": 2011,
+                    "value": 92.094
+                },
+                {
+                    "year": 2012,
+                    "value": 90.211
+                },
+                {
+                    "year": 2013,
+                    "value": 89.12100000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.45700000000001
+                },
+                {
+                    "year": 2015,
+                    "value": 91.413
+                },
+                {
+                    "year": 2016,
+                    "value": 89.21700000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_high_quintile",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 95.54899999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 94.476
+                },
+                {
+                    "year": 2002,
+                    "value": 91.20299999999999
+                },
+                {
+                    "year": 2003,
+                    "value": 91.54799999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 94.072
+                },
+                {
+                    "year": 2005,
+                    "value": 95.27
+                },
+                {
+                    "year": 2006,
+                    "value": 91.891
+                },
+                {
+                    "year": 2007,
+                    "value": 92.919
+                },
+                {
+                    "year": 2008,
+                    "value": 92.43700000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 91.87100000000001
+                },
+                {
+                    "year": 2010,
+                    "value": 94.62
+                },
+                {
+                    "year": 2011,
+                    "value": 91.141
+                },
+                {
+                    "year": 2012,
+                    "value": 88.854
+                },
+                {
+                    "year": 2013,
+                    "value": 88.574
+                },
+                {
+                    "year": 2014,
+                    "value": 91.344
+                },
+                {
+                    "year": 2015,
+                    "value": 88.191
+                },
+                {
+                    "year": 2016,
+                    "value": 89.54700000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "high_quintile",
+                "state": "alabama"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 97.852
+                },
+                {
+                    "year": 2001,
+                    "value": 95.025
+                },
+                {
+                    "year": 2002,
+                    "value": 96.236
+                },
+                {
+                    "year": 2003,
+                    "value": 95.4
+                },
+                {
+                    "year": 2004,
+                    "value": 95.29700000000001
+                },
+                {
+                    "year": 2005,
+                    "value": 96.62299999999999
+                },
+                {
+                    "year": 2006,
+                    "value": 97.242
+                },
+                {
+                    "year": 2007,
+                    "value": 95.04799999999999
+                },
+                {
+                    "year": 2008,
+                    "value": 92.78399999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 94.306
+                },
+                {
+                    "year": 2010,
+                    "value": 95.479
+                },
+                {
+                    "year": 2011,
+                    "value": 96.354
+                },
+                {
+                    "year": 2012,
+                    "value": 94.15100000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 92.86200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.117
+                },
+                {
+                    "year": 2015,
+                    "value": 92.512
+                },
+                {
+                    "year": 2016,
+                    "value": 88.493
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 98.99700000000001
+                },
+                {
+                    "year": 2001,
+                    "value": 98.09700000000001
+                },
+                {
+                    "year": 2002,
+                    "value": 98.56299999999999
+                },
+                {
+                    "year": 2003,
+                    "value": 91.89399999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 98.088
+                },
+                {
+                    "year": 2005,
+                    "value": 98.40899999999999
+                },
+                {
+                    "year": 2006,
+                    "value": 92.603
+                },
+                {
+                    "year": 2007,
+                    "value": 92.39
+                },
+                {
+                    "year": 2008,
+                    "value": 90.98
+                },
+                {
+                    "year": 2009,
+                    "value": 91.53299999999999
+                },
+                {
+                    "year": 2010,
+                    "value": 92.37700000000001
+                },
+                {
+                    "year": 2011,
+                    "value": 92.57600000000001
+                },
+                {
+                    "year": 2012,
+                    "value": 89.79799999999999
+                },
+                {
+                    "year": 2013,
+                    "value": 90.26
+                },
+                {
+                    "year": 2014,
+                    "value": 90.714
+                },
+                {
+                    "year": 2015,
+                    "value": 90.955
+                },
+                {
+                    "year": 2016,
+                    "value": 90.12200000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "CL_SEX": "M",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 98.23100000000001
+                },
+                {
+                    "year": 2001,
+                    "value": 92.969
+                },
+                {
+                    "year": 2002,
+                    "value": 94.292
+                },
+                {
+                    "year": 2003,
+                    "value": 92.89
+                },
+                {
+                    "year": 2004,
+                    "value": 98.39200000000001
+                },
+                {
+                    "year": 2005,
+                    "value": 92.875
+                },
+                {
+                    "year": 2006,
+                    "value": 92.57
+                },
+                {
+                    "year": 2007,
+                    "value": 91.09700000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 91.16799999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 90.435
+                },
+                {
+                    "year": 2010,
+                    "value": 91.833
+                },
+                {
+                    "year": 2011,
+                    "value": 92.616
+                },
+                {
+                    "year": 2012,
+                    "value": 89.39200000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 90.62200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.555
+                },
+                {
+                    "year": 2015,
+                    "value": 90.00200000000001
+                },
+                {
+                    "year": 2016,
+                    "value": 89.689
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "CL_SEX": "F",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 94.81299999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 98.228
+                },
+                {
+                    "year": 2002,
+                    "value": 92.79700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 90.936
+                },
+                {
+                    "year": 2004,
+                    "value": 92.76
+                },
+                {
+                    "year": 2005,
+                    "value": 98.984
+                },
+                {
+                    "year": 2006,
+                    "value": 92.637
+                },
+                {
+                    "year": 2007,
+                    "value": 98.73100000000001
+                },
+                {
+                    "year": 2008,
+                    "value": 90.78200000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 92.68700000000001
+                },
+                {
+                    "year": 2010,
+                    "value": 92.949
+                },
+                {
+                    "year": 2011,
+                    "value": 92.53299999999999
+                },
+                {
+                    "year": 2012,
+                    "value": 90.21
+                },
+                {
+                    "year": 2013,
+                    "value": 89.86200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 89.852
+                },
+                {
+                    "year": 2015,
+                    "value": 91.961
+                },
+                {
+                    "year": 2016,
+                    "value": 90.588
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "low_quintile",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 91.31299999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 91.155
+                },
+                {
+                    "year": 2002,
+                    "value": 94.59700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 89.15299999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 88.331
+                },
+                {
+                    "year": 2005,
+                    "value": 92.303
+                },
+                {
+                    "year": 2006,
+                    "value": 90.213
+                },
+                {
+                    "year": 2007,
+                    "value": 86.476
+                },
+                {
+                    "year": 2008,
+                    "value": 88.06700000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 89.575
+                },
+                {
+                    "year": 2010,
+                    "value": 89.39299999999999
+                },
+                {
+                    "year": 2011,
+                    "value": 91.571
+                },
+                {
+                    "year": 2012,
+                    "value": 84.552
+                },
+                {
+                    "year": 2013,
+                    "value": 91.234
+                },
+                {
+                    "year": 2014,
+                    "value": 91.37700000000001
+                },
+                {
+                    "year": 2015,
+                    "value": 88.73700000000001
+                },
+                {
+                    "year": 2016,
+                    "value": 88.475
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_low_quintile",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 89.94
+                },
+                {
+                    "year": 2001,
+                    "value": 90.50200000000001
+                },
+                {
+                    "year": 2002,
+                    "value": 98.54700000000001
+                },
+                {
+                    "year": 2003,
+                    "value": 87.978
+                },
+                {
+                    "year": 2004,
+                    "value": 98.869
+                },
+                {
+                    "year": 2005,
+                    "value": 87.948
+                },
+                {
+                    "year": 2006,
+                    "value": 89.28299999999999
+                },
+                {
+                    "year": 2007,
+                    "value": 91.646
+                },
+                {
+                    "year": 2008,
+                    "value": 89.098
+                },
+                {
+                    "year": 2009,
+                    "value": 89.559
+                },
+                {
+                    "year": 2010,
+                    "value": 91.404
+                },
+                {
+                    "year": 2011,
+                    "value": 90.569
+                },
+                {
+                    "year": 2012,
+                    "value": 90.22
+                },
+                {
+                    "year": 2013,
+                    "value": 89.20200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 87.88
+                },
+                {
+                    "year": 2015,
+                    "value": 92.87899999999999
+                },
+                {
+                    "year": 2016,
+                    "value": 89.198
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_quintile",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 98.941
+                },
+                {
+                    "year": 2001,
+                    "value": 98.171
+                },
+                {
+                    "year": 2002,
+                    "value": 92.508
+                },
+                {
+                    "year": 2003,
+                    "value": 98.552
+                },
+                {
+                    "year": 2004,
+                    "value": 92.771
+                },
+                {
+                    "year": 2005,
+                    "value": 92.98100000000001
+                },
+                {
+                    "year": 2006,
+                    "value": 92.911
+                },
+                {
+                    "year": 2007,
+                    "value": 94.729
+                },
+                {
+                    "year": 2008,
+                    "value": 91.561
+                },
+                {
+                    "year": 2009,
+                    "value": 91.73899999999999
+                },
+                {
+                    "year": 2010,
+                    "value": 89.684
+                },
+                {
+                    "year": 2011,
+                    "value": 92.094
+                },
+                {
+                    "year": 2012,
+                    "value": 90.211
+                },
+                {
+                    "year": 2013,
+                    "value": 89.12100000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.45700000000001
+                },
+                {
+                    "year": 2015,
+                    "value": 91.413
+                },
+                {
+                    "year": 2016,
+                    "value": 89.21700000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "middle_high_quintile",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 95.54899999999999
+                },
+                {
+                    "year": 2001,
+                    "value": 94.476
+                },
+                {
+                    "year": 2002,
+                    "value": 91.20299999999999
+                },
+                {
+                    "year": 2003,
+                    "value": 91.54799999999999
+                },
+                {
+                    "year": 2004,
+                    "value": 94.072
+                },
+                {
+                    "year": 2005,
+                    "value": 95.27
+                },
+                {
+                    "year": 2006,
+                    "value": 91.891
+                },
+                {
+                    "year": 2007,
+                    "value": 92.919
+                },
+                {
+                    "year": 2008,
+                    "value": 92.43700000000001
+                },
+                {
+                    "year": 2009,
+                    "value": 91.87100000000001
+                },
+                {
+                    "year": 2010,
+                    "value": 94.62
+                },
+                {
+                    "year": 2011,
+                    "value": 91.141
+                },
+                {
+                    "year": 2012,
+                    "value": 88.854
+                },
+                {
+                    "year": 2013,
+                    "value": 88.574
+                },
+                {
+                    "year": 2014,
+                    "value": 91.344
+                },
+                {
+                    "year": 2015,
+                    "value": 88.191
+                },
+                {
+                    "year": 2016,
+                    "value": 89.54700000000001
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted number of 5-year-olds enrolled divided by 5-year-old population",
+                "TITLE": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "UNIT_MEASURE": "Child",
+                "income": "high_quintile",
+                "state": "alaska"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 97.852
+                },
+                {
+                    "year": 2001,
+                    "value": 95.025
+                },
+                {
+                    "year": 2002,
+                    "value": 96.236
+                },
+                {
+                    "year": 2003,
+                    "value": 95.4
+                },
+                {
+                    "year": 2004,
+                    "value": 95.29700000000001
+                },
+                {
+                    "year": 2005,
+                    "value": 96.62299999999999
+                },
+                {
+                    "year": 2006,
+                    "value": 97.242
+                },
+                {
+                    "year": 2007,
+                    "value": 95.04799999999999
+                },
+                {
+                    "year": 2008,
+                    "value": 92.78399999999999
+                },
+                {
+                    "year": 2009,
+                    "value": 94.306
+                },
+                {
+                    "year": 2010,
+                    "value": 95.479
+                },
+                {
+                    "year": 2011,
+                    "value": 96.354
+                },
+                {
+                    "year": 2012,
+                    "value": 94.15100000000001
+                },
+                {
+                    "year": 2013,
+                    "value": 92.86200000000001
+                },
+                {
+                    "year": 2014,
+                    "value": 91.117
+                },
+                {
+                    "year": 2015,
+                    "value": 92.512
+                },
+                {
+                    "year": 2016,
+                    "value": 98.493
+                }
+            ]
+        }
+    ]
+}

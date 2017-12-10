@@ -1,0 +1,115 @@
+{
+    "header": {
+        "id": "5-2-1",
+        "prepared": "November 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Agencies submit data based on only one of these definitions. Within each population group size, the proportion of female rape victims was calculated from all NIBRS reports of rape, sodomy, and sexual assault with an object. For agencies that reported using the revised definition, the actual number of reported rapes was decreased by the calculated proportion to arrive at an estimate for the number of rapes using the legacy definition. Conversely, for agencies that reported using the legacy definition, the actual number of reported rapes was increased by the inverse of the proportion to arrive at an estimate for the number of rapes using the revised definition.",
+                "TITLE": "Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age",
+                "UNIT_MEASURE": "Estimated Volume Number",
+                "unit": "rev_rape_def"
+            },
+            "observations": [
+                {
+                    "year": 2013,
+                    "value": 113695
+                },
+                {
+                    "year": 2014,
+                    "value": 118027
+                },
+                {
+                    "year": 2015,
+                    "value": 126134
+                },
+                {
+                    "year": 2016,
+                    "value": 130603
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Agencies submit data based on only one of these definitions. Within each population group size, the proportion of female rape victims was calculated from all NIBRS reports of rape, sodomy, and sexual assault with an object. For agencies that reported using the revised definition, the actual number of reported rapes was decreased by the calculated proportion to arrive at an estimate for the number of rapes using the legacy definition. Conversely, for agencies that reported using the legacy definition, the actual number of reported rapes was increased by the inverse of the proportion to arrive at an estimate for the number of rapes using the revised definition.",
+                "TITLE": "Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age",
+                "UNIT_MEASURE": "Estimated Volume Number",
+                "unit": "legacy_rape_def"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 90178
+                },
+                {
+                    "year": 2001,
+                    "value": 90863
+                },
+                {
+                    "year": 2002,
+                    "value": 95235
+                },
+                {
+                    "year": 2003,
+                    "value": 93883
+                },
+                {
+                    "year": 2004,
+                    "value": 95089
+                },
+                {
+                    "year": 2005,
+                    "value": 94347
+                },
+                {
+                    "year": 2006,
+                    "value": 94472
+                },
+                {
+                    "year": 2007,
+                    "value": 92160
+                },
+                {
+                    "year": 2008,
+                    "value": 90750
+                },
+                {
+                    "year": 2009,
+                    "value": 89241
+                },
+                {
+                    "year": 2010,
+                    "value": 85593
+                },
+                {
+                    "year": 2011,
+                    "value": 84175
+                },
+                {
+                    "year": 2012,
+                    "value": 85141
+                },
+                {
+                    "year": 2013,
+                    "value": 82109
+                },
+                {
+                    "year": 2014,
+                    "value": 84864
+                },
+                {
+                    "year": 2015,
+                    "value": 91261
+                },
+                {
+                    "year": 2016,
+                    "value": 95730
+                }
+            ]
+        }
+    ]
+}

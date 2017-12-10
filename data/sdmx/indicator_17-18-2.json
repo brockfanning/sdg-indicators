@@ -1,0 +1,55 @@
+{
+    "header": {
+        "id": "17-18-2",
+        "prepared": "",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "This is a dichotomous variable. In the US, several national laws providing this coverage are relevant. For coding purposes, we consider three most relevant: the Paperwork Reduction Act, which gives authority to the Administrator of the Office of Information and Regulatory Affairs to designate a Chief Statistician with professional credentials and to designate the responsibility of ensuring official national statistics reflect relevance, accuracy, and objectivity. The Confidential Information Protection and Statistical Efficiency Act protects the confidentialty of infomration provided for solely statistical purposes. The Information Quality Act ensures that the quality of infomration collected is commesurate with its intended use and provides a means for the public to challenge (and thereby ensure) the quality of information collected.",
+                "TITLE": "Number of countries that have national statistical legislation that complies with the Fundamental Principles of Official statistics",
+                "UNIT_MEASURE": "Yes/no"
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": "yes"
+                },
+                {
+                    "year": 2008,
+                    "value": "yes"
+                },
+                {
+                    "year": 2009,
+                    "value": "yes"
+                },
+                {
+                    "year": 2010,
+                    "value": "yes"
+                },
+                {
+                    "year": 2011,
+                    "value": "yes"
+                },
+                {
+                    "year": 2012,
+                    "value": "yes"
+                },
+                {
+                    "year": 2013,
+                    "value": "yes"
+                },
+                {
+                    "year": 2014,
+                    "value": "yes"
+                },
+                {
+                    "year": 2015,
+                    "value": "yes"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "header": {
+        "id": "5-5-2",
+        "prepared": "10/2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data are based on a sample and are subject to sampling variability. The degree of uncertainty for an estimate arising from sampling variability is represented through the use of a margin of error. The margin of error for the data provided is +/-.2 (this is the 90 percent margin of error). The margin of error can be interpreted roughly as providing a 90 percent probability that the interval defined by the estimate minus the margin of error and the estimate plus the margin of error (the lower and upper confidence bounds) contains the true value.  In addition to sampling variability, the ACS estimates are subject to nonsampling error. The effect of nonsampling error is not represented in these data. Occupation codes are 4-digit codes and are based on Standard Occupational Classification 2010.",
+                "TITLE": "Proportion of women in managerial positions",
+                "UNIT_MEASURE": ""
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 33.9
+                },
+                {
+                    "year": 2008.0,
+                    "value": 36.5
+                },
+                {
+                    "year": 2009.0,
+                    "value": 37.2
+                },
+                {
+                    "year": 2010.0,
+                    "value": 37.6
+                },
+                {
+                    "year": 2011.0,
+                    "value": 37.7
+                },
+                {
+                    "year": 2012.0,
+                    "value": 37.5
+                },
+                {
+                    "year": 2013.0,
+                    "value": 37.8
+                },
+                {
+                    "year": 2014.0,
+                    "value": 38.2
+                },
+                {
+                    "year": 2015.0,
+                    "value": 38.4
+                },
+                {
+                    "year": 2016.0,
+                    "value": 38.8
+                }
+            ]
+        }
+    ]
+}

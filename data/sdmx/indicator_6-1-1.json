@@ -1,0 +1,91 @@
+{
+    "header": {
+        "id": "6-1-1",
+        "prepared": "November 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The EPA Office of Ground Water and Dr inking Water (headquarters) calculates this measure using data reported in the Safe Drinking Water Information System - Federal (SDWIS - FED) and provides the results to EPA regions. This measure includes federally - regulated contaminants of the following viola tion types: Maximum Contaminant Level, Maximum Residual Disinfection Limit, and Treatment Technique violations. It includes any violations from currently open and closed community water systems (CWSs) that overlap any part of the most recent four quarters.",
+                "TITLE": "Proportion of population using safely managed drinking water services",
+                "UNIT_MEASURE": "Population"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 90.7
+                },
+                {
+                    "year": 2001.0,
+                    "value": 90.8
+                },
+                {
+                    "year": 2002.0,
+                    "value": 93.7
+                },
+                {
+                    "year": 2003.0,
+                    "value": 91.0
+                },
+                {
+                    "year": 2004.0,
+                    "value": 92.2
+                },
+                {
+                    "year": 2005.0,
+                    "value": 91.0
+                },
+                {
+                    "year": 2006.0,
+                    "value": 91.7
+                },
+                {
+                    "year": 2007.0,
+                    "value": 93.6
+                },
+                {
+                    "year": 2008.0,
+                    "value": 94.2
+                },
+                {
+                    "year": 2009.0,
+                    "value": 95.0
+                },
+                {
+                    "year": 2010.0,
+                    "value": 92.2
+                },
+                {
+                    "year": 2011.0,
+                    "value": 93.2
+                },
+                {
+                    "year": 2012.0,
+                    "value": 94.7
+                },
+                {
+                    "year": 2013.0,
+                    "value": 91.2
+                },
+                {
+                    "year": 2014.0,
+                    "value": 92.5
+                },
+                {
+                    "year": 2015.0,
+                    "value": 91.1
+                },
+                {
+                    "year": 2016.0,
+                    "value": 91.2
+                },
+                {
+                    "year": 2017.0,
+                    "value": 92.8
+                }
+            ]
+        }
+    ]
+}

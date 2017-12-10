@@ -1,0 +1,35 @@
+{
+    "header": {
+        "id": "8-10-2",
+        "prepared": "January 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Weighted sample mean from the Survey of Income and Program Participation",
+                "TITLE": "Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider",
+                "UNIT_MEASURE": "Proportion"
+            },
+            "observations": [
+                {
+                    "year": 2009.0,
+                    "value": 70.7
+                },
+                {
+                    "year": 2010.0,
+                    "value": 69.8
+                },
+                {
+                    "year": 2011.0,
+                    "value": 69.8
+                },
+                {
+                    "year": 2013.0,
+                    "value": 89.2
+                }
+            ]
+        }
+    ]
+}

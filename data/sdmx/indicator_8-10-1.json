@@ -1,0 +1,31 @@
+{
+    "header": {
+        "id": "8-10-1",
+        "prepared": "2017-10-04",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Data are derived from the Economic Census conducted by the US Census Bureau",
+                "TITLE": "Number of commercial bank branches and automated teller machines (ATMs) per 100,000 adults",
+                "UNIT_MEASURE": "Number"
+            },
+            "observations": [
+                {
+                    "year": 2002,
+                    "value": 81357
+                },
+                {
+                    "year": 2007,
+                    "value": 91116
+                },
+                {
+                    "year": 2012,
+                    "value": 97222
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "header": {
+        "id": "16-3-1",
+        "prepared": "October 2016",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Number of violent incidents reported to police or other authorities/number of violent incidents during 12-month period times 100%",
+                "TITLE": "Proportion of victims of violence in the previous 12 months who reported their victimization to competent authorities or other officially recognized conflict resolution mechanisms",
+                "UNIT_MEASURE": "Percentage of all violent victimizations (including rape/sexual assault, robbery, aggravated assault and simple assault)"
+            },
+            "observations": [
+                {
+                    "year": 2007.0,
+                    "value": 44.9
+                },
+                {
+                    "year": 2008.0,
+                    "value": 46.4
+                },
+                {
+                    "year": 2009.0,
+                    "value": 44.1
+                },
+                {
+                    "year": 2010.0,
+                    "value": 51.1
+                },
+                {
+                    "year": 2011.0,
+                    "value": 49.0
+                },
+                {
+                    "year": 2012.0,
+                    "value": 44.2
+                },
+                {
+                    "year": 2013.0,
+                    "value": 45.6
+                },
+                {
+                    "year": 2014.0,
+                    "value": 46.0
+                },
+                {
+                    "year": 2015.0,
+                    "value": 46.5
+                }
+            ]
+        }
+    ]
+}

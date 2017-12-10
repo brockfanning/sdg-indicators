@@ -1,0 +1,246 @@
+{
+    "header": {
+        "id": "8-4-2",
+        "prepared": "2017-10-20",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "",
+                "TITLE": "Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP",
+                "UNIT_MEASURE": "Domestic Material Consumption: Billions of Dollars, Per Capita: Dollars",
+                "unit": "dmstc_mtrl_cnsmptn"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 2452.9
+                },
+                {
+                    "year": 2001,
+                    "value": 2525.2
+                },
+                {
+                    "year": 2002,
+                    "value": 2598.6
+                },
+                {
+                    "year": 2003,
+                    "value": 2721.6
+                },
+                {
+                    "year": 2004,
+                    "value": 2900.3
+                },
+                {
+                    "year": 2005,
+                    "value": 3080.3
+                },
+                {
+                    "year": 2006,
+                    "value": 3235.8
+                },
+                {
+                    "year": 2007,
+                    "value": 3361.6
+                },
+                {
+                    "year": 2008,
+                    "value": 3375.7
+                },
+                {
+                    "year": 2009,
+                    "value": 3198.4
+                },
+                {
+                    "year": 2010,
+                    "value": 3362.8
+                },
+                {
+                    "year": 2011,
+                    "value": 3596.5
+                },
+                {
+                    "year": 2012,
+                    "value": 3739.1
+                },
+                {
+                    "year": 2013,
+                    "value": 3834.5
+                },
+                {
+                    "year": 2014,
+                    "value": 3970.5
+                },
+                {
+                    "year": 2015,
+                    "value": 4033.2
+                },
+                {
+                    "year": 2016,
+                    "value": 4121.4
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "",
+                "TITLE": "Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP",
+                "UNIT_MEASURE": "Domestic Material Consumption: Billions of Dollars, Per Capita: Dollars",
+                "unit": "dmstc_mtrl_cnsmptn_pr_cpt"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 8686.0
+                },
+                {
+                    "year": 2001,
+                    "value": 8853.0
+                },
+                {
+                    "year": 2002,
+                    "value": 9024.0
+                },
+                {
+                    "year": 2003,
+                    "value": 9364.0
+                },
+                {
+                    "year": 2004,
+                    "value": 9890.0
+                },
+                {
+                    "year": 2005,
+                    "value": 10407.0
+                },
+                {
+                    "year": 2006,
+                    "value": 10829.0
+                },
+                {
+                    "year": 2007,
+                    "value": 11142.0
+                },
+                {
+                    "year": 2008,
+                    "value": 11084.0
+                },
+                {
+                    "year": 2009,
+                    "value": 10410.0
+                },
+                {
+                    "year": 2010,
+                    "value": 10855.0
+                },
+                {
+                    "year": 2011,
+                    "value": 11523.0
+                },
+                {
+                    "year": 2012,
+                    "value": 11894.0
+                },
+                {
+                    "year": 2013,
+                    "value": 12113.0
+                },
+                {
+                    "year": 2014,
+                    "value": 12451.0
+                },
+                {
+                    "year": 2015,
+                    "value": 12558.0
+                },
+                {
+                    "year": 2016,
+                    "value": 12744.0
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "",
+                "TITLE": "Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP",
+                "UNIT_MEASURE": "Domestic Material Consumption: Billions of Dollars, Per Capita: Dollars",
+                "unit": "dmstc_mtrl_cnsmptn_pct_gdp"
+            },
+            "observations": [
+                {
+                    "year": 2000,
+                    "value": 23.85
+                },
+                {
+                    "year": 2001,
+                    "value": 23.77
+                },
+                {
+                    "year": 2002,
+                    "value": 23.67
+                },
+                {
+                    "year": 2003,
+                    "value": 23.64
+                },
+                {
+                    "year": 2004,
+                    "value": 23.63
+                },
+                {
+                    "year": 2005,
+                    "value": 23.53
+                },
+                {
+                    "year": 2006,
+                    "value": 23.35
+                },
+                {
+                    "year": 2007,
+                    "value": 23.22
+                },
+                {
+                    "year": 2008,
+                    "value": 22.93
+                },
+                {
+                    "year": 2009,
+                    "value": 22.18
+                },
+                {
+                    "year": 2010,
+                    "value": 22.47
+                },
+                {
+                    "year": 2011,
+                    "value": 23.18
+                },
+                {
+                    "year": 2012,
+                    "value": 23.14
+                },
+                {
+                    "year": 2013,
+                    "value": 22.97
+                },
+                {
+                    "year": 2014,
+                    "value": 22.78
+                },
+                {
+                    "year": 2015,
+                    "value": 22.26
+                },
+                {
+                    "year": 2016,
+                    "value": 22.13
+                }
+            ]
+        }
+    ]
+}

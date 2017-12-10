@@ -1,0 +1,63 @@
+{
+    "header": {
+        "id": "13-3-2",
+        "prepared": "January 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "There are many programs throughout the United States that build capacity to implement adaptation, mitigation and technology transfer, and development actions, including at the federal level. For example, the Resilience Americorps program which recruits, trains, and embeds Americorps members in ten communities across the country to increase civic engagement and community resilience in low-income areas, and help those communities develop plans for becoming more resilient to any number of shocks and stresses, including better preparations for extreme weather events.  For more information: https://www.whitehouse.gov/the-press-office/2015/08/19/resilience-americorps-announces-ten-cities-its-pilot-program-support",
+                "TITLE": "Number of countries that have communicated the strengthening of institutional, systemic and individual capacity-building to implement adaptation, mitigation and technology transfer, and development actions",
+                "UNIT_MEASURE": "Yes/no"
+            },
+            "observations": [
+                {
+                    "year": 2007,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2008,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2009,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2010,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2011,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2012,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2013,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2014,
+                    "value": "not_available"
+                },
+                {
+                    "year": 2015,
+                    "value": "yes"
+                },
+                {
+                    "year": 2016,
+                    "value": "yes"
+                },
+                {
+                    "year": 2017,
+                    "value": "yes"
+                }
+            ]
+        }
+    ]
+}

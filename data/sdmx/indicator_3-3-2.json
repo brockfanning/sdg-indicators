@@ -1,0 +1,87 @@
+{
+    "header": {
+        "id": "3-3-2",
+        "prepared": "2017-10-15",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "Number of cases / total population *100,000",
+                "TITLE": "Tuberculosis incidence per 100,000 population",
+                "UNIT_MEASURE": "Number of cases per 100,000 population"
+            },
+            "observations": [
+                {
+                    "year": 2000.0,
+                    "value": 5.8
+                },
+                {
+                    "year": 2001.0,
+                    "value": 5.6
+                },
+                {
+                    "year": 2002.0,
+                    "value": 5.2
+                },
+                {
+                    "year": 2003.0,
+                    "value": 5.1
+                },
+                {
+                    "year": 2004.0,
+                    "value": 5.0
+                },
+                {
+                    "year": 2005.0,
+                    "value": 4.8
+                },
+                {
+                    "year": 2006.0,
+                    "value": 4.6
+                },
+                {
+                    "year": 2007.0,
+                    "value": 4.4
+                },
+                {
+                    "year": 2008.0,
+                    "value": 4.2
+                },
+                {
+                    "year": 2009.0,
+                    "value": 3.8
+                },
+                {
+                    "year": 2010.0,
+                    "value": 3.6
+                },
+                {
+                    "year": 2011.0,
+                    "value": 3.4
+                },
+                {
+                    "year": 2012.0,
+                    "value": 3.2
+                },
+                {
+                    "year": 2013.0,
+                    "value": 3.0
+                },
+                {
+                    "year": 2014.0,
+                    "value": 3.0
+                },
+                {
+                    "year": 2015.0,
+                    "value": 3.0
+                },
+                {
+                    "year": 2016.0,
+                    "value": 2.9
+                }
+            ]
+        }
+    ]
+}

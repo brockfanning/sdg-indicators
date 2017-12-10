@@ -1,0 +1,77 @@
+{
+    "header": {
+        "id": "16-2-2",
+        "prepared": "November 2017",
+        "sender": "???"
+    },
+    "series": [
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The FBI began collecting these data in 2013 through the UCR Program\u2019s Summary Reporting System and National Incident-Based Reporting System.  This table provides the volume of human trafficking offenses as reported, the number of reporting agencies, and the estimated population covered by the reporting agencies.  The data used in creating this table were from all law enforcement agencies submitting one or more human trafficking incidents for at least 1 month of the calendar year. The published data, therefore, do not necessarily represent reports from each participating agency for all 12 months of the calendar year. When the FBI determines that an agency\u2019s data collection methodology does not comply with national UCR guidelines, the figure(s) for that agency\u2019s offense(s) will not be included in the table, and the discrepancy will be explained in a footnote.",
+                "TITLE": "Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation",
+                "UNIT_MEASURE": "The total number of human trafficking offenses reported, the total number of human trafficking - commercial sex acts offenses reported, the total number of human trafficking - involuntary servitude offenses reported, the number of agencies reporting human trafficking offenses, and the estimated population of the reporting agencies.  \t\t\t\t\t\t"
+            },
+            "observations": [
+                {
+                    "year": 2014,
+                    "value": 443
+                },
+                {
+                    "year": 2015,
+                    "value": 965
+                },
+                {
+                    "year": 2016,
+                    "value": 1234
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The FBI began collecting these data in 2013 through the UCR Program\u2019s Summary Reporting System and National Incident-Based Reporting System.  This table provides the volume of human trafficking offenses as reported, the number of reporting agencies, and the estimated population covered by the reporting agencies.  The data used in creating this table were from all law enforcement agencies submitting one or more human trafficking incidents for at least 1 month of the calendar year. The published data, therefore, do not necessarily represent reports from each participating agency for all 12 months of the calendar year. When the FBI determines that an agency\u2019s data collection methodology does not comply with national UCR guidelines, the figure(s) for that agency\u2019s offense(s) will not be included in the table, and the discrepancy will be explained in a footnote.",
+                "TITLE": "Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation",
+                "UNIT_MEASURE": "The total number of human trafficking offenses reported, the total number of human trafficking - commercial sex acts offenses reported, the total number of human trafficking - involuntary servitude offenses reported, the number of agencies reporting human trafficking offenses, and the estimated population of the reporting agencies.  \t\t\t\t\t\t",
+                "form": "com_sex_acts"
+            },
+            "observations": [
+                {
+                    "year": 2014,
+                    "value": 300
+                },
+                {
+                    "year": 2015,
+                    "value": 744
+                },
+                {
+                    "year": 2016,
+                    "value": 1051
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "FREQ": "A",
+                "COLL_METHOD": "The FBI began collecting these data in 2013 through the UCR Program\u2019s Summary Reporting System and National Incident-Based Reporting System.  This table provides the volume of human trafficking offenses as reported, the number of reporting agencies, and the estimated population covered by the reporting agencies.  The data used in creating this table were from all law enforcement agencies submitting one or more human trafficking incidents for at least 1 month of the calendar year. The published data, therefore, do not necessarily represent reports from each participating agency for all 12 months of the calendar year. When the FBI determines that an agency\u2019s data collection methodology does not comply with national UCR guidelines, the figure(s) for that agency\u2019s offense(s) will not be included in the table, and the discrepancy will be explained in a footnote.",
+                "TITLE": "Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation",
+                "UNIT_MEASURE": "The total number of human trafficking offenses reported, the total number of human trafficking - commercial sex acts offenses reported, the total number of human trafficking - involuntary servitude offenses reported, the number of agencies reporting human trafficking offenses, and the estimated population of the reporting agencies.  \t\t\t\t\t\t",
+                "form": "invol_serv"
+            },
+            "observations": [
+                {
+                    "year": 2014,
+                    "value": 141
+                },
+                {
+                    "year": 2015,
+                    "value": 219
+                },
+                {
+                    "year": 2016,
+                    "value": 183
+                }
+            ]
+        }
+    ]
+}
