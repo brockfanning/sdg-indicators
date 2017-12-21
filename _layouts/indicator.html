@@ -38,7 +38,7 @@
         </section>
 
         <div class="usa-grid initiative-description">
-          
+
 
 {% assign slug = page.indicator | replace: '.', '-' %}
 {% assign dataset_name = 'indicator_' | append: slug %}
@@ -54,7 +54,7 @@
 
 {% for indicators in sdg_indicators %}
 {% if indicators.indicator_id == page.indicator %}
-  {% assign this_sdg_indicator_metadata = indicators %}  
+  {% assign this_sdg_indicator_metadata = indicators %}
 {% endif %}
 {% endfor %}
 
@@ -94,6 +94,7 @@
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">{{ t.data }}</a></li>
     <li role="presentation"><a href="#metadata" aria-controls="metadata" role="tab" data-toggle="tab">{{ t.metadata }}</a></li>
+    <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">{{ t.map }}</a></li>
     {% if site.github.environment == 'dotcom' %}
     <li role="presentation"><a href="#edit" aria-controls="edit" role="tab" data-toggle="tab">{{ t.editing }}</a></li>
     {% endif %}
@@ -113,7 +114,7 @@
           <div class="button_wrapper">
               <a class="usa-button usa-button-big" href="{{ site.baseurl }}/data/{{ dataset_name }}.csv">Download CSV</a>
           </div>
-        
+
 
 
       </div>
@@ -126,7 +127,7 @@
     </div>
     <div role="tabpanel" class="tab-pane" id="metadata">
       <div class="metadata-table">
-    
+
       <h2>Global Metadata</h2>
       <p class="metadata-notes">
         {{ t.this-table }} <a href="{{ this_sdg_indicator_metadata.goal_meta_link }}">{{ t.documentation }} {{ page_goal_num }}</a>{{ t.provided }}
@@ -199,6 +200,14 @@
 
     </div>
 
+    <div role="tabpanel" class="tab-pane" id="map">
+
+      <h2>Map!</h2>
+
+      <svg id="d3map" width="960" height="600"></svg>
+
+    </div>
+
     {% if site.github.environment == 'dotcom' %}
     <div role="tabpanel" class="tab-pane" id="edit">
       <div class="edit-container">
@@ -222,20 +231,98 @@
 
 
       </div>   <!-- usa-grid -->
-      
+
     </div>
-    
+
 
 {% include scripts.html %}
 
 <script>
   init_table({
-    csv_path: '{{ site.baseurl }}/data/{{ dataset_name }}.csv', 
-    element: 'datatable', 
+    csv_path: '{{ site.baseurl }}/data/{{ dataset_name }}.csv',
+    element: 'datatable',
     allow_download: false,
     csv_options: {separator: ',', delimiter: '"'},
     datatables_options: {"paging": false, "bInfo" : false, "searching": false}
   });
 </script>
-    
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script>
+  var svg = d3.select('svg#d3map');
+  var width = +svg.attr('width');
+  var height = +svg.attr('height');
+
+  var subnational = d3.map();
+
+  var path = d3.geoPath();
+
+  var x = d3.scaleLinear()
+    .domain([1, 10])
+    .rangeRound([600, 860]);
+
+  var color = d3.scaleThreshold()
+    .domain(d3.range(2, 10))
+    .range(d3.schemeBlues[9]);
+
+  var g = svg.append('g')
+    .attr('class', 'key')
+    .attr('transform', 'translate(0,40)');
+
+  g.selectAll('rect')
+    .data(color.range().map(function(d) {
+      d = color.invertExtent(d);
+      if (d[0] == null) d[0] = x.domain()[0];
+      if (d[1] == null) d[1] = x.domain()[1];
+      return d;
+    }))
+    .enter().append('rect')
+      .attr('height', 8)
+      .attr('x', function(d) { return x(d[0]); })
+      .attr('width', function(d) { return x(d[1]) - x(d[0]); })
+      .attr('fill', function(d) { return color(d[0]); });
+
+  g.append('text')
+    .attr('class', 'caption')
+    .attr('x', x.range()[0])
+    .attr('y', -6)
+    .attr('fill', '#000')
+    .attr('text-anchor', 'start')
+    .attr('font-weight', 'bold')
+    .text('Subnational data');
+
+  g.call(d3.axisBottom(x)
+      .tickSize(13)
+      .tickFormat(function(x, i) { return i ? x : x + '%'; })
+      .tickValues(color.domain()))
+    .select('.domain')
+      .remove();
+
+  d3.queue()
+    .defer(d3.json, 'https://d3js.org/us-10m.v1.json')
+    .defer(d3.tsv, '/sdg-indicators/data/subnational.tsv', function(d) { subnational.set(d.id, +d.rate); })
+    .await(ready);
+
+  function ready(error, us) {
+    if (error) throw error;
+
+
+    svg.append('g')
+        .attr('class', 'counties')
+      .selectAll('path')
+      .data(topojson.feature(us, us.objects.counties).features)
+      .enter().append('path')
+        .attr('fill', function(d) { return color(d.rate = subnational.get(d.id)); })
+        .attr('d', path)
+      .append('title')
+        .text(function(d) { return d.rate + '%'; });
+
+    svg.append('path')
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr('class', 'states')
+      .attr('d', path);
+  }
+</script>
 {% include footer.html %}
