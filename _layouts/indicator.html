@@ -249,4 +249,8 @@
   });
 </script>
 
+{% if page.subnational %}
+  {% include components/map-scripts.html %}
+{% endif %}
+
 {% include footer.html %}
