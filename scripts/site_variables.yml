@@ -18,11 +18,12 @@ csv_column_names:
 # These paths can be written as Unix-style (using forward-slashes) and the
 # scripts will adjust automatically when run on Windows computers.
 folders:
-  data_csv_wide:      data
-  data_csv_tidy:      data/tidy
-  data_sdmx_json:     data/sdmx
-  pages_sdmx:         api/sdmx
-  pages_indicators:   _indicators
+  data_csv_wide:        data
+  data_csv_tidy:        data/tidy
+  data_csv_subnational: data/subnational
+  data_sdmx_json:       data/sdmx
+  pages_sdmx:           api/sdmx
+  pages_indicators:     _indicators
 
 # Here you can inform the scripts about the keys being used in your indicator's
 # "front matter" to control metadata. For example, if the key you are using for

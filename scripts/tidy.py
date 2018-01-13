@@ -39,6 +39,7 @@ HEADER_YEAR = site['csv_column_names']['year']
 HEADER_VALUE = site['csv_column_names']['value']
 FOLDER_DATA_CSV_TIDY = site['folders']['data_csv_tidy']
 FOLDER_DATA_CSV_WIDE = site['folders']['data_csv_wide']
+FOLDER_DATA_CSV_SUBNATIONAL = site['folders']['data_csv_subnational']
 
 def tidy_headers_check(df):
     """This checks to see if the column headers are suitable for tidying."""
@@ -135,7 +136,7 @@ def tidy_csv_from_disaggregation_folder(csv, subfolder):
 
     # Convert the folder structure into a column according to our syntax rules.
     # For example: state/alabama will turn into 'state:alabama'.
-    subfolder = subfolder.replace(FOLDER_DATA_CSV_WIDE, '')
+    subfolder = subfolder.replace(FOLDER_DATA_CSV_SUBNATIONAL, '')
     subfolder = subfolder.strip(os.sep)
     subfolder_column = subfolder.replace(os.sep, ':')
 
@@ -208,7 +209,7 @@ def main():
 
     # Check here to see if there are any subfolder-style disaggregations.
     disaggregation_folders = dict()
-    folders = glob.glob(FOLDER_DATA_CSV_WIDE + '/*/')
+    folders = glob.glob(FOLDER_DATA_CSV_SUBNATIONAL + '/*/')
     for folder in folders:
         subfolders = glob.glob(folder + '/*/')
         if (subfolders):
