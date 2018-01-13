@@ -26,6 +26,71 @@ HEADER_YEAR = site['csv_column_names']['year']
 FOLDER_DATA_CSV_WIDE = site['folders']['data_csv_wide']
 FOLDER_DATA_CSV_SUBNATIONAL = site['folders']['data_csv_subnational']
 
+def state_abbreviation(state):
+    abbreviations = {
+        'United States': 'US',
+        'Alabama': 'AL',
+        'Alaska': 'AK',
+        'American Samoa': 'AS',
+        'Arizona': 'AZ',
+        'Arkansas': 'AR',
+        'California': 'CA',
+        'Colorado': 'CO',
+        'Connecticut': 'CT',
+        'Delaware': 'DE',
+        'District of Columbia': 'DC',
+        'Federated States Of Micronesia': 'FM',
+        'Florida': 'FL',
+        'Georgia': 'GA',
+        'Guam': 'GU',
+        'Hawaii': 'HI',
+        'Idaho': 'ID',
+        'Illinois': 'IL',
+        'Indiana': 'IN',
+        'Iowa': 'IA',
+        'Kansas': 'KS',
+        'Kentucky': 'KY',
+        'Louisiana': 'LA',
+        'Maine': 'ME',
+        'Marshall Islands': 'MH',
+        'Maryland': 'MD',
+        'Massachusetts': 'MA',
+        'Michigan': 'MI',
+        'Minnesota': 'MN',
+        'Mississippi': 'MS',
+        'Missouri': 'MO',
+        'Montana': 'MT',
+        'Nebraska': 'NE',
+        'Nevada': 'NV',
+        'New Hampshire': 'NH',
+        'New Jersey': 'NJ',
+        'New Mexico': 'NM',
+        'New York': 'NY',
+        'North Carolina': 'NC',
+        'North Dakota': 'ND',
+        'Northern Mariana Islands': 'MP',
+        'Ohio': 'OH',
+        'Oklahoma': 'OK',
+        'Oregon': 'OR',
+        'Palau': 'PW',
+        'Pennsylvania': 'PA',
+        'Puerto Rico': 'PR',
+        'Rhode Island': 'RI',
+        'South Carolina': 'SC',
+        'South Dakota': 'SD',
+        'Tennessee': 'TN',
+        'Texas': 'TX',
+        'Utah': 'UT',
+        'Vermont': 'VT',
+        'Virgin Islands': 'VI',
+        'Virginia': 'VA',
+        'Washington': 'WA',
+        'West Virginia': 'WV',
+        'Wisconsin': 'WI',
+        'Wyoming': 'WY'
+    }
+    return abbreviations[state]
+
 def main():
 
     csv_parameters = {
@@ -37,11 +102,11 @@ def main():
     df = pd.read_csv(**csv_parameters)
 
     for index,row in df.iterrows():
-        state_name = row['GeoName'].lower().replace(' ', '-')
+        state_name = state_abbreviation(row['GeoName'])
         row = row.iloc[1:]
         subfolder = os.path.join(FOLDER_DATA_CSV_SUBNATIONAL, 'state', state_name)
 
-        if state_name == 'united-states':
+        if state_name == 'US':
             subfolder = FOLDER_DATA_CSV_WIDE
         else:
             os.makedirs(subfolder, exist_ok=True)
