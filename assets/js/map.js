@@ -73,6 +73,11 @@ var state_ids = {
   'UM': '74',
   'VI': '78'
 };
+// Also flip the above object for reverse lookups later.
+var state_abbreviations = {};
+for(var key in state_ids) {
+  state_abbreviations[state_ids[key]] = key;
+}
 
 // This hardcoded list of goal colors for d3's chromatic scale schemes.
 var goal_schemes = {
@@ -116,12 +121,6 @@ function abort() {
 function ready(error, data, us) {
   if (error) throw error;
 
-  // A future improvement would be to implement disaggregation filtering
-  // on these maps, but for now, we are just doing a hardcoded visualization
-  // of the aggregated data for the most recent year, 2016. A necessary
-  // improvement would be some sort of slider widget for changing the year.
-  var year = '2016';
-
   // To get the aggregated data, we need the rows that have the correct year,
   // a value, but no other columns filled out. So first get the other columns.
   var otherColumns = [];
@@ -151,10 +150,6 @@ function ready(error, data, us) {
 
   // Filter down the data.
   data = data.filter(function(row) {
-    // Ensure the correct year.
-    if (row.year != year) {
-      return false;
-    }
     // We only care about rows with state.
     if (row.state == '') {
       return false;
@@ -174,73 +169,129 @@ function ready(error, data, us) {
     return;
   }
 
-  // Get the max and min values.
-  var min = d3.min(data, function(d) { return +d.value; });
-  var max = d3.max(data, function(d) { return +d.value; });
+  // Get a sorted list of the years available.
+  var years = d3.map(data, function(d) { return +d.year; }).keys().sort();
 
-  // Map the data according to the state's id code.
-  data_by_id = {};
-  for (var row in data) {
-    data_by_id[state_ids[data[row].state]] = data[row].value;
+  // Show the year widget.
+  $('#map-year').show();
+  var $btnPrev = $('#map-previous').click(previousYear);
+  var $btnNext = $('#map-next').click(nextYear);
+  var $btnCurrent = $('#map-current');
+
+  // Finally do the initial map rendering, starting with the most recent year.
+  var currentYearIndex = years.length - 1;
+  updateYear();
+
+  // Switch to the previous year.
+  function previousYear() {
+    currentYearIndex -= 1;
+    if (currentYearIndex < 0) {
+      currentYearIndex = 0;
+    }
+    updateYear();
   }
 
-  // A horizontal scale for the legend.
-  var x = d3.scaleLinear()
-    .domain([min, max])
-    .rangeRound([600, 860]);
+  // Switch to the next year.
+  function nextYear() {
+    currentYearIndex += 1;
+    if (currentYearIndex >= years.length) {
+      currentYearIndex = years.length - 1;
+    }
+    updateYear();
+  }
 
-  // A threshold scale for the colors of the legend.
-  var num_steps = 9;
-  var step_size = (max - min) / (num_steps - 1);
-  var steps = d3.range(min, max + step_size, step_size);
-  var color = d3.scaleThreshold()
-    .domain(steps)
-    .range(color_scheme[num_steps]);
+  // Function to update the current year.
+  function updateYear() {
+    $btnPrev.attr('disabled', currentYearIndex == 0);
+    $btnNext.attr('disabled', currentYearIndex >= years.length - 1);
+    $btnCurrent.html(years[currentYearIndex]);
+    renderMap();
+  }
 
-  // Start drawing the legend.
-  var g = svg.append('g')
-    .attr('transform', 'translate(0,40)');
+  // Function to render the map.
+  function renderMap() {
 
-  // Convert each "color step" into a colored rectangle.
-  g.selectAll('rect')
-    .data(color.range().map(function(d) {
-      d = color.invertExtent(d);
-      if (d[0] == null) d[0] = x.domain()[0];
-      if (d[1] == null) d[1] = x.domain()[1];
-      return d;
-    }))
-    .enter().append('rect')
-      .attr('height', 8)
-      .attr('x', function(d) { return x(d[0]); })
-      .attr('width', function(d) { return x(d[1]) - x(d[0]); })
-      .attr('fill', function(d) { return color(d[0]); });
+    var year = years[currentYearIndex];
 
-  // Add the legend text.
-  g.append('text')
-    .attr('class', 'caption')
-    .attr('x', x.range()[0])
-    .attr('y', -6)
-    .attr('fill', '#000')
-    .attr('text-anchor', 'start')
-    .attr('font-weight', 'bold')
-    .text(map_vars.legend_text);
+    // Clear the svg to start.
+    svg.selectAll('*').remove();
 
-  // Add the tick marks.
-  g.call(d3.axisBottom(x)
-      .tickSize(13)
-      .tickFormat(d3.format(".0f"))
-      .tickValues(color.domain()))
-    .select('.domain')
-      .remove();
+    var data_by_year = data.filter(function(row) {
+      if (row.year != year) {
+        return false;
+      }
+      return true;
+    });
 
-  // Finally draw the map itself.
-  svg.append('g')
-      .attr('class', 'states')
-    .selectAll('path')
-    .data(topojson.feature(us, us.objects.states).features)
-    .enter().append('path')
-      .attr('fill', function(d) { return color(d.num = data_by_id[d.id]); })
-      .attr('d', path)
-    .append('title')
-      .text(function(d) { return d.num; });
+    // Get the max and min values.
+    var minValue = d3.min(data_by_year, function(d) { return +d.value; });
+    var maxValue = d3.max(data_by_year, function(d) { return +d.value; });
+
+    // Map the data according to the state's id code.
+    var data_by_id = {};
+    for (var row in data_by_year) {
+      data_by_id[state_ids[data_by_year[row].state]] = data_by_year[row].value;
+    }
+
+    // A horizontal scale for the legend.
+    var legendScale = d3.scaleLinear()
+      .domain([minValue, maxValue])
+      .rangeRound([600, 860]);
+
+    // A threshold scale for the colors of the legend.
+    var num_steps = 9;
+    var step_size = (maxValue - minValue) / (num_steps - 1);
+    var steps = d3.range(minValue, maxValue + step_size, step_size);
+    var color = d3.scaleThreshold()
+      .domain(steps)
+      .range(color_scheme[num_steps]);
+
+    // Start drawing the legend.
+    var g = svg.append('g')
+      .attr('transform', 'translate(0,40)');
+
+    // Convert each "color step" into a colored rectangle.
+    g.selectAll('rect')
+      .data(color.range().map(function(d) {
+        d = color.invertExtent(d);
+        if (d[0] == null) d[0] = legendScale.domain()[0];
+        if (d[1] == null) d[1] = legendScale.domain()[1];
+        return d;
+      }))
+      .enter().append('rect')
+        .attr('height', 8)
+        .attr('x', function(d) { return legendScale(d[0]); })
+        .attr('width', function(d) { return legendScale(d[1]) - legendScale(d[0]); })
+        .attr('fill', function(d) { return color(d[0]); });
+
+    // Add the legend text.
+    g.append('text')
+      .attr('class', 'caption')
+      .attr('x', legendScale.range()[0])
+      .attr('y', -6)
+      .attr('fill', '#000')
+      .attr('text-anchor', 'start')
+      .attr('font-weight', 'bold')
+      .text(map_vars.legend_text);
+
+    // Add the tick marks.
+    var tickValues = color.domain();
+    g.call(d3.axisBottom(legendScale)
+        .tickSize(13)
+        .tickFormat(d3.format(".0f"))
+        .tickValues(tickValues))
+      .select('.domain')
+        .remove();
+
+    // Finally draw the map itself.
+    svg.append('g')
+        .attr('class', 'states')
+      .selectAll('path')
+      .data(topojson.feature(us, us.objects.states).features)
+      .enter().append('path')
+        .attr('fill', function(d) { return color(d.num = data_by_id[d.id]); })
+        .attr('d', path)
+      .append('title')
+        .text(function(d) { return state_abbreviations[d.id] + ' - ' + d.num; });
+  }
 }
