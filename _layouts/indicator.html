@@ -43,6 +43,16 @@
 {% assign slug = page.indicator | replace: '.', '-' %}
 {% assign dataset_name = 'indicator_' | append: slug %}
 
+{% assign subnational = false %}
+{% if site.data.subnational.state %}
+    {% for state in site.data.subnational.state %}
+        {% if state[1][dataset_name] %}
+            {% assign subnational = true %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
 {% if page.lang == 'en' %}
     {% assign sdg_indicators = site.data.sdg_indicator_metadata %}
 {% else %}
@@ -94,7 +104,7 @@
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">{{ t.data }}</a></li>
     <li role="presentation"><a href="#metadata" aria-controls="metadata" role="tab" data-toggle="tab">{{ t.metadata }}</a></li>
-    {% if page.subnational %}
+    {% if subnational %}
     <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">{{ t.map }}</a></li>
     {% endif %}
     {% if site.github.environment == 'dotcom' %}
@@ -202,7 +212,7 @@
 
     </div>
 
-    {% if page.subnational %}
+    {% if subnational %}
     <div role="tabpanel" class="tab-pane" id="map">
 
       {% include components/map.html %}
@@ -249,7 +259,7 @@
   });
 </script>
 
-{% if page.subnational %}
+{% if subnational %}
   {% include components/map-scripts.html %}
 {% endif %}
 
