@@ -292,6 +292,6 @@ function ready(error, data, us) {
         .attr('fill', function(d) { return color(d.num = data_by_id[d.id]); })
         .attr('d', path)
       .append('title')
-        .text(function(d) { return state_abbreviations[d.id] + ' - ' + d.num; });
+        .text(function(d) { return state_abbreviations[d.id] + ': ' + d.num; });
   }
 }
