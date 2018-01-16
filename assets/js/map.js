@@ -290,9 +290,15 @@ function ready(error, data, us) {
       .selectAll('path')
       .data(topojson.feature(us, us.objects.states).features)
       .enter().append('path')
+        .attr('class', 'state')
         .attr('fill', function(d) { return color(d.num = data_by_id[d.id]); })
         .attr('d', path)
-      .append('title')
-        .text(function(d) { return state_abbreviations[d.id] + ': ' + d.num; });
+        .attr('title', function(d) { return state_abbreviations[d.id] + ': ' + d.num; });
+
+    tippy('svg .state', {
+      size: 'large',
+      performance: true,
+      followCursor: true
+    });
   }
 }
