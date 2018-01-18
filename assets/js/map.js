@@ -155,8 +155,25 @@ function sdg_indicator_map(container, config) {
     var $btnCurrent = $('#map-current');
 
     // Get the max and min values.
-    var minValue = d3.min(data, function(d) { return +d[config.data_column_value]; });
-    var maxValue = d3.max(data, function(d) { return +d[config.data_column_value]; });
+    var getDataValue = function(d) {
+      return +d[config.data_column_value];
+    };
+    var minValue = d3.min(data, getDataValue);
+    var maxValue = d3.max(data, getDataValue);
+    var threeDeviations = d3.deviation(data, getDataValue) * 3;
+    var mean = d3.mean(data, getDataValue);
+
+    // To prevent non-useful choropleth maps where one extreme outlier makes
+    // all the other regions appear uniform, make sure that the minValue and
+    // maxValue are not outside of 3 standard definitions from the mean. This
+    // causes the legend to start and end at the less extreme values, and all
+    // regions with extreme values will get the first or last color.
+    if (minValue < mean - threeDeviations) {
+      minValue = mean - threeDeviations;
+    }
+    if (maxValue > mean + threeDeviations) {
+      maxValue = mean + threeDeviations;
+    }
 
     // A horizontal scale for the legend.
     var legendScale = d3.scaleLinear()
