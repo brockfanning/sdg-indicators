@@ -18,7 +18,7 @@
  *     The column header in the CSV that represents the subnational region
  *   "geojson_path"
  *     A web-accessible path to the geojson file
- *   "geojson_d3_data"
+ *   "geojson_d3_callback"
  *     A callback function used to feed the geojson data into the d3 rendering
  *   "region_ids"
  *     An object consisting of each subnational region value, keyed to that
@@ -26,24 +26,13 @@
  *   "region_labels"
  *     An object consisting of each subnational region value, keyed to that
  *     region's human-readable label.
- *   "legend_start"
- *     The number of pixels at which the legend starts
- *   "legend_end"
- *     The number of pixels at which the legend ends
- *   "legend_text"
- *     The text to display above the legend
- *   "abort_text"
- *     The message to display if the data does not support subnational display
- *   "button_text_previous"
- *     The text for the "Previous" button
- *   "button_text_next"
- *     The text for the "Next" button
  */
 function sdg_indicator_map(config) {
 
   var svg = d3.select('#map-regions');
   var width = +svg.attr('width');
   var height = +svg.attr('height');
+  var heightRatio = height / width;
   var path = d3.geoPath();
 
   // This hardcoded list of goal colors for d3's chromatic scale schemes.
@@ -75,14 +64,6 @@ function sdg_indicator_map(config) {
     .defer(d3.csv, config.data_path)
     .defer(d3.json, config.geojson_path)
     .await(ready);
-
-  // This function hides the map and displays a message, for the cases where the
-  // data is not actually ready for subnational mapping.
-  function abort() {
-    $('#map-container *').hide();
-    $('#map-container')
-      .append('<h4>' + config.abort_text + '</h4>');
-  }
 
   // This function only executed after indicator data and geo data has been loaded.
   function ready(error, data, geojson) {
@@ -216,11 +197,29 @@ function sdg_indicator_map(config) {
       .select('.domain')
         .remove();
 
+    // Make the map responsive to screen width changes.
+    svg.attr('width', '100%');
+    d3.select(window)
+      .on('resize', resizeMap);
+
     // Finally do the initial map rendering, starting with the most recent year.
     var currentYearIndex = years.length - 1;
     updateYear();
 
-    // Switch to the previous year.
+    /**************** Helper functions *************************/
+
+    /**
+     * This function hides the map and displays a message, for the cases where
+     * the data is not actually ready for subnational mapping.
+     */
+    function abort() {
+      $('#map-container *').hide();
+      $('#map-abort').show();
+    }
+
+    /**
+     * Switch the map to the previous year.
+     */
     function previousYear() {
       currentYearIndex -= 1;
       if (currentYearIndex < 0) {
@@ -229,7 +228,9 @@ function sdg_indicator_map(config) {
       updateYear();
     }
 
-    // Switch to the next year.
+    /**
+     * Switch the map to the next year.
+     */
     function nextYear() {
       currentYearIndex += 1;
       if (currentYearIndex >= years.length) {
@@ -238,7 +239,9 @@ function sdg_indicator_map(config) {
       updateYear();
     }
 
-    // Function to update the current year.
+    /**
+     * Update the map according to the last specified year.
+     */
     function updateYear() {
       $btnPrev.attr('disabled', currentYearIndex == 0);
       $btnNext.attr('disabled', currentYearIndex >= years.length - 1);
@@ -246,34 +249,37 @@ function sdg_indicator_map(config) {
       renderMap();
     }
 
-    // Make the map responsive to screen width changes.
-    d3.select(window)
-      .on('resize', resizeMap);
+    /**
+     * Callback for whenever the screen is resized.
+     */
     function resizeMap() {
+
       var parentWidth = $('#map-container').width();
-      // At load time, this can be empty, so choose the smallest of: the SVG,
-      // or the window.
+      // At load time, parentWidth is 0. In that case, we have to use the SVG's
+      // width, or the window's width if smaller.
       if (!parentWidth) {
         parentWidth = width;
         if (parentWidth > $(window).width()) {
           parentWidth = $(window).width();
         }
       }
-      console.log(parentWidth);
-      // Rescale the contents of the map SVG.
+
+      // Rescale the contents of the map SVG, making sure not to go bigger than
+      // the original.
       var scale = parentWidth / width;
       if (scale > 1) {
         scale = 1;
       }
       d3.selectAll('#map-regions .regions').attr('transform', 'scale(' + scale + ')');
-      // Give the svg a new height and width.
-      var heightRatio = height / width;
+
+      // Give the svg a new height.
       $('#map-regions')
-        .width(parentWidth)
         .height(parentWidth * heightRatio);
 	  }
 
-    // Function to render the map.
+    /**
+     * Helper function to render the map.
+     */
     function renderMap() {
 
       var year = years[currentYearIndex];
@@ -302,7 +308,7 @@ function sdg_indicator_map(config) {
       svg.append('g')
           .attr('class', 'regions')
         .selectAll('path')
-        .data(config.geojson_d3_data(geojson))
+        .data(config.geojson_d3_callback(geojson))
         .enter().append('path')
           .attr('class', 'region')
           .attr('fill', function(d) { return color(d.num = data_by_id[d.id]); })

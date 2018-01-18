@@ -12,7 +12,7 @@
     data_column_value: 'value',
     data_column_region: 'state',
     geojson_path: 'https://d3js.org/us-10m.v1.json',
-    geojson_d3_data: function(data) {
+    geojson_d3_callback: function(data) {
       return topojson.feature(data, data.objects.states).features;
     },
     region_ids: {
@@ -137,10 +137,6 @@
       "WV": "West Virginia",
       "WI": "Wisconsin",
       "WY": "Wyoming"
-    },
-    legend_text: '{{ page.title }}',
-    abort_text: 'Subnational data is not yet available for this indicator.',
-    button_text_previous: 'Previous',
-    button_text_next: 'Next'
+    }
   });
 </script>
