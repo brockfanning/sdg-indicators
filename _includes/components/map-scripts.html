@@ -5,7 +5,7 @@
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/map.js"></script>
 <script>
-  sdg_indicator_map('#map-{{ id }}', {
+  sdg_indicator_map({
     indicator_id: '{{ id }}',
     data_path: '{{ site.baseurl }}/data/tidy/indicator_{{ id }}.csv',
     data_column_year: 'year',
@@ -138,8 +138,6 @@
       "WI": "Wisconsin",
       "WY": "Wyoming"
     },
-    legend_start: 600,
-    legend_end: 860,
     legend_text: '{{ page.title }}',
     abort_text: 'Subnational data is not yet available for this indicator.',
     button_text_previous: 'Previous',

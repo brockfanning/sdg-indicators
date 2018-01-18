@@ -3,6 +3,7 @@
 #map-current {
   display: inline-block;
   margin: 0;
+  width: auto;
 }
 #map-year {
   text-align: center;
@@ -10,4 +11,17 @@
 }
 #map-current {
   margin: 0 20px;
+}
+#map-container {
+  position: relative;
+}
+#map-caption {
+  margin-bottom: 5px;
+  line-height: 13px;
+  font-size: 11px;
+  padding-left: 10px;
+}
+#map-legend {
+  margin: 15px 0 -15px 0;
+  text-align: center;
 }

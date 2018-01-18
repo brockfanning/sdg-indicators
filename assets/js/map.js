@@ -4,8 +4,6 @@
 /**
  * A global function for rendering the SDG indicator map.
  *
- * @param String container
- *   The CSS selector for the container of the map.
  * @param Object config
  *   An object containing all required configuration options. These consist of:
  *   "indicator_id"
@@ -41,9 +39,9 @@
  *   "button_text_next"
  *     The text for the "Next" button
  */
-function sdg_indicator_map(container, config) {
+function sdg_indicator_map(config) {
 
-  var svg = d3.select(container);
+  var svg = d3.select('#map-regions');
   var width = +svg.attr('width');
   var height = +svg.attr('height');
   var path = d3.geoPath();
@@ -81,9 +79,9 @@ function sdg_indicator_map(container, config) {
   // This function hides the map and displays a message, for the cases where the
   // data is not actually ready for subnational mapping.
   function abort() {
-    $(container)
-      .hide()
-      .after('<h4>' + config.abort_text + '</h4>');
+    $('#map-container *').hide();
+    $('#map-container')
+      .append('<h4>' + config.abort_text + '</h4>');
   }
 
   // This function only executed after indicator data and geo data has been loaded.
@@ -148,8 +146,7 @@ function sdg_indicator_map(container, config) {
     // Get a sorted list of the years available.
     var years = d3.map(data, function(d) { return +d[config.data_column_year]; }).keys().sort();
 
-    // Show the year widget.
-    $('#map-year').show();
+    // Set up the year widget.
     var $btnPrev = $('#map-previous').click(previousYear);
     var $btnNext = $('#map-next').click(nextYear);
     var $btnCurrent = $('#map-current');
@@ -178,7 +175,7 @@ function sdg_indicator_map(container, config) {
     // A horizontal scale for the legend.
     var legendScale = d3.scaleLinear()
       .domain([minValue, maxValue])
-      .rangeRound([config.legend_start, config.legend_end]);
+      .rangeRound([0, 260]);
 
     // A threshold scale for the colors of the legend.
     var num_steps = 9;
@@ -189,8 +186,9 @@ function sdg_indicator_map(container, config) {
       .range(color_scheme[num_steps]);
 
     // Start drawing the legend.
-    var g = svg.append('g')
-      .attr('transform', 'translate(0,40)');
+    var legend = d3.select('#map-colors');
+    var g = legend.append('g')
+      .attr('transform', 'translate(10, 0)');
 
     // Convert each "color step" into a colored rectangle.
     g.selectAll('rect')
@@ -207,14 +205,7 @@ function sdg_indicator_map(container, config) {
         .attr('fill', function(d) { return color(d[0]); });
 
     // Add the legend text.
-    g.append('text')
-      .attr('class', 'caption')
-      .attr('x', legendScale.range()[0])
-      .attr('y', -6)
-      .attr('fill', '#000')
-      .attr('text-anchor', 'start')
-      .attr('font-weight', 'bold')
-      .text(config.legend_text);
+    $('#map-caption').html(config.legend_text);
 
     // Add the tick marks.
     var tickValues = color.domain();
@@ -255,6 +246,33 @@ function sdg_indicator_map(container, config) {
       renderMap();
     }
 
+    // Make the map responsive to screen width changes.
+    d3.select(window)
+      .on('resize', resizeMap);
+    function resizeMap() {
+      var parentWidth = $('#map-container').width();
+      // At load time, this can be empty, so choose the smallest of: the SVG,
+      // or the window.
+      if (!parentWidth) {
+        parentWidth = width;
+        if (parentWidth > $(window).width()) {
+          parentWidth = $(window).width();
+        }
+      }
+      console.log(parentWidth);
+      // Rescale the contents of the map SVG.
+      var scale = parentWidth / width;
+      if (scale > 1) {
+        scale = 1;
+      }
+      d3.selectAll('#map-regions .regions').attr('transform', 'scale(' + scale + ')');
+      // Give the svg a new height and width.
+      var heightRatio = height / width;
+      $('#map-regions')
+        .width(parentWidth)
+        .height(parentWidth * heightRatio);
+	  }
+
     // Function to render the map.
     function renderMap() {
 
@@ -291,11 +309,15 @@ function sdg_indicator_map(container, config) {
           .attr('d', path)
           .attr('title', function(d) { return region_labels[d.id] + ': ' + d.num; });
 
-      tippy('svg .region', {
+      // Enhance the tooltips using the Tippy library.
+      tippy('#map-regions .region', {
         size: 'large',
         performance: true,
         followCursor: true
       });
+
+      // Resize the map if needed.
+      resizeMap();
     }
   }
 }
