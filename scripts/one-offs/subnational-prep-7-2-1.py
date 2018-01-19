@@ -59,8 +59,11 @@ def main():
     for state in states:
         data = df[df['StateCode'] == state]
         data = data.drop('StateCode', axis=1)
-        subfolder = os.path.join(FOLDER_DATA_CSV_SUBNATIONAL, 'state', state)
-        os.makedirs(subfolder, exist_ok=True)
+        if state == 'US':
+            subfolder = FOLDER_DATA_CSV_WIDE
+        else:
+            subfolder = os.path.join(FOLDER_DATA_CSV_SUBNATIONAL, 'state', state)
+            os.makedirs(subfolder, exist_ok=True)
         path = os.path.join(subfolder, 'indicator_7-2-1.csv')
         data.to_csv(path, float_format='%.2f', index=False, header=[HEADER_YEAR, HEADER_ALL])
 
