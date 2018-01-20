@@ -5,7 +5,7 @@ and outputs it in subnational subfolders for each state. This is clearly not
 re-usable but writing this is faster than manually creating the CSV files. The
 source data can be downloaded at https://www.eia.gov/state/seds/CDF/Complete_SEDS.csv.
 
-This assumes a CSV file temporarily placed in the repo root called:
+This assumes a CSV file temporarily placed in the data-to-import folder called:
 "Complete_SEDS.csv"
 """
 
@@ -29,7 +29,7 @@ FOLDER_DATA_CSV_SUBNATIONAL = site['folders']['data_csv_subnational']
 def main():
 
     csv_parameters = {
-        'filepath_or_buffer': 'Complete_SEDS.csv',
+        'filepath_or_buffer': 'data-to-import/Complete_SEDS.csv',
         'usecols': [1, 2, 3, 4]
     }
     df = pd.read_csv(**csv_parameters)

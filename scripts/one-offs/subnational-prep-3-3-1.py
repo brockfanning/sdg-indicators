@@ -6,7 +6,7 @@ re-usable but writing this is faster than manually creating the CSV files. The
 source data can be downloaded from https://www.cdc.gov/nchhstp/atlas/index.htm
 after going through the steps to get to the "Export" button.
 
-This assumes a CSV file temporarily placed in the repo root called:
+This assumes a CSV file temporarily placed in the data-to-import folder called:
 "AtlasPlusTableData_HIV_Diagnoses.csv"
 """
 
@@ -95,7 +95,7 @@ def state_abbreviation(state):
 def main():
 
     csv_parameters = {
-        'filepath_or_buffer': 'AtlasPlusTableData_HIV_Diagnoses.csv',
+        'filepath_or_buffer': 'data-to-import/AtlasPlusTableData_HIV_Diagnoses.csv',
         'usecols': [0, 1, 2],
         'index_col': 0,
         'skiprows': 6

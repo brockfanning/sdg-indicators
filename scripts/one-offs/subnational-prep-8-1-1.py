@@ -4,7 +4,7 @@ This script parses a spreadsheet provided for subnational test data for 8.1.1,
 and outputs it in subnational subfolders for each state. This is clearly not
 re-usable but writing this is faster than manually creating the CSV files.
 
-This assumes a CSV file temporarily placed in the repo root called:
+This assumes a CSV file temporarily placed in the data-to-import folder called:
 "SDG 8.1.1 SubNational Example.csv"
 
 """
@@ -94,7 +94,7 @@ def state_abbreviation(state):
 def main():
 
     csv_parameters = {
-        'filepath_or_buffer': 'SDG 8.1.1 SubNational Example.csv',
+        'filepath_or_buffer': 'data-to-import/SDG 8.1.1 SubNational Example.csv',
         'usecols': [1, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
         'skiprows': 3,
         'skipfooter': 11
