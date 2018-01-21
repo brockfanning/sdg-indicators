@@ -26,6 +26,7 @@ HEADER_YEAR = site['csv_column_names']['year']
 FOLDER_DATA_CSV_WIDE = site['folders']['data_csv_wide']
 FOLDER_DATA_CSV_SUBNATIONAL = site['folders']['data_csv_subnational']
 
+# Each year's data is in a separate file.
 YEAR_FILES = {
   2005: 'ACS_05_EST_S2402',
   2006: 'ACS_06_EST_S2402',
@@ -39,6 +40,22 @@ YEAR_FILES = {
   2014: 'ACS_14_1YR_S2402',
   2015: 'ACS_15_1YR_S2402',
   2016: 'ACS_16_1YR_S2402',
+}
+
+# Each year might use a different column for the value.
+VALUE_COLUMNS = {
+  2005: 'HC03_EST_VC04',
+  2006: 'HC03_EST_VC04',
+  2007: 'HC03_EST_VC04',
+  2008: 'HC03_EST_VC04',
+  2009: 'HC03_EST_VC04',
+  2010: 'HC03_EST_VC04',
+  2011: 'HC03_EST_VC04',
+  2012: 'HC03_EST_VC04',
+  2013: 'HC03_EST_VC04',
+  2014: 'HC03_EST_VC04',
+  2015: 'HC05_EST_VC04',
+  2016: 'HC05_EST_VC04'
 }
 
 def state_abbreviation(state):
@@ -107,35 +124,36 @@ def state_abbreviation(state):
   return abbreviations[state]
 
 CSV_COLUMN_STATE = 'GEO.display-label'
-CSV_COLUMN_VALUE = 'HC03_EST_VC04'
 
-csv_parameters = {
-  'usecols': [CSV_COLUMN_STATE, CSV_COLUMN_VALUE],
-  'skiprows': [1]
-}
+csv_parameters = { 'skiprows': [1] }
 
 def main():
 
-  all_data = pd.DataFrame({HEADER_YEAR:[], CSV_COLUMN_VALUE:[], CSV_COLUMN_STATE:[]})
+  # Start with a blank dataframe with an int Year column. This will become one
+  # big dataframe with all the years.
+  all_data = pd.DataFrame({ HEADER_YEAR:[] })
   all_data[HEADER_YEAR] = all_data[HEADER_YEAR].astype(int)
 
   for year in YEAR_FILES:
 
+    # Unzip and load the CSV file.
     filebase = YEAR_FILES[year]
     zip_filename = filebase + '.zip'
     csv_filename = filebase + '_with_ann.csv'
     zip_path = os.path.join('data-to-import', zip_filename)
-
     with zipfile.ZipFile(zip_path) as z:
       with z.open(csv_filename) as f:
+        csv_parameters['usecols'] = [CSV_COLUMN_STATE, VALUE_COLUMNS[year]]
         df = pd.read_csv(f, **csv_parameters)
+        # Set the year on all rows.
         df[HEADER_YEAR] = year
+        # Rename some columns.
+        df = df.rename({
+          VALUE_COLUMNS[year]: HEADER_ALL,
+          CSV_COLUMN_STATE: 'state'
+        }, axis='columns')
+        # Add this year to the one big dataframe.
         all_data = all_data.append(df)
-
-  all_data = all_data.rename({
-    CSV_COLUMN_STATE: 'state',
-    CSV_COLUMN_VALUE: HEADER_ALL
-  }, axis='columns')
 
   # Move year to the front.
   cols = all_data.columns.tolist()
