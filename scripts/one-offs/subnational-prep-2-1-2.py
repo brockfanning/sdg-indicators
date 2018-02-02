@@ -48,7 +48,7 @@ def main():
             'io': excel_path,
             'sheet_name': sheet,
             'skiprows': 7,
-            'skip_footer': 5,
+            'skip_footer': 4,
             'usecols': [0, 4],
             'names': [HEADER_REGION, HEADER_ALL]
         }
