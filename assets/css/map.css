@@ -5,6 +5,10 @@
   margin: 0;
   width: auto;
 }
+#map-previous[disabled],
+#map-next[disabled] {
+  background-color: #ddd;
+}
 #map-year {
   text-align: center;
   margin-top: 20px;
