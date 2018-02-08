@@ -28,20 +28,20 @@ HEADER_REGION = 'state'
 
 def main():
 
-    # Each sheet corresponds to a range of years.
+    # Normally each year is a separate series, but in this case the data is
+    # only available in 3-year groups.
     excel_sheets = {
-        '1999-2001': [1999, 2000, 2001],
-        '2002-04': [2002, 2003, 2004],
-        '2005-07': [2005, 2006, 2007],
-        '2008-10': [2008, 2009, 2010],
-        '2011-13': [2011, 2012, 2013],
-        '2014-16': [2014, 2015, 2016]
+        '1999-2001',
+        '2002-04',
+        '2005-07',
+        '2008-10',
+        '2011-13',
+        '2014-16'
     }
     excel_path = os.path.join('data-to-import', 'State Food Insecurity for SDG.xlsx')
 
     # First create a large dataframe with all the info.
     all_data = pd.DataFrame({ HEADER_YEAR:[], HEADER_REGION:[], HEADER_ALL:[] })
-    all_data[HEADER_YEAR] = all_data[HEADER_YEAR].astype(int)
 
     for sheet in excel_sheets:
         excel_params = {
@@ -53,9 +53,8 @@ def main():
             'names': [HEADER_REGION, HEADER_ALL]
         }
         df = pd.read_excel(**excel_params).dropna()
-        for year in excel_sheets[sheet]:
-            df[HEADER_YEAR] = year
-            all_data = all_data.append(df)
+        df[HEADER_YEAR] = sheet
+        all_data = all_data.append(df)
 
     # Move year to the front.
     cols = all_data.columns.tolist()
