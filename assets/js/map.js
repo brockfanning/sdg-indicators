@@ -125,7 +125,7 @@ function sdg_indicator_map(config) {
     }
 
     // Get a sorted list of the years available.
-    var years = d3.map(data, function(d) { return +d[config.data_column_year]; }).keys().sort();
+    var years = d3.map(data, function(d) { return d[config.data_column_year]; }).keys().sort();
 
     // Set up the year widget.
     var $btnPrev = $('#map-previous').click(previousYear);
