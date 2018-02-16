@@ -21,6 +21,9 @@ FOLDER_DATA_CSV_WIDE = site['folders']['data_csv_wide']
 FOLDER_DATA_CSV_SUBNATIONAL = site['folders']['data_csv_subnational']
 HEADER_REGION = 'state'
 
+#SOURCE_GROUP = 'Total'
+SOURCE_GROUP = 'Men'
+
 def state_abbreviation(state):
     abbreviations = {
         'United States': 'US',
@@ -122,7 +125,7 @@ def main():
         }
         df = pd.read_excel(**excel_params).dropna()
         df[HEADER_YEAR] = year
-        all_data = all_data.append(df[df['group'] == 'Total'])
+        all_data = all_data.append(df[df['group'] == SOURCE_GROUP])
 
     all_data = all_data.drop('group', axis='columns')
     states = all_data.state.unique()
