@@ -9,7 +9,12 @@
   </div>
 
   <div id="map-legend">
-    <div id="map-caption">{{ page.title }}</div>
+
+    <div id="map-caption">
+      {% assign caption = page.subnational_title %}
+      {% unless caption %}{% assign caption = page.title %}{% endunless %}
+      {{ caption }}
+    </div>
     <svg id="map-colors" height="25" width="280"></svg>
   </div>
 
