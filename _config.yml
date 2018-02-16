@@ -76,6 +76,10 @@ prose:
             element: text
             label: "UN Custodial Agency"
             scope: global
+      - name: "subnational_title"
+        field:
+            element: text
+            label: "Subnational Title"
       - name: "graph_title"
         field: 
             element: text
