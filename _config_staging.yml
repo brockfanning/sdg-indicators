@@ -82,6 +82,10 @@ prose:
         field: 
             element: text
             label: "Graph Title"  
+      - name: "subnational_title"
+        field:
+            element: text
+            label: "Subnational Title"
       - name: "actual_indicator_available"
         field: 
             element: text
