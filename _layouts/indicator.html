@@ -44,6 +44,16 @@
 {% assign slug = page.indicator | replace: '.', '-' %}
 {% assign dataset_name = 'indicator_' | append: slug %}
 
+{% assign show_map = false %}
+{% if site.data.regional.region %}
+  {% for region in site.data.regional.region %}
+    {% if region[1][dataset_name] %}
+      {% assign show_map = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 {% if page.lang == 'en' %}
     {% assign sdg_indicators = site.data.sdg_indicator_metadata %}
 {% else %}
