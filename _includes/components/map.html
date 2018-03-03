@@ -1,0 +1,23 @@
+<div id="map-container">
+
+  <h4 id="map-abort">Subnational data is not yet available for this indicator.</h4>
+
+  <div id="map-year">
+    <button id="map-previous" aria-label="Previous">&laquo;</button>
+    <h2 id="map-current"></h2>
+    <button id="map-next" aria-label="Next">&raquo;</button>
+  </div>
+
+  <div id="map-legend">
+
+    <div id="map-caption">
+      {% assign caption = page.subnational_title %}
+      {% unless caption %}{% assign caption = page.title %}{% endunless %}
+      {{ caption }}
+    </div>
+    <svg id="map-colors" height="25" width="280"></svg>
+  </div>
+
+  <svg id="map-regions" height="680" width="960"></svg>
+
+</div>
