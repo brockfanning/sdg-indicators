@@ -39,18 +39,17 @@
         </section>
 
         <div class="usa-grid initiative-description">
-          
+
 
 {% assign slug = page.indicator | replace: '.', '-' %}
 {% assign dataset_name = 'indicator_' | append: slug %}
 
 {% assign show_map = false %}
-{% if site.data.regional.region %}
-  {% for region in site.data.regional.region %}
-    {% if region[1][dataset_name] %}
+{% if site.data.tidy[dataset_name] %}
+  {% for row in site.data.tidy[dataset_name] %}
+    {% if row.region %}
       {% assign show_map = true %}
       {% break %}
-    {% endif %}
   {% endfor %}
 {% endif %}
 
@@ -63,7 +62,7 @@
 
 {% for indicators in sdg_indicators %}
 {% if indicators.indicator_id == page.indicator %}
-  {% assign this_sdg_indicator_metadata = indicators %}  
+  {% assign this_sdg_indicator_metadata = indicators %}
 {% endif %}
 {% endfor %}
 
@@ -119,7 +118,7 @@
     </div>
     <div role="tabpanel" class="tab-pane" id="metadata">
       <div class="metadata-table">
-    
+
       <h2>Global Metadata</h2>
       <p class="metadata-notes">
         {{ t.this-table }} <a href="{{ this_sdg_indicator_metadata.goal_meta_link }}">{{ t.documentation }} {{ page_goal_num }}</a>{{ t.provided }}
@@ -221,13 +220,13 @@
 
 
       </div>   <!-- usa-grid -->
-      
+
     </div>
-    
+
 
 {% include scripts.html %}
 
 {% include indicator_data_source/base.html graph_type=graph_type %}
 {% include indicator_data_source/{{ page.indicator_data_source }}.html graph_type=graph_type %}
-    
+
 {% include footer.html %}
