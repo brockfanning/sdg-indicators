@@ -1,0 +1,22 @@
+# The files in this folder are meant to be customized for your needs. The syntax
+# used here is YAML, which is the same as the "front matter" used at the top of
+# Jekyll content.
+
+# Here you can inform the platform about your particular naming convention in
+# CSV files. These settings are case sensitive. For example, if the naming
+# convention in your CSV data is to use 'Year' for the year column, you would
+# want this setting:
+#   year: Year
+csv_column_names:
+  year:   year
+  all:    all
+  value:  value
+
+# Here you can inform the scripts about where certain types of files are stored
+# in the repository. The paths below are all relative from the root of the repo.
+# These paths can be written as Unix-style (using forward-slashes) and the
+# scripts will adjust automatically when run on Windows computers.
+folders:
+  data_csv_wide:        data
+  data_csv_tidy:        data/tidy
+  data_csv_subnational: data/subnational
