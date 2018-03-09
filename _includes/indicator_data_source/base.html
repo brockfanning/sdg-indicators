@@ -14,6 +14,10 @@ $('.spin').show();
 document.addEventListener('IndicatorDataReady', function(e) {
   sdg_indicators.indicatorTableAdapter(e);
 
+  {% if include.show_map %}
+  sdg_indicators.indicatorMapAdapter(e);
+  {% endif %}
+
   {% case include.graph_type %}
   {% when 'line' %} sdg_indicators.indicatorGraphLineAdapter(e);
   {% when 'line-rate' %} sdg_indicators.indicatorGraphLineRateAdapter(e);

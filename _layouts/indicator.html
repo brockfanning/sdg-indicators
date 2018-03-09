@@ -50,6 +50,7 @@
     {% if row.region %}
       {% assign show_map = true %}
       {% break %}
+    {% endif %}
   {% endfor %}
 {% endif %}
 
@@ -92,6 +93,9 @@
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">{{ t.data }}</a></li>
     <li role="presentation"><a href="#metadata" aria-controls="metadata" role="tab" data-toggle="tab">{{ t.metadata }}</a></li>
+    {% if show_map %}
+    <li role="presentation"><a href="#map" aria-controls="map" role="tab" data-toggle="tab">{{ t.map }}</a></li>
+    {% endif %}
     {% if site.github.environment == 'dotcom' %}
     <li role="presentation"><a href="#edit" aria-controls="edit" role="tab" data-toggle="tab">{{ t.editing }}</a></li>
     {% endif %}
@@ -187,6 +191,12 @@
 
     </div>
 
+    {% if show_map %}
+    <div role="tabpanel" class="tab-pane" id="map">
+      {% include components/map.html %}
+    </div>
+    {% endif %}
+
     {% if site.github.environment == 'dotcom' %}
     <div role="tabpanel" class="tab-pane" id="edit">
       <div class="edit-container">
@@ -222,7 +232,11 @@
 
 {% include scripts.html %}
 
-{% include indicator_data_source/base.html graph_type=graph_type %}
-{% include indicator_data_source/{{ page.indicator_data_source }}.html graph_type=graph_type %}
+{% if show_map %}
+  {% include components/map-scripts.html %}
+{% endif %}
+
+{% include indicator_data_source/base.html graph_type=graph_type show_map=show_map %}
+{% include indicator_data_source/{{ page.indicator_data_source }}.html graph_type=graph_type show_map=show_map %}
 
 {% include footer.html %}
