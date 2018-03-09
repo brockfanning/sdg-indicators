@@ -8,14 +8,14 @@
  *   An object containing all required configuration options. These consist of:
  *   "indicator_id"
  *     The id of the indicator, eg: 8-1-1
- *   "data_path"
- *     A web-accessible path to the CSV data file
+ *   "data"
+ *     The indicator data in tidy format, containing the columns specified below.
  *   "data_column_year"
- *     The column header in the CSV that represents the year
+ *     The attribute in the data that represents the year for a row
  *   "data_column_value"
- *     The column header in the CSV that represents the value
+ *     The attribute in the data that represents the value for a row
  *   "data_column_region"
- *     The column header in the CSV that represents the subnational region
+ *     The attribute in the data that represents the region for a row
  *   "geojson_path"
  *     A web-accessible path to the geojson file
  *   "geojson_d3_callback"
@@ -61,12 +61,11 @@ function sdg_indicator_map(config) {
 
   // Load our data files and then continue.
   d3.queue()
-    .defer(d3.csv, config.data_path)
     .defer(d3.json, config.geojson_path)
     .await(ready);
 
   // This function only executed after indicator data and geo data has been loaded.
-  function ready(error, data, geojson) {
+  function ready(error, geojson) {
     if (error) throw error;
 
     // To get the aggregated data, we need the rows that have the correct year,
@@ -75,7 +74,7 @@ function sdg_indicator_map(config) {
     var hasYear = false;
     var hasValue = false;
     var hasRegion = false;
-    for (var column in data[0]) {
+    for (var column in config.data[0]) {
       if (config.data_column_year == column) {
         hasYear = true;
       }
@@ -97,7 +96,7 @@ function sdg_indicator_map(config) {
     }
 
     // Filter down the data.
-    data = data.filter(function(row) {
+    var data = config.data.filter(function(row) {
       // We only care about rows with regions.
       if (row[config.data_column_region] == '') {
         return false;
