@@ -118,7 +118,7 @@ def main():
         excel_path = files[year]
         excel_params = {
             'io': files[year],
-            'skiprows': 7,
+            'skiprows': 6,
             'skip_footer': 9,
             'usecols': [2, 3, 10],
             'names': [HEADER_REGION, 'group', HEADER_ALL]
@@ -128,6 +128,9 @@ def main():
         all_data = all_data.append(df[df['group'] == SOURCE_GROUP])
 
     all_data = all_data.drop('group', axis='columns')
+
+    print(all_data)
+
     states = all_data.state.unique()
 
     # Move year to the front.
@@ -142,7 +145,7 @@ def main():
         abbrev = state_abbreviation(state)
         subfolder = os.path.join(FOLDER_DATA_CSV_SUBNATIONAL, 'state', abbrev)
         os.makedirs(subfolder, exist_ok=True)
-        path = os.path.join(subfolder, 'indicator_8-5-2.csv')
+        path = os.path.join(subfolder, 'indicator_8-5-2x.csv')
         data.to_csv(path, index=False, header=[HEADER_YEAR, HEADER_ALL])
 
 if __name__ == '__main__':
