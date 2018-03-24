@@ -8,15 +8,58 @@ var sdg_indicators = sdg_indicators || {};
 
 (function() {
 
+  // Helper function for converting tidy to wide data.
+  function tidyToWide(tidy, columnsToExclude) {
+
+    var rows = $.csv.toObjects(tidy);
+    var columns = Object.keys(rows[0]);
+
+    if (columnsToExclude) {
+      columns = columns.filter(function(x) { return columnsToExclude.indexOf(x) === -1; });
+    }
+
+    // For tidy CSV, the main series is the one with only "year" and "value".
+    var otherCols = columns.filter(function(x) { return x != 'year' && x != 'value'; });
+    var mainSeries = rows.filter(function(x) { return otherCols.every(function(y) { return !x[y]; })});
+
+    // For the data table we want to convert tidy to wide. Each value in the
+    // non-value/year columns can be a separate column in the wide format.
+    var wide = {};
+    // First add the main series.
+    mainSeries.forEach(function(row) {
+      wide[row.year] = { year: row.year, all: row.value };
+    });
+    // Add other columns if necessary.
+    if (otherCols) {
+      rows.forEach(function(row) {
+        otherCols.forEach(function(otherCol) {
+          if (row[otherCol]) {
+            wide[row.year][row[otherCol]] = row.value;
+          }
+        });
+      });
+    }
+
+    // Return in array format.
+    return Object.values(wide);
+  }
+
   // Implement the indicatorMapAdapter method.
   sdg_indicators.indicatorMapAdapter = function(e) {
-    sdg_indicator_map_us({
-      indicator_id: e.detail.indicator_id,
-      data: e.detail.tidy,
-      data_column_year: 'year',
-      data_column_value: 'value',
-      data_column_region: 'region'
-    });
+    // Get our base configuration for the map.
+    var config = sdg_indicators.getMapConfig();
+    // Add specific data for this indicator.
+    config.data = $.csv.toObjects(e.detail.tidy);
+    config.indicator_id = e.detail.indicator_id;
+    config.data_for_table = tidyToWide(e.detail.tidy);
+    // Display the map.
+    sdg_indicators.indicatorMap(config);
+    // Display the subnational table.
+    var columns = Object.keys(e.detail.subnational[0]);
+    columns = columns.filter(function(x) { return x != 'year' && x != 'all'; });
+    columns.sort();
+    columns.unshift('year', 'all');
+    sdg_indicators.indicatorTable(columns, e.detail.subnational, 'states-' + e.detail.indicator_id + '.csv', 'map-container');
   }
 
   // Implement the indicatorTableAdapter method.
@@ -26,7 +69,7 @@ var sdg_indicators = sdg_indicators || {};
     columns.sort();
     columns.unshift('year', 'all');
 
-    sdg_indicators.indicatorTable(columns, e.detail.wide);
+    sdg_indicators.indicatorTable(columns, e.detail.wide, e.detail.indicator_id + '.csv');
   };
 
   {% case include.graph_type %}
@@ -65,40 +108,21 @@ var sdg_indicators = sdg_indicators || {};
   // Grab the CSV data.
   $.when($.get(csv_path)).then(function(data) {
 
-    var rows = $.csv.toObjects(data);
-    var columns = Object.keys(rows[0]);
-
-    // For tidy CSV, the main series is the one with only "year" and "value".
-    var otherCols = columns.filter(function(x) { return x != 'year' && x != 'value'; });
-    var mainSeries = rows.filter(function(x) { return otherCols.every(function(y) { return !x[y]; })});
-
-    // For the data table we want to convert tidy to wide. Each value in the
-    // non-value/year columns can be a separate column in the wide format.
-    var wide = {};
-    // First add the main series.
-    mainSeries.forEach(function(row) {
-      wide[row.year] = { year: row.year, all: row.value };
-    });
-    // Add other columns if necessary.
-    if (otherCols) {
-      rows.forEach(function(row) {
-        otherCols.forEach(function(otherCol) {
-          if (row[otherCol]) {
-            wide[row.year][row[otherCol]] = row.value;
-          }
-        });
-      });
-    }
+    // Convert to wide, without regional data.
+    var columnsToExclude = ['region'];
+    var wide = tidyToWide(data, columnsToExclude);
+    var subnational = tidyToWide(data);
 
     document.dispatchEvent(new CustomEvent('IndicatorDataReady', {
       detail: {
         // A single series for the visualizations.
-        years: mainSeries.map(function(x) { return x.year; }),
-        values: mainSeries.map(function(x) { return x.value; }),
+        years: wide.map(function(x) { return x.year; }),
+        values: wide.map(function(x) { return x.all; }),
         // All of the data for the data table.
-        wide: Object.values(wide),
+        wide: wide,
+        subnational: subnational,
         // Tidy data for the map.
-        tidy: rows,
+        tidy: data,
         indicator_id: '{{ slug }}'
       }
     }));

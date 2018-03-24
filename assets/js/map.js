@@ -1,6 +1,8 @@
 // This is a proof-of-concept for using tidy data format and d3.js to visualize
 // subnational data on maps.
 
+var sdg_indicators = sdg_indicators || {};
+
 /**
  * A global function for rendering the SDG indicator map.
  *
@@ -9,13 +11,8 @@
  *   "indicator_id"
  *     The id of the indicator, eg: 8-1-1
  *   "data"
- *     The indicator data in tidy format, containing the columns specified below.
- *   "data_column_year"
- *     The attribute in the data that represents the year for a row
- *   "data_column_value"
- *     The attribute in the data that represents the value for a row
- *   "data_column_region"
- *     The attribute in the data that represents the region for a row
+ *     Tidy data as an array of objects, each containing the properties:
+ *     "year", "value", and "region".
  *   "geojson_path"
  *     A web-accessible path to the geojson file
  *   "geojson_d3_callback"
@@ -27,7 +24,7 @@
  *     An object consisting of each subnational region value, keyed to that
  *     region's human-readable label.
  */
-function sdg_indicator_map(config) {
+sdg_indicators.indicatorMap = function(config) {
 
   var svg = d3.select('#map-regions');
   var width = +svg.attr('width');
@@ -75,13 +72,13 @@ function sdg_indicator_map(config) {
     var hasValue = false;
     var hasRegion = false;
     for (var column in config.data[0]) {
-      if (config.data_column_year == column) {
+      if ('year' == column) {
         hasYear = true;
       }
-      else if (config.data_column_value == column) {
+      else if ('value' == column) {
         hasValue = true;
       }
-      else if (config.data_column_region == column) {
+      else if ('region' == column) {
         hasRegion = true;
       }
       else {
@@ -98,7 +95,7 @@ function sdg_indicator_map(config) {
     // Filter down the data.
     var data = config.data.filter(function(row) {
       // We only care about rows with regions.
-      if (row[config.data_column_region] == '') {
+      if (row.region == '') {
         return false;
       }
       // We only want aggregate data, so there should be no other columns present.
@@ -124,7 +121,7 @@ function sdg_indicator_map(config) {
     }
 
     // Get a sorted list of the years available.
-    var years = d3.map(data, function(d) { return d[config.data_column_year]; }).keys().sort();
+    var years = d3.map(data, function(d) { return d.year; }).keys().sort();
 
     // Set up the year widget.
     var $btnPrev = $('#map-previous').click(previousYear);
@@ -133,7 +130,7 @@ function sdg_indicator_map(config) {
 
     // Get the max and min values.
     var getDataValue = function(d) {
-      return +d[config.data_column_value];
+      return +d.value;
     };
     var minValue = d3.min(data, getDataValue);
     var maxValue = d3.max(data, getDataValue);
@@ -288,7 +285,7 @@ function sdg_indicator_map(config) {
 
       // Filter to this particular year.
       var data_by_year = data.filter(function(row) {
-        if (row[config.data_column_year] != year) {
+        if (row.year != year) {
           return false;
         }
         return true;
@@ -297,8 +294,8 @@ function sdg_indicator_map(config) {
       // Map the data according to the region's id code.
       var data_by_id = {};
       for (var row in data_by_year) {
-        var region_key = data_by_year[row][config.data_column_region];
-        var region_value = data_by_year[row][config.data_column_value];
+        var region_key = data_by_year[row].region;
+        var region_value = data_by_year[row].value;
         var region_id = config.region_ids[region_key];
         data_by_id[region_id] = region_value;
       }
