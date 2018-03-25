@@ -8,7 +8,16 @@ var sdg_indicators = sdg_indicators || {};
 
 (function() {
 
-  // Helper function for converting tidy to wide data.
+  /**
+   * Helper function for converting tidy to wide data.
+   *
+   * @param tidy
+   *   The tidy CSV data already loaded.
+   * @param columnsToExclude
+   *   An array of columns, which should correspond to properties on data rows.
+   * @return
+   *   An array of data row objects, in wide format.
+   */
   function tidyToWide(tidy, columnsToExclude) {
 
     var rows = $.csv.toObjects(tidy);
@@ -44,6 +53,22 @@ var sdg_indicators = sdg_indicators || {};
     return Object.values(wide);
   }
 
+  /**
+   * Helper to get a re-arranged array of columns of a datatable.
+   *
+   * @param rowObject
+   *   An object containing properties, which will be used as column names.
+   * @return
+   *   An array of columns (object properties), re-arranged.
+   */
+  function arrangeColumns(rowObject) {
+    var columns = Object.keys(rowObject);
+    columns = columns.filter(function(x) { return x != 'year' && x != 'all'; });
+    columns.sort();
+    columns.unshift('year', 'all');
+    return columns;
+  }
+
   // Implement the indicatorMapAdapter method.
   sdg_indicators.indicatorMapAdapter = function(e) {
     // Get our base configuration for the map.
@@ -51,24 +76,18 @@ var sdg_indicators = sdg_indicators || {};
     // Add specific data for this indicator.
     config.data = $.csv.toObjects(e.detail.tidy);
     config.indicator_id = e.detail.indicator_id;
-    config.data_for_table = tidyToWide(e.detail.tidy);
     // Display the map.
     sdg_indicators.indicatorMap(config);
-    // Display the subnational table.
-    var columns = Object.keys(e.detail.subnational[0]);
-    columns = columns.filter(function(x) { return x != 'year' && x != 'all'; });
-    columns.sort();
-    columns.unshift('year', 'all');
-    sdg_indicators.indicatorTable(columns, e.detail.subnational, 'states-' + e.detail.indicator_id + '.csv', 'map-container');
+    // Display the subnational table. Convert tidy to wide again, this time
+    // without excluding the regional columns.
+    var rows = tidyToWide(e.detail.tidy);
+    var columns = arrangeColumns(rows[0]);
+    sdg_indicators.indicatorTable(columns, rows, 'states-' + e.detail.indicator_id + '.csv', 'map-container');
   }
 
   // Implement the indicatorTableAdapter method.
   sdg_indicators.indicatorTableAdapter = function(e) {
-    var columns = Object.keys(e.detail.wide[0]);
-    columns = columns.filter(function(x) { return x != 'year' && x != 'all'; });
-    columns.sort();
-    columns.unshift('year', 'all');
-
+    var columns = arrangeColumns(e.detail.wide[0]);
     sdg_indicators.indicatorTable(columns, e.detail.wide, e.detail.indicator_id + '.csv');
   };
 
@@ -108,10 +127,10 @@ var sdg_indicators = sdg_indicators || {};
   // Grab the CSV data.
   $.when($.get(csv_path)).then(function(data) {
 
-    // Convert to wide, without regional data.
+    // Convert to wide, without regional data. We exclude regional data here
+    // because it will be sectioned off into its own tab.
     var columnsToExclude = ['region'];
     var wide = tidyToWide(data, columnsToExclude);
-    var subnational = tidyToWide(data);
 
     document.dispatchEvent(new CustomEvent('IndicatorDataReady', {
       detail: {
@@ -120,7 +139,6 @@ var sdg_indicators = sdg_indicators || {};
         values: wide.map(function(x) { return x.all; }),
         // All of the data for the data table.
         wide: wide,
-        subnational: subnational,
         // Tidy data for the map.
         tidy: data,
         indicator_id: '{{ slug }}'
