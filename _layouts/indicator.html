@@ -45,7 +45,11 @@
 {% assign dataset_name = 'indicator_' | append: slug %}
 
 {% assign show_map = false %}
+{% assign indicator_data_source = page.indicator_data_source %}
 {% if site.data.tidy[dataset_name] %}
+  {% if !page.indicator_data_source %}
+    {% assign indicator_data_source = 'local_csv_tidy' %}
+  {% endif %}
   {% for row in site.data.tidy[dataset_name] %}
     {% if row.region %}
       {% assign show_map = true %}
@@ -237,6 +241,6 @@
 {% endif %}
 
 {% include indicator_data_source/base.html graph_type=graph_type show_map=show_map %}
-{% include indicator_data_source/{{ page.indicator_data_source }}.html graph_type=graph_type show_map=show_map %}
+{% include indicator_data_source/{{ indicator_data_source }}.html graph_type=graph_type show_map=show_map %}
 
 {% include footer.html %}
