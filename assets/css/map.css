@@ -32,3 +32,6 @@
 #map-abort {
   display: none;
 }
+#map-regions .region {
+  stroke: #666;
+}
