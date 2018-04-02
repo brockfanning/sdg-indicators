@@ -6,8 +6,21 @@ re-usable but writing this is faster than manually creating the CSV files. The
 source data can be downloaded from https://www.cdc.gov/nchhstp/atlas/index.htm
 after going through the steps to get to the "Export" button.
 
-This assumes a CSV file temporarily placed in the data-to-import folder called:
-"AtlasPlusTableData_HIV_Diagnoses.csv"
+In the absence of coding the whole process, here are the manual steps:
+1. Go to https://www.cdc.gov/nchhstp/atlas/index.htm
+2. Click on "HIV" and "TABLES"
+3. Check "HIV Diagnoses" and click "Next"
+4. Check "National" (or "State") and click "Next"
+5. Select all years and click "Next"
+6. Leave default options and click "Next"
+7. Click "Create my table"
+8. Click "Export"
+
+Do the above twice, once for "National" and once for "State" (step 4)
+
+This assumes 2 CSV files temporarily placed in the data-to-import folder called:
+"AtlasPlusTableData_National.csv" and "AtlasPlusTableData_State.csv".
+(You need to rename them manually as indicated.)
 """
 
 import os.path
@@ -94,8 +107,9 @@ def state_abbreviation(state):
 
 def main():
 
+    # First the subnational data.
     csv_parameters = {
-        'filepath_or_buffer': 'data-to-import/AtlasPlusTableData_HIV_Diagnoses.csv',
+        'filepath_or_buffer': 'data-to-import/AtlasPlusTableData_State.csv',
         'usecols': [0, 1, 2],
         'index_col': 0,
         'skiprows': 6
@@ -112,6 +126,19 @@ def main():
         os.makedirs(subfolder, exist_ok=True)
         path = os.path.join(subfolder, 'indicator_3-3-1.csv')
         data.to_csv(path, index_label=HEADER_YEAR, header=[HEADER_ALL])
+
+    # Next the national data.
+    csv_parameters = {
+        'filepath_or_buffer': 'data-to-import/AtlasPlusTableData_National.csv',
+        'usecols': [0, 1],
+        'index_col': 0,
+        'skiprows': 6
+    }
+    df = pd.read_csv(**csv_parameters)
+
+    subfolder = FOLDER_DATA_CSV_WIDE
+    path = os.path.join(subfolder, 'indicator_3-3-1.csv')
+    df.to_csv(path, index_label=HEADER_YEAR, header=[HEADER_ALL])
 
 if __name__ == '__main__':
     main()
