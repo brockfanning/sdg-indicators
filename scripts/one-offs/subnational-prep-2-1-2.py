@@ -30,14 +30,14 @@ def main():
 
     # Normally each year is a separate series, but in this case the data is
     # only available in 3-year groups.
-    excel_sheets = {
+    excel_sheets = [
         '1999-2001',
         '2002-04',
         '2005-07',
         '2008-10',
         '2011-13',
         '2014-16'
-    }
+    ]
     excel_path = os.path.join('data-to-import', 'State Food Insecurity for SDG.xlsx')
 
     # First create a large dataframe with all the info.
@@ -62,13 +62,16 @@ def main():
     cols = [HEADER_YEAR] + cols
     all_data = all_data[cols]
 
+    # Account for discrepancy in source data with national identifier.
+    all_data[HEADER_REGION] = all_data[HEADER_REGION].replace('U.S. total', 'U.S.')
+
     # Loop through the states.
     states = all_data[HEADER_REGION].unique()
     for state in states:
+        # Filter data to this state.
         state_data = all_data[all_data[HEADER_REGION] == state].drop(HEADER_REGION, axis='columns')
-        if 'U.S.' in state:
-            # Let's not overwrite the federal data.
-            continue
+        if state == 'U.S.':
+            subfolder = FOLDER_DATA_CSV_WIDE
         else:
             subfolder = os.path.join(FOLDER_DATA_CSV_SUBNATIONAL, HEADER_REGION, state)
         os.makedirs(subfolder, exist_ok=True)
