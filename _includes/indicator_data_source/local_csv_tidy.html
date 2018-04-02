@@ -13,44 +13,68 @@ var sdg_indicators = sdg_indicators || {};
    *
    * @param tidy
    *   The tidy CSV data already loaded.
-   * @param columnsToExclude
-   *   An array of columns, which should correspond to properties on data rows.
+   * @param columnToExclude
+   *   A column in the tidy data which should be excluded from the wide data.
    * @return
    *   An array of data row objects, in wide format.
    */
-  function tidyToWide(tidy, columnsToExclude) {
+  function tidyToWide(tidy, columnToExclude) {
 
     var rows = $.csv.toObjects(tidy);
     var columns = Object.keys(rows[0]);
 
-    if (columnsToExclude) {
-      columns = columns.filter(function(x) { return columnsToExclude.indexOf(x) === -1; });
+    // Filter out unneeded rows and columns.
+    if (columnToExclude) {
+      rows = rows.filter(function (x) { return !x[columnToExclude]; });
+      columns = columns.filter(function(x) { return x != columnToExclude; });
     }
 
-    // For tidy CSV, the main series is the one with only "year" and "value".
+    // If the tidy data has no disaggregation, then this is quick and easy.
     var otherCols = columns.filter(function(x) { return x != 'year' && x != 'value'; });
-    var mainSeries = rows.filter(function(x) { return otherCols.every(function(y) { return !x[y]; })});
-
-    // For the data table we want to convert tidy to wide. Each value in the
-    // non-value/year columns can be a separate column in the wide format.
-    var wide = {};
-    // First add the main series.
-    mainSeries.forEach(function(row) {
-      wide[row.year] = { year: row.year, all: row.value };
-    });
-    // Add other columns if necessary.
-    if (otherCols) {
-      rows.forEach(function(row) {
-        otherCols.forEach(function(otherCol) {
-          if (row[otherCol]) {
-            wide[row.year][row[otherCol]] = row.value;
-          }
-        });
+    if (!otherCols.length) {
+      return rows.map(function(x) {
+        return {
+          year: x.year,
+          all: x.value
+        };
       });
     }
 
-    // Return in array format.
-    return Object.values(wide);
+    // Otherwise we loop through to fill in values and simultaneously construct
+    // an object with empty values for all possible columns.
+    var wide = {};
+    var wideColumns = {};
+    rows.forEach(function(row) {
+      if (!wide[row.year]) {
+        wide[row.year] = { year: row.year };
+      }
+      if (otherCols.some(function(x) { return row[x]; })) {
+        // If the row has extra columns, use their values as wide columns.
+        otherCols.forEach(function(col) {
+          if (row[col]) {
+            wide[row.year][row[col]] = row.value;
+            // While we're here, note this column for later.
+            wideColumns[row[col]] = '';
+          }
+        });
+      }
+      else {
+        // Otherwise fill in the 'all' column to represent an 'aggregate' row.
+        wide[row.year]['all'] = row.value;
+      }
+    });
+
+    // Now we normalize the wide rows to make sure each row has all columns.
+    wide = Object.values(wide).map(function(row) {
+      Object.keys(wideColumns).forEach(function(column) {
+        if (!row[column]) {
+          row[column] = '';
+        }
+      });
+      return row;
+    });
+
+    return wide;
   }
 
   /**
@@ -129,8 +153,8 @@ var sdg_indicators = sdg_indicators || {};
 
     // Convert to wide, without regional data. We exclude regional data here
     // because it will be sectioned off into its own tab.
-    var columnsToExclude = ['region'];
-    var wide = tidyToWide(data, columnsToExclude);
+    var columnToExclude = 'region';
+    var wide = tidyToWide(data, columnToExclude);
 
     document.dispatchEvent(new CustomEvent('IndicatorDataReady', {
       detail: {
