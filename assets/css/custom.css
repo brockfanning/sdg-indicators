@@ -85,7 +85,7 @@ header.splash.fixed-header.smaller {
 }
 
 .usa-banner.banner-small {
-    padding : 2rem 0 0 0;
+    /* padding : 2rem 0 0 0; */
 }
 
 .usa-banner h1 {
@@ -179,7 +179,7 @@ header.fixed-header .site-navbar ul li#nav-logo a:hover {
 
 
 header.smaller {
-    height: 105px;
+    height: 200px;
 }
 
 header.smaller .site-navbar ul li {

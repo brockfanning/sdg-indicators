@@ -6,11 +6,15 @@ en:
   data : "Data"
   metadata : "Metadata"
   us : "U.S."
-  editing : "Edit (Requires Password)"
+  jm: "Jamaica"
+  editing : "Edit"
   this-table : "This table provides information on metadata for SDG indicators as defined by the United Nations Statistical Commission. Complete global "
+
   documentation : "metadata documentation on all indicators in Goal "
+
   provided : ", unless otherwise noted, is provided by the UN Statistics Division."
-  available : "This table provides metadata for the actual indicator available from U.S. statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from U.S. statistics, this table should be consulted for information on national methodology and other US-specific metadata information."
+
+  available : "Outlined below is the metadata for this indicator as produced by the National Statistics System in Jamaica. This table should be consulted for information on national methodology and other specific metadata information, including the Ministry, Department or Agency responsible for the production of this indicator."
 es:
   sub-subtitle : "Indicador"
   tab-instructions : "Consulte la pestaña de metadatos para obtener información sobre fuentes, definiciones y metodología"
