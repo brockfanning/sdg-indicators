@@ -7,6 +7,8 @@ en:
   nav-statistics : "JM Statistics"
   nav-training : "Training Materials"
   nav-faq : "FAQs"
+  nav-overview: "Overview"
+  nav-reports: "Reports"
 es:
   site-title: "Estadísticas Nacionales de USA para los Objetivos de Desarrollo Sostenible de la ONU"
   disclaimer-wip: "Este sitio web es un trabajo en progreso"

@@ -1,5 +1,5 @@
 ---
-title: JM Statistics
+title: SDG Indicators
 permalink: /statistics/
 layout: frontpage
 ---
