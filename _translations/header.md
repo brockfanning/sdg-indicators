@@ -1,7 +1,7 @@
 ---
 translation_id: header
 en:
-  site-title: "U.S. Indicators For The Sustainable Development Goals"
+  site-title: "JM Indicators For The Sustainable Development Goals"
   disclaimer-wip: "This site is a work in progress"
   nav-reporting-status : "Reporting Status"
   nav-statistics : "JM Statistics"
