@@ -67,6 +67,9 @@
 
             <div class="container-fluid status-traffic-statbox">
               <div class="col-md-3">
+                <span class="label color-produced">{{ finalized_reporting }}</span> {{ t.success-text }} <br>{{ finalized_percent | round }}%
+              </div>
+              <div class="col-md-3">
                 <span class="label color-proxy-indicator">{{ tier3 }}</span> {{ t.default-text }} <br>{{ tier3_percent | round }}%
               </div>
               <div class="col-md-3">
@@ -75,13 +78,14 @@
               <div class="col-md-3">
                 <span class="label color-not-available">{{ compiling_statistic }}</span> {{t.warning-text }} <br>{{ compiling_percent | round }}%
               </div>
-              <div class="col-md-3">
-                <span class="label color-produced">{{ finalized_reporting }}</span> {{ t.success-text }} <br>{{ finalized_percent | round }}%
-              </div>
+              
             </div>
 
             <div class="usa-width-one-whole">
-              <div class="progress progress-top" style="margin-top: 18px;">               
+              <div class="progress progress-top" style="margin-top: 18px;">    
+                <div class="progress-bar color-produced" style="width:{{ finalized_percent }}%">
+                  <span class="sr-only">{{ t.success-text }} {{ finalized_percent }}%</span>
+                </div>           
                 <div class="progress-bar color-proxy-indicator" style="width:{{ tier3_percent }}%">
                   <span class="sr-only">{{ t.default-text }} {{ tier3_percent }}%</span>
                 </div> 
@@ -91,9 +95,7 @@
                 <div class="progress-bar color-not-available" style="width:{{ compiling_percent }}%">
                   <span class="sr-only">{{t.warning-text }} {{ compiling_percent }}%</span>
                 </div>
-                <div class="progress-bar color-produced" style="width:{{ finalized_percent }}%">
-                  <span class="sr-only">{{ t.success-text }} {{ finalized_percent }}%</span>
-                </div>
+                
               </div>
             </div>
         </div>
@@ -193,7 +195,7 @@
 
                          <div class="media-body">
 <h4>{{ goal.short }} <span class="badge dark-badge">{{ indicators_count }} indicators</span></h4>
-                            <div class="container-fluid status-traffic-statbox">
+                            <!-- <div class="container-fluid status-traffic-statbox">
                               <div class="col-md-3">
                                 <span class="label color-proxy-indicator">{{ tier3 }}</span> {{ t.default-text }} <br>{{ tier3_percent | round }}%
                               </div>
@@ -206,9 +208,24 @@
                               <div class="col-md-3">
                                 <span class="label color-produced">{{ finalized_reporting }}</span> {{ t.success-text }} <br>{{ finalized_percent | round }}%
                               </div>
+                            </div> -->
+
+                            <div class="container-fluid status-traffic-statbox">
+                              <div class="col-md-3">
+                                <span class="label color-produced">{{ finalized_reporting }}</span> {{ t.success-text }} <br>{{ finalized_percent | round }}%
+                              </div>
+                              <div class="col-md-3">
+                                <span class="label color-proxy-indicator">{{ tier3 }}</span> {{ t.default-text }} <br>{{ tier3_percent | round }}%
+                              </div>
+                              <div class="col-md-3">
+                                <span class="label color-data-available">{{ unsourced_data }}</span> {{ t.danger-text }} <br>{{ unsourced_percent | round }}%
+                              </div>
+                              <div class="col-md-3">
+                                <span class="label color-not-available">{{ compiling_statistic }}</span> {{ t.warning-text }} <br>{{ compiling_percent | round }}%
+                              </div>
                             </div>
 
-                            <div class="usa-width-one-whole">
+                            <!-- <div class="usa-width-one-whole">
                               <div class="progress">               
                                 <div class="progress-bar color-proxy-indicator" style="width:{{ tier3_percent }}%">
                                   <span class="sr-only">{{ t.default-text }} {{ tier3_percent }}%</span>
@@ -221,6 +238,23 @@
                                 </div>
                                 <div class="progress-bar color-produced" style="width:{{ finalized_percent }}%">
                                   <span class="sr-only">{{ t.success-text }} {{ finalized_percent }}%</span>
+                                </div>
+                              </div>
+                            </div> -->
+
+                            <div class="usa-width-one-whole">
+                              <div class="progress">     
+                                <div class="progress-bar color-produced" style="width:{{ finalized_percent }}%">
+                                  <span class="sr-only">{{ t.success-text }} {{ finalized_percent }}%</span>
+                                </div>          
+                                <div class="progress-bar color-proxy-indicator" style="width:{{ tier3_percent }}%">
+                                  <span class="sr-only">{{ t.default-text }} {{ tier3_percent }}%</span>
+                                </div> 
+                                <div class="progress-bar color-data-available" style="width:{{ unsourced_percent }}%">
+                                  <span class="sr-only">{{ t.danger-text }} {{ unsourced_percent }}%</span>
+                                </div>
+                                <div class="progress-bar color-not-availables" style="width:{{ compiling_percent }}%">
+                                  <span class="sr-only">{{ t.warning-text }} {{ compiling_percent }}%</span>
                                 </div>
                               </div>
                             </div>

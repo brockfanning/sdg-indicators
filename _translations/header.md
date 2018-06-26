@@ -4,7 +4,7 @@ en:
   site-title: "JM Indicators For The Sustainable Development Goals"
   disclaimer-wip: "This site is a work in progress"
   nav-reporting-status : "Reporting Status"
-  nav-statistics : "JM Statistics"
+  nav-statistics : "SDG Indicators"
   nav-training : "Training Materials"
   nav-faq : "FAQs"
   nav-overview: "Overview"
