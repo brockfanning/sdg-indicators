@@ -64,6 +64,11 @@
             {% assign tier3_percent = tier3 | divided_by:indicators_count | times:100 %}
 
             <h4>{{ t.page-subtitle }} <span class="badge dark-badge">{{ indicators_count | round }} indicators</span></h4>
+<!-- 
+              default-text : "Proxy Indicator(s)"
+              danger-text : "Not Produced, source data available"
+              warning-text : "Not Produced, No data available"
+              success-text : "Produced"      -->
 
             <div class="container-fluid status-traffic-statbox">
               <div class="col-md-3">
