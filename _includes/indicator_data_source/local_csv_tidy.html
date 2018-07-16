@@ -65,7 +65,10 @@ var sdg_indicators = sdg_indicators || {};
     });
 
     // Now we normalize the wide rows to make sure each row has all columns.
-    wide = Object.values(wide).map(function(row) {
+    var wideValues = Object.keys(wide).map(function(e) {
+      return wide[e]
+    });
+    wide = wideValues.map(function(row) {
       Object.keys(wideColumns).forEach(function(column) {
         if (!row[column]) {
           row[column] = '';
