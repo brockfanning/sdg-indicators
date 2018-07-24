@@ -1875,3 +1875,13 @@ td {
 p a {
     color: #5A98D3;
 }
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #DDE9F6;
+}
+
+
+.table-striped > thead > tr > th{
+    background-color: #5A98D3;
+    color:  white;
+}
