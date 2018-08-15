@@ -79,9 +79,11 @@ header.splash.fixed-header.smaller {
 
 
 .usa-banner {
-    background-color : #D0252F;
+    /* background-color : #56b0ff; */
     padding : 5rem 0 0rem 0;
-    color : #fff;
+    /* color : #fff; */
+    color : #112e51;
+    background: linear-gradient(180deg, white 20%, #D0252F 20%, #D0252F 55%, white 55%);
 }
 
 .usa-banner.banner-small {
@@ -157,7 +159,8 @@ header.fixed-header .site-navbar ul li#nav-logo {
 }
 
 header.fixed-header .site-navbar ul li a {
-    color: #112e51;
+    color: #ffffff;
+    /* color: #112e51; */
     display : inline-block;
     text-decoration: none;
     vertical-align: top;
@@ -188,6 +191,7 @@ header.smaller .site-navbar ul li {
 
 header.smaller .site-navbar ul li a {
     padding-top : 1.5em;
+    color: #112e51;
 }
 
 
@@ -351,7 +355,7 @@ a.initiative-block:visited {
 
 
 .initiative-description {
-    font-size : 2rem;
+    /* font-size : 2rem; */
 }
 
 aside.related {
@@ -413,11 +417,13 @@ p.metadata-notes {
 .goal-heading a,
 .goal-heading a:link,
 .goal-heading a:visited {
-    color : #fff;
+    /* color : #fff; */
+    color : #112e51;
 }
 
 .goal-heading a:hover {
-    color : #dce4ef;
+    /* color : #dce4ef; */
+    color : #1374f9;
 }
 
 .goal-heading {
@@ -478,7 +484,7 @@ p a, .usa-content-list a {
 }
 
 .usa-banner-content h1 {
-  font-size: 2.86rem;
+  font-size: 2rem;
 }
 
 .usa-font-lead {
@@ -592,4 +598,8 @@ margin-bottom : 1em;
 
 .status-dashboard .goal-progress .usa-grid-full .media-object {
     max-width: 155px;
+}
+
+.usa-grid.fresh-back {
+    background-color : #fff;
 }
