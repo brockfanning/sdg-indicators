@@ -41,7 +41,7 @@ GEM
     jekyll-get-json (0.0.1)
       deep_merge (~> 1.2)
       jekyll (~> 3.0)
-    jekyll-open-sdg-plugins (0.0.2)
+    jekyll-open-sdg-plugins (0.0.4)
       jekyll (~> 3.0)
     jekyll-remote-theme (0.3.1)
       jekyll (~> 3.5)
@@ -51,7 +51,7 @@ GEM
     jekyll-watch (1.5.1)
       listen (~> 3.0)
     kramdown (1.17.0)
-    liquid (4.0.1)
+    liquid (4.0.3)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -91,7 +91,7 @@ DEPENDENCIES
   html-proofer
   jekyll (= 3.5.1)
   jekyll-get-json (~> 0.0.1)
-  jekyll-open-sdg-plugins (~> 0.0.1)
+  jekyll-open-sdg-plugins (~> 0.0.4)
   jekyll-remote-theme
 
 BUNDLED WITH
