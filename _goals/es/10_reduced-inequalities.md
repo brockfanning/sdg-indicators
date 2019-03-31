@@ -1,7 +1,9 @@
 ---
+permalink: /es/10/
 color: '#dd1367'
 language: es
 layout: goal
-permalink: /es/reduced-inequalities/
+redirect_from:
+  - /es/reduced-inequalities/
 sdg_goal: '10'
 ---

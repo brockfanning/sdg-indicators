@@ -1,7 +1,9 @@
 ---
+permalink: /fr/15/
 color: '#56c02b'
 language: fr
 layout: goal
-permalink: /fr/life-on-land/
+redirect_from:
+  - /fr/life-on-land/
 sdg_goal: '15'
 ---

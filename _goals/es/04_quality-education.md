@@ -1,7 +1,9 @@
 ---
+permalink: /es/4/
 color: '#c5192d'
 language: es
 layout: goal
-permalink: /es/quality-education/
+redirect_from:
+  - /es/quality-education/
 sdg_goal: '4'
 ---

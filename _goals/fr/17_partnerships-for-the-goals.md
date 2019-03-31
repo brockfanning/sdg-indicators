@@ -1,7 +1,9 @@
 ---
+permalink: /fr/17/
 color: '#19486a'
 language: fr
 layout: goal
-permalink: /fr/partnerships-for-the-goals/
+redirect_from:
+  - /fr/partnerships-for-the-goals/
 sdg_goal: '17'
 ---
